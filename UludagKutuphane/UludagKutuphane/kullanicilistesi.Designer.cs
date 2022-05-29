@@ -36,25 +36,24 @@ namespace UludagKutuphane
             // KullaniciListesi_dgv
             // 
             this.KullaniciListesi_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.KullaniciListesi_dgv.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.KullaniciListesi_dgv.Location = new System.Drawing.Point(0, 0);
-            this.KullaniciListesi_dgv.Margin = new System.Windows.Forms.Padding(2);
+            this.KullaniciListesi_dgv.Location = new System.Drawing.Point(-1, 50);
+            this.KullaniciListesi_dgv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.KullaniciListesi_dgv.MultiSelect = false;
             this.KullaniciListesi_dgv.Name = "KullaniciListesi_dgv";
             this.KullaniciListesi_dgv.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.KullaniciListesi_dgv.RowTemplate.Height = 24;
-            this.KullaniciListesi_dgv.Size = new System.Drawing.Size(621, 401);
+            this.KullaniciListesi_dgv.Size = new System.Drawing.Size(984, 570);
             this.KullaniciListesi_dgv.TabIndex = 0;
             // 
             // kullanicilistesi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(621, 401);
+            this.ClientSize = new System.Drawing.Size(981, 620);
             this.Controls.Add(this.KullaniciListesi_dgv);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "kullanicilistesi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "kullanicilistesi";

@@ -108,6 +108,30 @@
     <Compile Include="Kaydol.Designer.cs">
       <DependentUpon>Kaydol.cs</DependentUpon>
     </Compile>
+    <Compile Include="kitaguncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kitaguncelle.Designer.cs">
+      <DependentUpon>kitaguncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kitapekle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kitapekle.Designer.cs">
+      <DependentUpon>kitapekle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kitaplistesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kitaplistesi.Designer.cs">
+      <DependentUpon>kitaplistesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kitapsil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kitapsil.Designer.cs">
+      <DependentUpon>kitapsil.cs</DependentUpon>
+    </Compile>
     <Compile Include="kullaniciekle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +166,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Kaydol.resx">
       <DependentUpon>Kaydol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kitaguncelle.resx">
+      <DependentUpon>kitaguncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kitapekle.resx">
+      <DependentUpon>kitapekle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kitaplistesi.resx">
+      <DependentUpon>kitaplistesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kitapsil.resx">
+      <DependentUpon>kitapsil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="kullaniciekle.resx">
       <DependentUpon>kullaniciekle.cs</DependentUpon>

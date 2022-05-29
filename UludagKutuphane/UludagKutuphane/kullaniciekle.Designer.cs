@@ -51,130 +51,123 @@ namespace UludagKutuphane
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(212, 67);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(124, 66);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(28, 13);
+            this.label1.Size = new System.Drawing.Size(36, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Adı :";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(195, 98);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(101, 105);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 13);
+            this.label2.Size = new System.Drawing.Size(59, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "Soyadı :";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(160, 130);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(54, 144);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 13);
+            this.label3.Size = new System.Drawing.Size(105, 17);
             this.label3.TabIndex = 2;
             this.label3.Text = "Üye Numarası :";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(143, 164);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(32, 186);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(96, 13);
+            this.label4.Size = new System.Drawing.Size(128, 17);
             this.label4.TabIndex = 3;
             this.label4.Text = "Telefon Numarası :";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(194, 197);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(100, 226);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 13);
+            this.label5.Size = new System.Drawing.Size(60, 17);
             this.label5.TabIndex = 4;
             this.label5.Text = "Eposta :";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(198, 227);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(105, 263);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(42, 13);
+            this.label6.Size = new System.Drawing.Size(55, 17);
             this.label6.TabIndex = 5;
             this.label6.Text = "Bölüm :";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(203, 258);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(112, 302);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(37, 13);
+            this.label7.Size = new System.Drawing.Size(48, 17);
             this.label7.TabIndex = 6;
             this.label7.Text = "Ceza :";
             // 
             // KullaniciAdi_txt
             // 
-            this.KullaniciAdi_txt.Location = new System.Drawing.Point(256, 64);
-            this.KullaniciAdi_txt.Margin = new System.Windows.Forms.Padding(2);
+            this.KullaniciAdi_txt.Location = new System.Drawing.Point(182, 63);
+            this.KullaniciAdi_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.KullaniciAdi_txt.Multiline = true;
             this.KullaniciAdi_txt.Name = "KullaniciAdi_txt";
-            this.KullaniciAdi_txt.Size = new System.Drawing.Size(123, 19);
+            this.KullaniciAdi_txt.Size = new System.Drawing.Size(174, 22);
             this.KullaniciAdi_txt.TabIndex = 7;
             // 
             // KullaniciSoyadi_txt
             // 
-            this.KullaniciSoyadi_txt.Location = new System.Drawing.Point(256, 96);
-            this.KullaniciSoyadi_txt.Margin = new System.Windows.Forms.Padding(2);
+            this.KullaniciSoyadi_txt.Location = new System.Drawing.Point(182, 102);
+            this.KullaniciSoyadi_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.KullaniciSoyadi_txt.Name = "KullaniciSoyadi_txt";
-            this.KullaniciSoyadi_txt.Size = new System.Drawing.Size(123, 20);
+            this.KullaniciSoyadi_txt.Size = new System.Drawing.Size(174, 22);
             this.KullaniciSoyadi_txt.TabIndex = 8;
             // 
             // UyeNumara_txt
             // 
-            this.UyeNumara_txt.Location = new System.Drawing.Point(256, 128);
-            this.UyeNumara_txt.Margin = new System.Windows.Forms.Padding(2);
+            this.UyeNumara_txt.Location = new System.Drawing.Point(182, 142);
+            this.UyeNumara_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.UyeNumara_txt.Name = "UyeNumara_txt";
-            this.UyeNumara_txt.Size = new System.Drawing.Size(123, 20);
+            this.UyeNumara_txt.Size = new System.Drawing.Size(174, 22);
             this.UyeNumara_txt.TabIndex = 9;
             // 
             // TelNo_txt
             // 
-            this.TelNo_txt.Location = new System.Drawing.Point(256, 162);
-            this.TelNo_txt.Margin = new System.Windows.Forms.Padding(2);
+            this.TelNo_txt.Location = new System.Drawing.Point(182, 183);
+            this.TelNo_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TelNo_txt.Name = "TelNo_txt";
-            this.TelNo_txt.Size = new System.Drawing.Size(123, 20);
+            this.TelNo_txt.Size = new System.Drawing.Size(174, 22);
             this.TelNo_txt.TabIndex = 10;
             // 
             // EPosta_txt
             // 
-            this.EPosta_txt.Location = new System.Drawing.Point(256, 194);
-            this.EPosta_txt.Margin = new System.Windows.Forms.Padding(2);
+            this.EPosta_txt.Location = new System.Drawing.Point(182, 223);
+            this.EPosta_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.EPosta_txt.Multiline = true;
             this.EPosta_txt.Name = "EPosta_txt";
-            this.EPosta_txt.Size = new System.Drawing.Size(123, 19);
+            this.EPosta_txt.Size = new System.Drawing.Size(174, 22);
             this.EPosta_txt.TabIndex = 11;
             // 
             // ceza_txt
             // 
-            this.ceza_txt.Location = new System.Drawing.Point(256, 256);
-            this.ceza_txt.Margin = new System.Windows.Forms.Padding(2);
+            this.ceza_txt.Location = new System.Drawing.Point(182, 299);
+            this.ceza_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ceza_txt.Multiline = true;
             this.ceza_txt.Name = "ceza_txt";
-            this.ceza_txt.Size = new System.Drawing.Size(123, 19);
+            this.ceza_txt.Size = new System.Drawing.Size(174, 22);
             this.ceza_txt.TabIndex = 13;
             // 
             // UyeEkle
             // 
-            this.UyeEkle.Location = new System.Drawing.Point(256, 294);
-            this.UyeEkle.Margin = new System.Windows.Forms.Padding(2);
+            this.UyeEkle.Location = new System.Drawing.Point(182, 346);
+            this.UyeEkle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.UyeEkle.Name = "UyeEkle";
-            this.UyeEkle.Size = new System.Drawing.Size(122, 42);
+            this.UyeEkle.Size = new System.Drawing.Size(174, 52);
             this.UyeEkle.TabIndex = 14;
             this.UyeEkle.Text = "EKLE";
             this.UyeEkle.UseVisualStyleBackColor = true;
@@ -183,12 +176,12 @@ namespace UludagKutuphane
             // KullaniciEkle_dgv
             // 
             this.KullaniciEkle_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.KullaniciEkle_dgv.Location = new System.Drawing.Point(400, 64);
-            this.KullaniciEkle_dgv.Margin = new System.Windows.Forms.Padding(2);
+            this.KullaniciEkle_dgv.Location = new System.Drawing.Point(374, 63);
+            this.KullaniciEkle_dgv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.KullaniciEkle_dgv.Name = "KullaniciEkle_dgv";
             this.KullaniciEkle_dgv.RowHeadersWidth = 51;
             this.KullaniciEkle_dgv.RowTemplate.Height = 24;
-            this.KullaniciEkle_dgv.Size = new System.Drawing.Size(486, 392);
+            this.KullaniciEkle_dgv.Size = new System.Drawing.Size(780, 482);
             this.KullaniciEkle_dgv.TabIndex = 15;
             // 
             // Bolum_cmb
@@ -198,16 +191,17 @@ namespace UludagKutuphane
             "Seçiniz",
             "Yönetim Bilişim Sistemleri",
             "İşletme"});
-            this.Bolum_cmb.Location = new System.Drawing.Point(256, 224);
+            this.Bolum_cmb.Location = new System.Drawing.Point(182, 260);
+            this.Bolum_cmb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Bolum_cmb.Name = "Bolum_cmb";
-            this.Bolum_cmb.Size = new System.Drawing.Size(121, 21);
+            this.Bolum_cmb.Size = new System.Drawing.Size(171, 24);
             this.Bolum_cmb.TabIndex = 16;
             // 
             // kullaniciekle
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(895, 483);
+            this.ClientSize = new System.Drawing.Size(1193, 594);
             this.Controls.Add(this.Bolum_cmb);
             this.Controls.Add(this.KullaniciEkle_dgv);
             this.Controls.Add(this.UyeEkle);
@@ -225,7 +219,7 @@ namespace UludagKutuphane
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "kullaniciekle";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

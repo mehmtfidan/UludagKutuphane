@@ -23,7 +23,11 @@ namespace UludagKutuphane
             kullanicieklebtn.Visible = false;
             kullaniciguncellebtn.Visible = false;
             kullanicisilbtn.Visible = false;
-           
+
+            kitapeklebtn.Visible = false;
+            kitapguncellebtn.Visible = false;
+            kitapsilbtn.Visible = false;
+
         }
 
         private void kullanicilistesibtn_Click(object sender, EventArgs e)
@@ -69,6 +73,44 @@ namespace UludagKutuphane
             kullaniciguncelleform.Show();
         }
 
+        private void kitaplistesibtn_Click(object sender, EventArgs e)
+        {
+            if (kitapeklebtn.Visible == false)
+            {
+                kitapeklebtn.Visible = true;
+                kitapguncellebtn.Visible = true;
+                kitapsilbtn.Visible = true;
+            }
+            else
+            {
+                kitapeklebtn.Visible = false;
+                kitapguncellebtn.Visible = false;
+                kitapsilbtn.Visible = false;
+            }
+            kitaplistesi klisteform = new kitaplistesi();
+            klisteform.MdiParent = this;
+            klisteform.Show();
+        }
 
+        private void kitapeklebtn_Click(object sender, EventArgs e)
+        {
+            kitapekle kekleform = new kitapekle();
+            kekleform.MdiParent = this;
+            kekleform.Show();
+        }
+
+        private void kitapguncellebtn_Click(object sender, EventArgs e)
+        {
+            kitaguncelle kguncelle = new kitaguncelle();
+            kguncelle.MdiParent = this;
+            kguncelle.Show();
+        }
+
+        private void kitapsilbtn_Click(object sender, EventArgs e)
+        {
+            kitapsil ksil = new kitapsil();
+            ksil.MdiParent = this;
+            ksil.Show();
+        }
     }
 }
