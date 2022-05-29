@@ -49,7 +49,7 @@ namespace UludagKutuphane
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.KitapEkleBtn = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -226,14 +226,14 @@ namespace UludagKutuphane
             this.dataGridView1.Size = new System.Drawing.Size(747, 696);
             this.dataGridView1.TabIndex = 28;
             // 
-            // button1
+            // KitapEkleBtn
             // 
-            this.button1.Location = new System.Drawing.Point(218, 474);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(162, 70);
-            this.button1.TabIndex = 29;
-            this.button1.Text = "EKLE";
-            this.button1.UseVisualStyleBackColor = true;
+            this.KitapEkleBtn.Location = new System.Drawing.Point(218, 474);
+            this.KitapEkleBtn.Name = "KitapEkleBtn";
+            this.KitapEkleBtn.Size = new System.Drawing.Size(162, 70);
+            this.KitapEkleBtn.TabIndex = 29;
+            this.KitapEkleBtn.Text = "EKLE";
+            this.KitapEkleBtn.UseVisualStyleBackColor = true;
             // 
             // dateTimePicker1
             // 
@@ -292,7 +292,7 @@ namespace UludagKutuphane
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.KitapEkleBtn);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox13);
             this.Controls.Add(this.textBox10);
@@ -345,7 +345,7 @@ namespace UludagKutuphane
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.TextBox textBox13;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button KitapEkleBtn;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.ComboBox comboBox1;

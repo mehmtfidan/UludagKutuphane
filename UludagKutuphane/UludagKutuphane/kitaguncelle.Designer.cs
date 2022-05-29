@@ -29,21 +29,21 @@ namespace UludagKutuphane
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.DurumuCmb = new System.Windows.Forms.ComboBox();
+            this.KategoriCmb = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Kayittarihitxt = new System.Windows.Forms.DateTimePicker();
+            this.Yayimyilitxt = new System.Windows.Forms.DateTimePicker();
+            this.KitapGuncelleBtn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.DemirbasNotxt = new System.Windows.Forms.TextBox();
+            this.Yayinevitxt = new System.Windows.Forms.TextBox();
+            this.BaskiNotxt = new System.Windows.Forms.TextBox();
+            this.Isbntxt = new System.Windows.Forms.TextBox();
+            this.Cevirmentxt = new System.Windows.Forms.TextBox();
+            this.kitapYazaritxt = new System.Windows.Forms.TextBox();
+            this.kitapAditxt = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -59,21 +59,21 @@ namespace UludagKutuphane
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // comboBox4
+            // DurumuCmb
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(93, 338);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(161, 24);
-            this.comboBox4.TabIndex = 62;
+            this.DurumuCmb.FormattingEnabled = true;
+            this.DurumuCmb.Location = new System.Drawing.Point(93, 338);
+            this.DurumuCmb.Name = "DurumuCmb";
+            this.DurumuCmb.Size = new System.Drawing.Size(161, 24);
+            this.DurumuCmb.TabIndex = 62;
             // 
-            // comboBox3
+            // KategoriCmb
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(93, 267);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(161, 24);
-            this.comboBox3.TabIndex = 61;
+            this.KategoriCmb.FormattingEnabled = true;
+            this.KategoriCmb.Location = new System.Drawing.Point(93, 267);
+            this.KategoriCmb.Name = "KategoriCmb";
+            this.KategoriCmb.Size = new System.Drawing.Size(161, 24);
+            this.KategoriCmb.TabIndex = 61;
             // 
             // comboBox2
             // 
@@ -91,28 +91,28 @@ namespace UludagKutuphane
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 59;
             // 
-            // dateTimePicker2
+            // Kayittarihitxt
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(417, 397);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(161, 22);
-            this.dateTimePicker2.TabIndex = 58;
+            this.Kayittarihitxt.Location = new System.Drawing.Point(417, 397);
+            this.Kayittarihitxt.Name = "Kayittarihitxt";
+            this.Kayittarihitxt.Size = new System.Drawing.Size(161, 22);
+            this.Kayittarihitxt.TabIndex = 58;
             // 
-            // dateTimePicker1
+            // Yayimyilitxt
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(421, 336);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(161, 22);
-            this.dateTimePicker1.TabIndex = 57;
+            this.Yayimyilitxt.Location = new System.Drawing.Point(421, 336);
+            this.Yayimyilitxt.Name = "Yayimyilitxt";
+            this.Yayimyilitxt.Size = new System.Drawing.Size(161, 22);
+            this.Yayimyilitxt.TabIndex = 57;
             // 
-            // button1
+            // KitapGuncelleBtn
             // 
-            this.button1.Location = new System.Drawing.Point(234, 504);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(162, 70);
-            this.button1.TabIndex = 56;
-            this.button1.Text = "GÜNCELLE";
-            this.button1.UseVisualStyleBackColor = true;
+            this.KitapGuncelleBtn.Location = new System.Drawing.Point(234, 504);
+            this.KitapGuncelleBtn.Name = "KitapGuncelleBtn";
+            this.KitapGuncelleBtn.Size = new System.Drawing.Size(162, 70);
+            this.KitapGuncelleBtn.TabIndex = 56;
+            this.KitapGuncelleBtn.Text = "GÜNCELLE";
+            this.KitapGuncelleBtn.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
@@ -124,54 +124,54 @@ namespace UludagKutuphane
             this.dataGridView1.Size = new System.Drawing.Size(789, 696);
             this.dataGridView1.TabIndex = 55;
             // 
-            // textBox13
+            // DemirbasNotxt
             // 
-            this.textBox13.Location = new System.Drawing.Point(421, 204);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(161, 22);
-            this.textBox13.TabIndex = 54;
+            this.DemirbasNotxt.Location = new System.Drawing.Point(421, 204);
+            this.DemirbasNotxt.Name = "DemirbasNotxt";
+            this.DemirbasNotxt.Size = new System.Drawing.Size(161, 22);
+            this.DemirbasNotxt.TabIndex = 54;
             // 
-            // textBox10
+            // Yayinevitxt
             // 
-            this.textBox10.Location = new System.Drawing.Point(421, 127);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(161, 22);
-            this.textBox10.TabIndex = 53;
+            this.Yayinevitxt.Location = new System.Drawing.Point(421, 127);
+            this.Yayinevitxt.Name = "Yayinevitxt";
+            this.Yayinevitxt.Size = new System.Drawing.Size(161, 22);
+            this.Yayinevitxt.TabIndex = 53;
             // 
-            // textBox9
+            // BaskiNotxt
             // 
-            this.textBox9.Location = new System.Drawing.Point(421, 66);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(161, 22);
-            this.textBox9.TabIndex = 52;
+            this.BaskiNotxt.Location = new System.Drawing.Point(421, 66);
+            this.BaskiNotxt.Name = "BaskiNotxt";
+            this.BaskiNotxt.Size = new System.Drawing.Size(161, 22);
+            this.BaskiNotxt.TabIndex = 52;
             // 
-            // textBox5
+            // Isbntxt
             // 
-            this.textBox5.Location = new System.Drawing.Point(421, 267);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(161, 22);
-            this.textBox5.TabIndex = 51;
+            this.Isbntxt.Location = new System.Drawing.Point(421, 267);
+            this.Isbntxt.Name = "Isbntxt";
+            this.Isbntxt.Size = new System.Drawing.Size(161, 22);
+            this.Isbntxt.TabIndex = 51;
             // 
-            // textBox3
+            // Cevirmentxt
             // 
-            this.textBox3.Location = new System.Drawing.Point(93, 203);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(161, 22);
-            this.textBox3.TabIndex = 50;
+            this.Cevirmentxt.Location = new System.Drawing.Point(93, 203);
+            this.Cevirmentxt.Name = "Cevirmentxt";
+            this.Cevirmentxt.Size = new System.Drawing.Size(161, 22);
+            this.Cevirmentxt.TabIndex = 50;
             // 
-            // textBox2
+            // kitapYazaritxt
             // 
-            this.textBox2.Location = new System.Drawing.Point(93, 130);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(161, 22);
-            this.textBox2.TabIndex = 49;
+            this.kitapYazaritxt.Location = new System.Drawing.Point(93, 130);
+            this.kitapYazaritxt.Name = "kitapYazaritxt";
+            this.kitapYazaritxt.Size = new System.Drawing.Size(161, 22);
+            this.kitapYazaritxt.TabIndex = 49;
             // 
-            // textBox1
+            // kitapAditxt
             // 
-            this.textBox1.Location = new System.Drawing.Point(93, 68);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(161, 22);
-            this.textBox1.TabIndex = 48;
+            this.kitapAditxt.Location = new System.Drawing.Point(93, 68);
+            this.kitapAditxt.Name = "kitapAditxt";
+            this.kitapAditxt.Size = new System.Drawing.Size(161, 22);
+            this.kitapAditxt.TabIndex = 48;
             // 
             // label13
             // 
@@ -286,21 +286,21 @@ namespace UludagKutuphane
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1404, 785);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.DurumuCmb);
+            this.Controls.Add(this.KategoriCmb);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Kayittarihitxt);
+            this.Controls.Add(this.Yayimyilitxt);
+            this.Controls.Add(this.KitapGuncelleBtn);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox13);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.DemirbasNotxt);
+            this.Controls.Add(this.Yayinevitxt);
+            this.Controls.Add(this.BaskiNotxt);
+            this.Controls.Add(this.Isbntxt);
+            this.Controls.Add(this.Cevirmentxt);
+            this.Controls.Add(this.kitapYazaritxt);
+            this.Controls.Add(this.kitapAditxt);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
@@ -325,21 +325,21 @@ namespace UludagKutuphane
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox DurumuCmb;
+        private System.Windows.Forms.ComboBox KategoriCmb;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DateTimePicker Kayittarihitxt;
+        private System.Windows.Forms.DateTimePicker Yayimyilitxt;
+        private System.Windows.Forms.Button KitapGuncelleBtn;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox DemirbasNotxt;
+        private System.Windows.Forms.TextBox Yayinevitxt;
+        private System.Windows.Forms.TextBox BaskiNotxt;
+        private System.Windows.Forms.TextBox Isbntxt;
+        private System.Windows.Forms.TextBox Cevirmentxt;
+        private System.Windows.Forms.TextBox kitapYazaritxt;
+        private System.Windows.Forms.TextBox kitapAditxt;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
