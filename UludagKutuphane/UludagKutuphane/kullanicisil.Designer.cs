@@ -29,47 +29,52 @@ namespace UludagKutuphane
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.KullaniciSil_dgv = new System.Windows.Forms.DataGridView();
+            this.Sil_btn = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.KullaniciSil_dgv)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // KullaniciSil_dgv
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 142);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(926, 433);
-            this.dataGridView1.TabIndex = 0;
+            this.KullaniciSil_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.KullaniciSil_dgv.Location = new System.Drawing.Point(9, 115);
+            this.KullaniciSil_dgv.Margin = new System.Windows.Forms.Padding(2);
+            this.KullaniciSil_dgv.Name = "KullaniciSil_dgv";
+            this.KullaniciSil_dgv.RowHeadersWidth = 51;
+            this.KullaniciSil_dgv.RowTemplate.Height = 24;
+            this.KullaniciSil_dgv.Size = new System.Drawing.Size(694, 352);
+            this.KullaniciSil_dgv.TabIndex = 0;
             // 
-            // button1
+            // Sil_btn
             // 
-            this.button1.Location = new System.Drawing.Point(21, 38);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(134, 69);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "SİL";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Sil_btn.Location = new System.Drawing.Point(16, 31);
+            this.Sil_btn.Margin = new System.Windows.Forms.Padding(2);
+            this.Sil_btn.Name = "Sil_btn";
+            this.Sil_btn.Size = new System.Drawing.Size(100, 56);
+            this.Sil_btn.TabIndex = 1;
+            this.Sil_btn.Text = "SİL";
+            this.Sil_btn.UseVisualStyleBackColor = true;
+            this.Sil_btn.Click += new System.EventHandler(this.Sil_btn_Click);
             // 
             // kullanicisil
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(950, 587);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(712, 477);
+            this.Controls.Add(this.Sil_btn);
+            this.Controls.Add(this.KullaniciSil_dgv);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "kullanicisil";
             this.Text = "kullanicisil";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.KullaniciSil_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.KullaniciSil_dgv)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView KullaniciSil_dgv;
+        private System.Windows.Forms.Button Sil_btn;
     }
 }

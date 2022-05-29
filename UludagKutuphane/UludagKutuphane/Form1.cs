@@ -42,8 +42,7 @@ namespace UludagKutuphane
             {
                 MessageBox.Show("Giriş Başarılı.");
                 islempaneli islempaneliform = new islempaneli();
-                islempaneliform.Show();
-                
+                islempaneliform.Show();               
             }
             else
             {

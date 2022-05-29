@@ -48,8 +48,9 @@ namespace UludagKutuphane
             this.panel1.Controls.Add(this.kullanicilistesibtn);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(177, 679);
+            this.panel1.Size = new System.Drawing.Size(133, 552);
             this.panel1.TabIndex = 0;
             // 
             // kullanicisilbtn
@@ -58,9 +59,10 @@ namespace UludagKutuphane
             this.kullanicisilbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.kullanicisilbtn.Image = ((System.Drawing.Image)(resources.GetObject("kullanicisilbtn.Image")));
             this.kullanicisilbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.kullanicisilbtn.Location = new System.Drawing.Point(0, 204);
+            this.kullanicisilbtn.Location = new System.Drawing.Point(0, 166);
+            this.kullanicisilbtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.kullanicisilbtn.Name = "kullanicisilbtn";
-            this.kullanicisilbtn.Size = new System.Drawing.Size(177, 73);
+            this.kullanicisilbtn.Size = new System.Drawing.Size(133, 59);
             this.kullanicisilbtn.TabIndex = 5;
             this.kullanicisilbtn.Text = "SİL";
             this.kullanicisilbtn.UseVisualStyleBackColor = false;
@@ -72,9 +74,10 @@ namespace UludagKutuphane
             this.kullaniciguncellebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.kullaniciguncellebtn.Image = ((System.Drawing.Image)(resources.GetObject("kullaniciguncellebtn.Image")));
             this.kullaniciguncellebtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.kullaniciguncellebtn.Location = new System.Drawing.Point(0, 135);
+            this.kullaniciguncellebtn.Location = new System.Drawing.Point(0, 110);
+            this.kullaniciguncellebtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.kullaniciguncellebtn.Name = "kullaniciguncellebtn";
-            this.kullaniciguncellebtn.Size = new System.Drawing.Size(177, 73);
+            this.kullaniciguncellebtn.Size = new System.Drawing.Size(133, 59);
             this.kullaniciguncellebtn.TabIndex = 4;
             this.kullaniciguncellebtn.Text = "GÜNCELLE";
             this.kullaniciguncellebtn.UseVisualStyleBackColor = false;
@@ -86,9 +89,10 @@ namespace UludagKutuphane
             this.kullanicieklebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.kullanicieklebtn.Image = ((System.Drawing.Image)(resources.GetObject("kullanicieklebtn.Image")));
             this.kullanicieklebtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.kullanicieklebtn.Location = new System.Drawing.Point(0, 66);
+            this.kullanicieklebtn.Location = new System.Drawing.Point(0, 54);
+            this.kullanicieklebtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.kullanicieklebtn.Name = "kullanicieklebtn";
-            this.kullanicieklebtn.Size = new System.Drawing.Size(177, 73);
+            this.kullanicieklebtn.Size = new System.Drawing.Size(133, 59);
             this.kullanicieklebtn.TabIndex = 3;
             this.kullanicieklebtn.Text = "EKLE";
             this.kullanicieklebtn.UseVisualStyleBackColor = false;
@@ -102,8 +106,9 @@ namespace UludagKutuphane
             this.kullanicilistesibtn.Image = ((System.Drawing.Image)(resources.GetObject("kullanicilistesibtn.Image")));
             this.kullanicilistesibtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.kullanicilistesibtn.Location = new System.Drawing.Point(0, 0);
+            this.kullanicilistesibtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.kullanicilistesibtn.Name = "kullanicilistesibtn";
-            this.kullanicilistesibtn.Size = new System.Drawing.Size(177, 70);
+            this.kullanicilistesibtn.Size = new System.Drawing.Size(133, 57);
             this.kullanicilistesibtn.TabIndex = 2;
             this.kullanicilistesibtn.Text = "KULLANICI";
             this.kullanicilistesibtn.UseVisualStyleBackColor = false;
@@ -113,20 +118,22 @@ namespace UludagKutuphane
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(177, 0);
+            this.panel2.Location = new System.Drawing.Point(133, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1041, 70);
+            this.panel2.Size = new System.Drawing.Size(781, 57);
             this.panel2.TabIndex = 1;
             // 
             // islempaneli
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1218, 679);
+            this.ClientSize = new System.Drawing.Size(914, 552);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.IsMdiContainer = true;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "islempaneli";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "islempaneli";

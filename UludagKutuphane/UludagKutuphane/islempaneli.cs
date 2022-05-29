@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Documents;
 using System.Windows.Forms;
 
 namespace UludagKutuphane
@@ -22,6 +23,7 @@ namespace UludagKutuphane
             kullanicieklebtn.Visible = false;
             kullaniciguncellebtn.Visible = false;
             kullanicisilbtn.Visible = false;
+           
         }
 
         private void kullanicilistesibtn_Click(object sender, EventArgs e)
@@ -38,6 +40,7 @@ namespace UludagKutuphane
                 kullaniciguncellebtn.Visible = false;
                 kullanicisilbtn.Visible = false;
             }
+           
             kullanicilistesi kullanicilistesiform = new kullanicilistesi();
             kullanicilistesiform.MdiParent = this;
             kullanicilistesiform.Show();
@@ -49,6 +52,8 @@ namespace UludagKutuphane
             kullaniciekleform.MdiParent = this;
             kullaniciekleform.Show();
         }
+
+
 
         private void kullanicisilbtn_Click(object sender, EventArgs e)
         {
@@ -63,5 +68,7 @@ namespace UludagKutuphane
             kullaniciguncelleform.MdiParent = this;
             kullaniciguncelleform.Show();
         }
+
+
     }
 }

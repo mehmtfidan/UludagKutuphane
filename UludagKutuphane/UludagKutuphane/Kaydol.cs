@@ -18,7 +18,7 @@ namespace UludagKutuphane
         public Kaydol()
         {
             InitializeComponent();
-            con = new MySqlConnection("server=172.21.54.3; user id=132030020, pwd=Ogrenci9512357.; database=132030020");
+            con = new MySqlConnection("server=172.21.54.3; user id=132030020; pwd=Ogrenci9512357.; database=132030020");
         }
 
         
@@ -38,11 +38,12 @@ namespace UludagKutuphane
             }
             else
             {
-                MySqlCommand konut = new MySqlCommand("INSERT INTO Memur (Adi, Soyadi, Kullanici_Adi, Kullanici_Sifre, Bolum_Id) VALUES ('" + kullaniciAdi + "', '" + kullaniciSoyadi + "', '" + kullaniciMail + "', '" + kullaniciSifre + "', '" + Okul + "')");
+                MySqlCommand konut = new MySqlCommand("INSERT INTO Memur (Adi, Soyadi, Kullanici_Adi, Kullanici_Sifre, Bolum_Id) VALUES ('" + kullaniciAdi + "', '" + kullaniciSoyadi + "', '" + kullaniciMail + "', '" + kullaniciSifre + "', '" + Okul + "')", con);
                 konut.ExecuteNonQuery();
                 this.Close();
                 MessageBox.Show("kayıt başarıyla oluşturuldu");
             }
+            con.Close();
         }
 
  

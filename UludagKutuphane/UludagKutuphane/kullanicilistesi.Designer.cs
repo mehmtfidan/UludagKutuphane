@@ -29,39 +29,44 @@ namespace UludagKutuphane
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.KullaniciListesi_dgv = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.KullaniciListesi_dgv)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // KullaniciListesi_dgv
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(828, 493);
-            this.dataGridView1.TabIndex = 0;
+            this.KullaniciListesi_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.KullaniciListesi_dgv.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.KullaniciListesi_dgv.Location = new System.Drawing.Point(0, 0);
+            this.KullaniciListesi_dgv.Margin = new System.Windows.Forms.Padding(2);
+            this.KullaniciListesi_dgv.MultiSelect = false;
+            this.KullaniciListesi_dgv.Name = "KullaniciListesi_dgv";
+            this.KullaniciListesi_dgv.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.KullaniciListesi_dgv.RowTemplate.Height = 24;
+            this.KullaniciListesi_dgv.Size = new System.Drawing.Size(621, 401);
+            this.KullaniciListesi_dgv.TabIndex = 0;
             // 
             // kullanicilistesi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(828, 493);
-            this.Controls.Add(this.dataGridView1);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(621, 401);
+            this.Controls.Add(this.KullaniciListesi_dgv);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "kullanicilistesi";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "kullanicilistesi";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.KullaniciListele_load);
+            ((System.ComponentModel.ISupportInitialize)(this.KullaniciListesi_dgv)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView KullaniciListesi_dgv;
     }
 }
