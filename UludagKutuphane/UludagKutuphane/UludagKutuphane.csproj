@@ -95,19 +95,64 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="islempaneli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="islempaneli.Designer.cs">
+      <DependentUpon>islempaneli.cs</DependentUpon>
+    </Compile>
     <Compile Include="Kaydol.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Kaydol.Designer.cs">
       <DependentUpon>Kaydol.cs</DependentUpon>
     </Compile>
+    <Compile Include="kullaniciekle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kullaniciekle.Designer.cs">
+      <DependentUpon>kullaniciekle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kullaniciguncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kullaniciguncelle.Designer.cs">
+      <DependentUpon>kullaniciguncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kullanicilistesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kullanicilistesi.Designer.cs">
+      <DependentUpon>kullanicilistesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kullanicisil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kullanicisil.Designer.cs">
+      <DependentUpon>kullanicisil.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="islempaneli.resx">
+      <DependentUpon>islempaneli.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Kaydol.resx">
       <DependentUpon>Kaydol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kullaniciekle.resx">
+      <DependentUpon>kullaniciekle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kullaniciguncelle.resx">
+      <DependentUpon>kullaniciguncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kullanicilistesi.resx">
+      <DependentUpon>kullanicilistesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kullanicisil.resx">
+      <DependentUpon>kullanicisil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

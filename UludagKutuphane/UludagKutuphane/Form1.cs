@@ -41,13 +41,16 @@ namespace UludagKutuphane
             if (dr.Read())
             {
                 MessageBox.Show("Giriş Başarılı.");
-                this.Close();
+                islempaneli islempaneliform = new islempaneli();
+                islempaneliform.Show();
+                
             }
             else
             {
                 MessageBox.Show("Hatalı Kullanıcı Adı veya Şifre Girdiniz.");
             }
             con.Close();
+           
         }
     }
 }
