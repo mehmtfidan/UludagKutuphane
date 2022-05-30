@@ -112,5 +112,20 @@ namespace UludagKutuphane
             ksil.MdiParent = this;
             ksil.Show();
         }
+    
+
+        private void OduncVer_btn_Click(object sender, EventArgs e)
+        {
+            OduncForm odunc = new OduncForm();
+            odunc.MdiParent = this;
+            odunc.Show();
+        }
+
+        private void GeriAl_btn_Click(object sender, EventArgs e)
+        {
+            OduncForm geri = new OduncForm();
+            geri.MdiParent = this;
+            geri.Show();
+        }
     }
 }
