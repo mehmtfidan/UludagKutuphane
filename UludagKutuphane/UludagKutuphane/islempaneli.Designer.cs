@@ -31,6 +31,7 @@ namespace UludagKutuphane
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(islempaneli));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.GeriAl_btn = new System.Windows.Forms.Button();
             this.OduncVer_btn = new System.Windows.Forms.Button();
             this.kitapsilbtn = new System.Windows.Forms.Button();
@@ -42,7 +43,7 @@ namespace UludagKutuphane
             this.kullanicieklebtn = new System.Windows.Forms.Button();
             this.kullanicilistesibtn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,6 +51,7 @@ namespace UludagKutuphane
             // 
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.GeriAl_btn);
             this.panel1.Controls.Add(this.OduncVer_btn);
@@ -65,8 +67,25 @@ namespace UludagKutuphane
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(173, 750);
+            this.panel1.Size = new System.Drawing.Size(173, 807);
             this.panel1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Blue;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(-3, 617);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(179, 70);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "   RAPORLAR";
+            this.button1.UseMnemonic = false;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // GeriAl_btn
             // 
@@ -80,7 +99,7 @@ namespace UludagKutuphane
             this.GeriAl_btn.Name = "GeriAl_btn";
             this.GeriAl_btn.Size = new System.Drawing.Size(179, 70);
             this.GeriAl_btn.TabIndex = 11;
-            this.GeriAl_btn.Text = "   Geri Al";
+            this.GeriAl_btn.Text = "   GERİ AL";
             this.GeriAl_btn.UseMnemonic = false;
             this.GeriAl_btn.UseVisualStyleBackColor = false;
             this.GeriAl_btn.Click += new System.EventHandler(this.GeriAl_btn_Click);
@@ -97,7 +116,7 @@ namespace UludagKutuphane
             this.OduncVer_btn.Name = "OduncVer_btn";
             this.OduncVer_btn.Size = new System.Drawing.Size(176, 71);
             this.OduncVer_btn.TabIndex = 10;
-            this.OduncVer_btn.Text = "         Ödünç Ver";
+            this.OduncVer_btn.Text = "         ÖDÜNÇ VER";
             this.OduncVer_btn.UseMnemonic = false;
             this.OduncVer_btn.UseVisualStyleBackColor = false;
             this.OduncVer_btn.Click += new System.EventHandler(this.OduncVer_btn_Click);
@@ -237,32 +256,32 @@ namespace UludagKutuphane
             this.panel2.Location = new System.Drawing.Point(173, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1046, 37);
+            this.panel2.Size = new System.Drawing.Size(1149, 37);
             this.panel2.TabIndex = 1;
             // 
-            // button1
+            // button2
             // 
-            this.button1.BackColor = System.Drawing.Color.Blue;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(-3, 617);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(179, 70);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "   RAPORLAR";
-            this.button1.UseMnemonic = false;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button2.BackColor = System.Drawing.Color.Blue;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(-3, 684);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(179, 67);
+            this.button2.TabIndex = 13;
+            this.button2.Text = "        KAYIP KİTAP";
+            this.button2.UseMnemonic = false;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // islempaneli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1219, 750);
+            this.ClientSize = new System.Drawing.Size(1322, 807);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.IsMdiContainer = true;
@@ -291,5 +310,6 @@ namespace UludagKutuphane
         private System.Windows.Forms.Button OduncVer_btn;
         private System.Windows.Forms.Button GeriAl_btn;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

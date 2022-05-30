@@ -221,5 +221,12 @@ namespace UludagKutuphane
             raporlarform.MdiParent = this;
             raporlarform.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            kayipkitap kkitapform = new kayipkitap();
+            kkitapform.MdiParent = this;
+            kkitapform.Show();
+        }
     }
 }

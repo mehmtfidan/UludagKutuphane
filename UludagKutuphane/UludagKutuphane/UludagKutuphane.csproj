@@ -114,6 +114,12 @@
     <Compile Include="Kaydol.Designer.cs">
       <DependentUpon>Kaydol.cs</DependentUpon>
     </Compile>
+    <Compile Include="kayipkitap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kayipkitap.Designer.cs">
+      <DependentUpon>kayipkitap.cs</DependentUpon>
+    </Compile>
     <Compile Include="kitaguncelle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +193,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Kaydol.resx">
       <DependentUpon>Kaydol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kayipkitap.resx">
+      <DependentUpon>kayipkitap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="kitaguncelle.resx">
       <DependentUpon>kitaguncelle.cs</DependentUpon>
