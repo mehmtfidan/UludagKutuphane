@@ -1,31 +1,133 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace UludagKutuphane
 {
     public partial class OduncForm : Form
     {
+        MySqlConnection con;
+        MySqlCommand cmd;
+        int KisiId;
+        string alis;
+
+
+
         public OduncForm()
         {
             InitializeComponent();
+            con = new MySqlConnection("server=172.21.54.3; user id=132030020; pwd=Ogrenci9512357.; database=132030020");
         }
 
-        
+        public int VarMi(string sorgu)
+        {
+            int sonuc;
+            con.Open();
+            cmd = new MySqlCommand(sorgu, con);
+            sonuc = Convert.ToInt32(cmd.ExecuteScalar());
+            con.Close();
+            return sonuc;
+        }
+
+
 
         private void OduncForm_Load(object sender, EventArgs e)
         {
+            UyeAdi_lbl.Visible = false;
+            con.Open();
+            string Komut = "Select Kitap.Id, Kitap.Ki_Adi AS Kitap_Adi, Kitap.Demirbas_No, Yazar.Y_Adi AS Yazar_Adi, Yazar.Y_Soyadi AS Yazar_Soyadi, Baski.Baski_Sayisi, Yayinevi.Yayin_Adi AS Yayinevi, Cevirmen.C_Adi AS Cevirmen_Adi, Cevirmen.C_Soyadi AS Cevirmen_Soyadi, Kitap.ISBN, Kitap.Yayim_Yili, Durum.D_Adi AS Durumu, Kategori.K_Adi AS kategori_Adi, Kitap.Kitaplik_No, Kitap.Raf_No, Kitap.Kayit_Tarihi From Kitap Inner Join Baski On Kitap.Baski_Id = Baski.Id Inner Join Cevirmen On Baski.Cevirmen_Id = Cevirmen.Id Inner Join Yayinevi On Baski.Yayinevi_Id = Yayinevi.Id Inner Join Yazar On Kitap.Yazar_Id = Yazar.Id Inner Join Kategori On Kitap.Kategori_Id = Kategori.Id Inner Join Durum On Kitap.Durum_Id = Durum.Id";
+            MySqlDataAdapter adp = new MySqlDataAdapter(Komut, con);
+            DataTable dt = new DataTable();
+            adp.Fill(dt);
+            Filtrele_dgv.DataSource = dt;
+            con.Close();
+        }
+
+        private void Ara_txt_TextChanged(object sender, EventArgs e)
+        {
+            con.Open();
+            DataTable tbl = new DataTable();
+            MySqlDataAdapter ara = new MySqlDataAdapter("Select Kitap.Id, Kitap.Ki_Adi AS Kitap_Adi, Kitap.Demirbas_No, Yazar.Y_Adi AS Yazar_Adi, Yazar.Y_Soyadi AS Yazar_Soyadi, Baski.Baski_Sayisi, Yayinevi.Yayin_Adi AS Yayinevi, Cevirmen.C_Adi AS Cevirmen_Adi, Cevirmen.C_Soyadi AS Cevirmen_Soyadi, Kitap.ISBN, Kitap.Yayim_Yili, Durum.D_Adi AS Durumu, Kategori.K_Adi AS kategori_Adi, Kitap.Kitaplik_No, Kitap.Raf_No, Kitap.Kayit_Tarihi From Kitap Inner Join Baski On Kitap.Baski_Id = Baski.Id Inner Join Cevirmen On Baski.Cevirmen_Id = Cevirmen.Id Inner Join Yayinevi On Baski.Yayinevi_Id = Yayinevi.Id Inner Join Yazar On Kitap.Yazar_Id = Yazar.Id Inner Join Kategori On Kitap.Kategori_Id = Kategori.Id Inner Join Durum On Kitap.Durum_Id = Durum.Id where Demirbas_No like '%" + Ara_txt.Text + "%' ", con);
+            ara.Fill(tbl);
+            con.Close();
+            Filtrele_dgv.DataSource = tbl;
+        }
 
 
-            //Ara_dgv.Columns[6].Visible = false;
-            //Ara_dgv.Columns[7].Visible = false;
 
+        private void BulBtn_Click(object sender, EventArgs e)
+        {
+            string SecilenKisi = UyeNo_txt.Text;
+
+            if (VarMi("SELECT COUNT(*) From Uye WHERE Uye_Numarasi = '" + SecilenKisi + "'") == 0)
+            {
+                MessageBox.Show("Bu numara ile kayıtlı üye yoktur!!");
+            }
+            else
+            {
+                con.Open();
+                MySqlCommand Komut = new MySqlCommand("SELECT Adi FROM Uye WHERE Uye_Numarasi = '" + SecilenKisi + "'", con);
+                string Adi = Convert.ToString(Komut.ExecuteScalar());
+                MySqlCommand Komut1 = new MySqlCommand("SELECT Soyadi FROM Uye WHERE Uye_Numarasi = '" + SecilenKisi + "'", con);
+                string Soyadi = Convert.ToString(Komut1.ExecuteScalar());
+                MySqlCommand Komut2 = new MySqlCommand("SELECT Id FROM Uye WHERE Uye_Numarasi = '" + SecilenKisi + "'", con);
+                KisiId = Convert.ToInt32(Komut2.ExecuteScalar());
+                UyeAdi_lbl.Visible = true;
+                UyeAdi_lbl.Text = Adi + " " + Soyadi;
+            }
+            con.Close();
+        }
+
+        private void OduncVerBtn_Click(object sender, EventArgs e)
+        {
+            int SecilenId = Convert.ToInt32(Filtrele_dgv.CurrentRow.Cells[0].Value);
+
+
+            DateTime Alis = new DateTime();
+            Alis = DateTime.Today;
+            alis = Convert.ToString(Alis);
+            DateTime Teslim = new DateTime();
+            Teslim = Alis.AddDays(15);
+            if (Teslim.DayOfWeek == DayOfWeek.Saturday)
+            {
+                Teslim.AddDays(2);
+                String teslim = Convert.ToString(Teslim);
+                con.Open();
+                MySqlCommand Insert1 = new MySqlCommand("INSERT INTO Odunc (Uye_Id, Kitap_Id, Alis_Tarihi, Teslim_Tarihi) VALUES ('" + KisiId + "', '" + SecilenId + "', '" + alis + "', '" + teslim + "')", con);
+                Insert1.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Kitap emanet edildi.");
+            }
+            else if (Teslim.DayOfWeek == DayOfWeek.Sunday)
+            {
+                Teslim.AddDays(1);
+                String teslim = Convert.ToString(Teslim);
+                con.Open();
+                MySqlCommand Insert2 = new MySqlCommand("INSERT INTO Odunc (Uye_Id, Kitap_Id, Alis_Tarihi, Teslim_Tarihi) VALUES ('" + KisiId + "', '" + SecilenId + "', '" + alis + "', '" + teslim + "')", con);
+                Insert2.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Kitap emanet edildi.");
+            }
+            else
+            {
+                con.Open();
+                MySqlCommand Insert2 = new MySqlCommand("INSERT INTO Odunc (Uye_Id, Kitap_Id, Alis_Tarihi, Teslim_Tarihi) VALUES ('" + KisiId + "', '" + SecilenId + "', '" + alis + "', '" + Teslim + "')", con);
+                Insert2.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Kitap emanet edildi.");
+            }
+
+            con.Open();
+
+            
+
+            MySqlDataAdapter ShowinDgv = new MySqlDataAdapter("Select Odunc.Alis_Tarihi, Odunc.Teslim_Tarihi, Kitap.Ki_Adi, Kitap.Demirbas_No, Uye.Adi, Uye.Soyadi, Uye.Uye_Numarasi, Uye.Telefon_No, Uye.E_Posta From Odunc Inner Join Kitap On Odunc.Kitap_Id = Kitap.Id Inner Join Uye On Odunc.Uye_Id = Uye.Id", con);
+            DataTable dt = new DataTable();
+            ShowinDgv.Fill(dt);
+            Odunc_dgv.DataSource = dt;
+
+            con.Close();
         }
     }
 }

@@ -69,7 +69,7 @@ namespace UludagKutuphane
             // CevirmenSoyadi_txt
             // 
             this.CevirmenSoyadi_txt.Location = new System.Drawing.Point(106, 221);
-            this.CevirmenSoyadi_txt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CevirmenSoyadi_txt.Margin = new System.Windows.Forms.Padding(2);
             this.CevirmenSoyadi_txt.Name = "CevirmenSoyadi_txt";
             this.CevirmenSoyadi_txt.Size = new System.Drawing.Size(122, 20);
             this.CevirmenSoyadi_txt.TabIndex = 85;
@@ -87,7 +87,7 @@ namespace UludagKutuphane
             // YazarSoyadi_txt
             // 
             this.YazarSoyadi_txt.Location = new System.Drawing.Point(106, 139);
-            this.YazarSoyadi_txt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.YazarSoyadi_txt.Margin = new System.Windows.Forms.Padding(2);
             this.YazarSoyadi_txt.Name = "YazarSoyadi_txt";
             this.YazarSoyadi_txt.Size = new System.Drawing.Size(122, 20);
             this.YazarSoyadi_txt.TabIndex = 83;
@@ -105,7 +105,7 @@ namespace UludagKutuphane
             // YayimYili_txt
             // 
             this.YayimYili_txt.Location = new System.Drawing.Point(358, 265);
-            this.YayimYili_txt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.YayimYili_txt.Margin = new System.Windows.Forms.Padding(2);
             this.YayimYili_txt.Name = "YayimYili_txt";
             this.YayimYili_txt.Size = new System.Drawing.Size(122, 20);
             this.YayimYili_txt.TabIndex = 81;
@@ -119,7 +119,7 @@ namespace UludagKutuphane
             "Emanette",
             "Kayıp"});
             this.Durum_cmb.Location = new System.Drawing.Point(106, 310);
-            this.Durum_cmb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Durum_cmb.Margin = new System.Windows.Forms.Padding(2);
             this.Durum_cmb.Name = "Durum_cmb";
             this.Durum_cmb.Size = new System.Drawing.Size(122, 21);
             this.Durum_cmb.TabIndex = 80;
@@ -151,7 +151,7 @@ namespace UludagKutuphane
             "Yabancı Dil",
             "YOK"});
             this.Kategori_cmb.Location = new System.Drawing.Point(106, 268);
-            this.Kategori_cmb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Kategori_cmb.Margin = new System.Windows.Forms.Padding(2);
             this.Kategori_cmb.Name = "Kategori_cmb";
             this.Kategori_cmb.Size = new System.Drawing.Size(122, 21);
             this.Kategori_cmb.TabIndex = 79;
@@ -169,7 +169,7 @@ namespace UludagKutuphane
             "6",
             "YOK"});
             this.Raf_cmb.Location = new System.Drawing.Point(238, 353);
-            this.Raf_cmb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Raf_cmb.Margin = new System.Windows.Forms.Padding(2);
             this.Raf_cmb.Name = "Raf_cmb";
             this.Raf_cmb.Size = new System.Drawing.Size(92, 21);
             this.Raf_cmb.TabIndex = 78;
@@ -205,7 +205,7 @@ namespace UludagKutuphane
             "S4-A",
             "S4-Ö"});
             this.Kitaaplik_cmb.Location = new System.Drawing.Point(122, 353);
-            this.Kitaaplik_cmb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Kitaaplik_cmb.Margin = new System.Windows.Forms.Padding(2);
             this.Kitaaplik_cmb.Name = "Kitaaplik_cmb";
             this.Kitaaplik_cmb.Size = new System.Drawing.Size(92, 21);
             this.Kitaaplik_cmb.TabIndex = 77;
@@ -213,7 +213,7 @@ namespace UludagKutuphane
             // KitapGüncelle_Btn
             // 
             this.KitapGüncelle_Btn.Location = new System.Drawing.Point(160, 401);
-            this.KitapGüncelle_Btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.KitapGüncelle_Btn.Margin = new System.Windows.Forms.Padding(2);
             this.KitapGüncelle_Btn.Name = "KitapGüncelle_Btn";
             this.KitapGüncelle_Btn.Size = new System.Drawing.Size(122, 57);
             this.KitapGüncelle_Btn.TabIndex = 75;
@@ -224,7 +224,7 @@ namespace UludagKutuphane
             // DemirbasNo_txt
             // 
             this.DemirbasNo_txt.Location = new System.Drawing.Point(362, 159);
-            this.DemirbasNo_txt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DemirbasNo_txt.Margin = new System.Windows.Forms.Padding(2);
             this.DemirbasNo_txt.Name = "DemirbasNo_txt";
             this.DemirbasNo_txt.Size = new System.Drawing.Size(122, 20);
             this.DemirbasNo_txt.TabIndex = 74;
@@ -232,7 +232,7 @@ namespace UludagKutuphane
             // Yayinevi_txt
             // 
             this.Yayinevi_txt.Location = new System.Drawing.Point(362, 97);
-            this.Yayinevi_txt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Yayinevi_txt.Margin = new System.Windows.Forms.Padding(2);
             this.Yayinevi_txt.Name = "Yayinevi_txt";
             this.Yayinevi_txt.Size = new System.Drawing.Size(122, 20);
             this.Yayinevi_txt.TabIndex = 73;
@@ -240,7 +240,7 @@ namespace UludagKutuphane
             // BaskiNo_txt
             // 
             this.BaskiNo_txt.Location = new System.Drawing.Point(362, 47);
-            this.BaskiNo_txt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BaskiNo_txt.Margin = new System.Windows.Forms.Padding(2);
             this.BaskiNo_txt.Name = "BaskiNo_txt";
             this.BaskiNo_txt.Size = new System.Drawing.Size(122, 20);
             this.BaskiNo_txt.TabIndex = 72;
@@ -248,7 +248,7 @@ namespace UludagKutuphane
             // ISBN_txt
             // 
             this.ISBN_txt.Location = new System.Drawing.Point(362, 211);
-            this.ISBN_txt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ISBN_txt.Margin = new System.Windows.Forms.Padding(2);
             this.ISBN_txt.Name = "ISBN_txt";
             this.ISBN_txt.Size = new System.Drawing.Size(122, 20);
             this.ISBN_txt.TabIndex = 71;
@@ -256,7 +256,7 @@ namespace UludagKutuphane
             // CevirmenAdi_txt
             // 
             this.CevirmenAdi_txt.Location = new System.Drawing.Point(106, 176);
-            this.CevirmenAdi_txt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CevirmenAdi_txt.Margin = new System.Windows.Forms.Padding(2);
             this.CevirmenAdi_txt.Name = "CevirmenAdi_txt";
             this.CevirmenAdi_txt.Size = new System.Drawing.Size(122, 20);
             this.CevirmenAdi_txt.TabIndex = 70;
@@ -264,7 +264,7 @@ namespace UludagKutuphane
             // YazarAdi_txt
             // 
             this.YazarAdi_txt.Location = new System.Drawing.Point(104, 96);
-            this.YazarAdi_txt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.YazarAdi_txt.Margin = new System.Windows.Forms.Padding(2);
             this.YazarAdi_txt.Name = "YazarAdi_txt";
             this.YazarAdi_txt.Size = new System.Drawing.Size(122, 20);
             this.YazarAdi_txt.TabIndex = 69;
@@ -272,7 +272,7 @@ namespace UludagKutuphane
             // KitapAdi_txt
             // 
             this.KitapAdi_txt.Location = new System.Drawing.Point(104, 50);
-            this.KitapAdi_txt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.KitapAdi_txt.Margin = new System.Windows.Forms.Padding(2);
             this.KitapAdi_txt.Name = "KitapAdi_txt";
             this.KitapAdi_txt.Size = new System.Drawing.Size(122, 20);
             this.KitapAdi_txt.TabIndex = 68;
@@ -401,7 +401,7 @@ namespace UludagKutuphane
             // 
             this.KitapGuncelle_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.KitapGuncelle_dgv.Location = new System.Drawing.Point(509, 47);
-            this.KitapGuncelle_dgv.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.KitapGuncelle_dgv.Margin = new System.Windows.Forms.Padding(2);
             this.KitapGuncelle_dgv.Name = "KitapGuncelle_dgv";
             this.KitapGuncelle_dgv.RowHeadersWidth = 51;
             this.KitapGuncelle_dgv.RowTemplate.Height = 24;
@@ -412,7 +412,7 @@ namespace UludagKutuphane
             // Kayit_Trihi_txt
             // 
             this.Kayit_Trihi_txt.Location = new System.Drawing.Point(358, 312);
-            this.Kayit_Trihi_txt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Kayit_Trihi_txt.Margin = new System.Windows.Forms.Padding(2);
             this.Kayit_Trihi_txt.Name = "Kayit_Trihi_txt";
             this.Kayit_Trihi_txt.Size = new System.Drawing.Size(122, 20);
             this.Kayit_Trihi_txt.TabIndex = 87;
@@ -424,7 +424,8 @@ namespace UludagKutuphane
             "Seçiniz..",
             "Adı",
             "Yazar Adı",
-            "Demirbaş Numarası"});
+            "Demirbaş Numarası",
+            "Çevirmen Adı"});
             this.comboBox1.Location = new System.Drawing.Point(41, 527);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
@@ -487,7 +488,7 @@ namespace UludagKutuphane
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "kitaguncelle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "kitapguncelle";
