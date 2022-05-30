@@ -30,7 +30,7 @@ namespace UludagKutuphane
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.Toplam_Kitap_lbl = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -52,14 +52,14 @@ namespace UludagKutuphane
             this.label1.TabIndex = 0;
             this.label1.Text = "Toplam Kitap Sayısı :";
             // 
-            // label2
+            // Toplam_Kitap_lbl
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(280, 97);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(16, 17);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "0";
+            this.Toplam_Kitap_lbl.AutoSize = true;
+            this.Toplam_Kitap_lbl.Location = new System.Drawing.Point(280, 97);
+            this.Toplam_Kitap_lbl.Name = "Toplam_Kitap_lbl";
+            this.Toplam_Kitap_lbl.Size = new System.Drawing.Size(16, 17);
+            this.Toplam_Kitap_lbl.TabIndex = 1;
+            this.Toplam_Kitap_lbl.Text = "0";
             // 
             // label3
             // 
@@ -166,10 +166,11 @@ namespace UludagKutuphane
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.Toplam_Kitap_lbl);
             this.Controls.Add(this.label1);
             this.Name = "raporlar";
             this.Text = "raporlar";
+            this.Load += new System.EventHandler(this.Raporlar_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -178,7 +179,7 @@ namespace UludagKutuphane
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label Toplam_Kitap_lbl;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
