@@ -214,5 +214,12 @@ namespace UludagKutuphane
                 gerialDurum = false;
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            raporlar raporlarform = new raporlar();
+            raporlarform.MdiParent = this;
+            raporlarform.Show();
+        }
     }
 }

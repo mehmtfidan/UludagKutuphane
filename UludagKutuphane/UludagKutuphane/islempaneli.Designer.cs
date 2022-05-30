@@ -42,6 +42,7 @@ namespace UludagKutuphane
             this.kullanicieklebtn = new System.Windows.Forms.Button();
             this.kullanicilistesibtn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,6 +50,7 @@ namespace UludagKutuphane
             // 
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.GeriAl_btn);
             this.panel1.Controls.Add(this.OduncVer_btn);
             this.panel1.Controls.Add(this.kitapsilbtn);
@@ -238,6 +240,23 @@ namespace UludagKutuphane
             this.panel2.Size = new System.Drawing.Size(1046, 37);
             this.panel2.TabIndex = 1;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Blue;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(-3, 617);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(179, 70);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "   RAPORLAR";
+            this.button1.UseMnemonic = false;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // islempaneli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -271,5 +290,6 @@ namespace UludagKutuphane
         private System.Windows.Forms.Button kitaplistesibtn;
         private System.Windows.Forms.Button OduncVer_btn;
         private System.Windows.Forms.Button GeriAl_btn;
+        private System.Windows.Forms.Button button1;
     }
 }
