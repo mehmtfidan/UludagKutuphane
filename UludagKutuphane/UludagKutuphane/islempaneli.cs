@@ -29,7 +29,7 @@ namespace UludagKutuphane
             kitapsilbtn.Visible = false;
 
         }
-
+        private kullanicilistesi kullanicilistesiform;
         private void kullanicilistesibtn_Click(object sender, EventArgs e)
         {
             if (kullanicieklebtn.Visible == false)
@@ -37,42 +37,74 @@ namespace UludagKutuphane
                 kullanicieklebtn.Visible = true;
                 kullaniciguncellebtn.Visible = true;
                 kullanicisilbtn.Visible = true;
+                kullanicilistesiform = new kullanicilistesi();
+                kullanicilistesiform.MdiParent = this;
+                kullanicilistesiform.Show();
             }
             else
             {
                 kullanicieklebtn.Visible = false;
                 kullaniciguncellebtn.Visible = false;
                 kullanicisilbtn.Visible = false;
+                kullanicilistesiform.Close();
             }
-           
-            kullanicilistesi kullanicilistesiform = new kullanicilistesi();
-            kullanicilistesiform.MdiParent = this;
-            kullanicilistesiform.Show();
+          
         }
-
+        private kullaniciekle kullaniciekleform;
+        private bool kullaniciekleDurum;
         private void kullanicieklebtn_Click(object sender, EventArgs e)
         {
-            kullaniciekle kullaniciekleform = new kullaniciekle();
-            kullaniciekleform.MdiParent = this;
-            kullaniciekleform.Show();
+           if (kullaniciekleDurum == false)
+            {
+                kullaniciekleform = new kullaniciekle();
+                kullaniciekleform.MdiParent = this;
+                kullaniciekleform.Show();
+                kullaniciekleDurum = true;
+            }
+            else
+            {
+                kullaniciekleform.Close();
+                kullaniciekleDurum = false;
+            }
+            
         }
 
-
+        private kullanicisil kullanicisilform;
+        private bool kullanicisilDurum;
 
         private void kullanicisilbtn_Click(object sender, EventArgs e)
         {
-            kullanicisil kullanicisilform = new kullanicisil();
-            kullanicisilform.MdiParent = this;
-            kullanicisilform.Show();
+           if(kullanicisilDurum ==false)
+            {
+                kullanicisilform = new kullanicisil();
+                kullanicisilform.MdiParent = this;
+                kullanicisilform.Show();
+                kullanicisilDurum = true;
+            }
+            else
+            {
+                kullanicisilform.Close();
+                kullanicisilDurum = false;
+            }
         }
-
+        private kullaniciguncelle kullaniciguncelleform;
+        private bool kullaniciguncelleDurum;
         private void kullaniciguncellebtn_Click(object sender, EventArgs e)
         {
-            kullaniciguncelle kullaniciguncelleform = new kullaniciguncelle();
-            kullaniciguncelleform.MdiParent = this;
-            kullaniciguncelleform.Show();
+            if (kullaniciguncelleDurum == false)
+            {
+                kullaniciguncelleform = new kullaniciguncelle();
+                kullaniciguncelleform.MdiParent = this;
+                kullaniciguncelleform.Show();
+                kullaniciguncelleDurum = true;
+            }
+            else
+            {
+                kullaniciguncelleform.Close();
+                kullaniciguncelleDurum = false;
+            }
         }
-
+        private kitaplistesi klisteform;
         private void kitaplistesibtn_Click(object sender, EventArgs e)
         {
             if (kitapeklebtn.Visible == false)
@@ -80,52 +112,107 @@ namespace UludagKutuphane
                 kitapeklebtn.Visible = true;
                 kitapguncellebtn.Visible = true;
                 kitapsilbtn.Visible = true;
+                klisteform = new kitaplistesi();
+                klisteform.MdiParent = this;
+                klisteform.Show();
             }
             else
             {
                 kitapeklebtn.Visible = false;
                 kitapguncellebtn.Visible = false;
                 kitapsilbtn.Visible = false;
+                klisteform.Close();
             }
-            kitaplistesi klisteform = new kitaplistesi();
-            klisteform.MdiParent = this;
-            klisteform.Show();
+           
         }
-
+        private kitapekle kekleform;
+        private bool kitapekleDurum;
         private void kitapeklebtn_Click(object sender, EventArgs e)
         {
-            kitapekle kekleform = new kitapekle();
-            kekleform.MdiParent = this;
-            kekleform.Show();
+           if(kitapekleDurum == false)
+            {
+                kekleform = new kitapekle();
+                kekleform.MdiParent = this;
+                kekleform.Show();
+                kitapekleDurum = true;
+                
+            }
+           else
+            {
+                kekleform.Close();
+                kitapekleDurum = false;
+            }
         }
-
+        private kitaguncelle kguncelle;
+        private bool kitapguncelleDurum;
         private void kitapguncellebtn_Click(object sender, EventArgs e)
         {
-            kitaguncelle kguncelle = new kitaguncelle();
-            kguncelle.MdiParent = this;
-            kguncelle.Show();
+            if(kitapguncelleDurum == false)
+            {
+                kguncelle = new kitaguncelle();
+                kguncelle.MdiParent = this;
+                kguncelle.Show();
+                kitapguncelleDurum = true;
+            }
+            else
+            {
+                kguncelle.Close();
+                kitapguncelleDurum = false;
+            }
         }
-
+        private kitapsil ksil;
+        private bool kitapsilDurum;
         private void kitapsilbtn_Click(object sender, EventArgs e)
         {
-            kitapsil ksil = new kitapsil();
-            ksil.MdiParent = this;
-            ksil.Show();
+           if(kitapsilDurum == false)
+            {
+                ksil = new kitapsil();
+                ksil.MdiParent = this;
+                ksil.Show();
+                kitapsilDurum = true;
+            }
+           else
+            {
+                ksil.Close();
+                kitapsilDurum = false;
+            }
         }
-    
 
+        private OduncForm odunc;
+        private bool oduncverDurum;
         private void OduncVer_btn_Click(object sender, EventArgs e)
         {
-            OduncForm odunc = new OduncForm();
-            odunc.MdiParent = this;
-            odunc.Show();
-        }
+            if(oduncverDurum == false)
+            {
+                odunc = new OduncForm();
+                odunc.MdiParent = this;
+                odunc.Show();
+                oduncverDurum = true;
+            }
+            else
+            {
+                odunc.Close();
+                oduncverDurum = false;
+            }
+           
 
+        }
+        private GeriAlForm geri;
+        private bool gerialDurum;
         private void GeriAl_btn_Click(object sender, EventArgs e)
         {
-            OduncForm geri = new OduncForm();
-            geri.MdiParent = this;
-            geri.Show();
+            if(gerialDurum == false)
+            {
+                geri = new GeriAlForm();
+                geri.MdiParent = this;
+                geri.Show();
+                gerialDurum = true;
+            }
+            else
+            {
+                geri.Close();
+                gerialDurum = false;
+            }
         }
     }
 }

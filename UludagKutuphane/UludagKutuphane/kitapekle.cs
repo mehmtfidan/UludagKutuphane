@@ -120,7 +120,7 @@ namespace UludagKutuphane
             else if (VarMi("Select COUNT('') Yazar WHERE Y_Adi='" + YazarAdi + "'") != 0 && VarMi("Select COUNT('') Yazar WHERE Y_Soyadi='" + YazarSoyadi + "'") != 0)
             {
                 con.Open();
-                cmd = new MySqlCommand("Select Id from Cevirmen where Y_Adi like '%" + YazarAdi + "%' AND Y_Soyadi like '%" + YazarSoyadi + "%'", con);
+                cmd = new MySqlCommand("Select Id from Yazar where Y_Adi like '%" + YazarAdi + "%' AND Y_Soyadi like '%" + YazarSoyadi + "%'", con);
                 YazarId = Convert.ToInt32(cmd.ExecuteScalar());
                 con.Close();
             }
