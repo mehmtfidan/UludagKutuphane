@@ -23,8 +23,8 @@ namespace UludagKutuphane
         {
 
 
-            Ara_dgv.Columns[6].Visible = false;
-            Ara_dgv.Columns[7].Visible = false;
+            //Ara_dgv.Columns[6].Visible = false;
+            //Ara_dgv.Columns[7].Visible = false;
 
         }
     }

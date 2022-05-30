@@ -29,52 +29,54 @@ namespace UludagKutuphane
         /// </summary>
         private void InitializeComponent()
         {
-            this.KitapSilBtn = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.KitapSil_btn = new System.Windows.Forms.Button();
+            this.KitapSil_dgv = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.KitapSil_dgv)).BeginInit();
             this.SuspendLayout();
             // 
-            // KitapSilBtn
+            // KitapSil_btn
             // 
-            this.KitapSilBtn.Location = new System.Drawing.Point(44, 37);
-            this.KitapSilBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.KitapSilBtn.Name = "KitapSilBtn";
-            this.KitapSilBtn.Size = new System.Drawing.Size(105, 51);
-            this.KitapSilBtn.TabIndex = 0;
-            this.KitapSilBtn.Text = "SİL";
-            this.KitapSilBtn.UseVisualStyleBackColor = true;
+            this.KitapSil_btn.Location = new System.Drawing.Point(44, 37);
+            this.KitapSil_btn.Margin = new System.Windows.Forms.Padding(2);
+            this.KitapSil_btn.Name = "KitapSil_btn";
+            this.KitapSil_btn.Size = new System.Drawing.Size(105, 51);
+            this.KitapSil_btn.TabIndex = 0;
+            this.KitapSil_btn.Text = "SİL";
+            this.KitapSil_btn.UseVisualStyleBackColor = true;
+            this.KitapSil_btn.Click += new System.EventHandler(this.KitapSil_btn_Click);
             // 
-            // dataGridView1
+            // KitapSil_dgv
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(17, 125);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(706, 364);
-            this.dataGridView1.TabIndex = 1;
+            this.KitapSil_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.KitapSil_dgv.Location = new System.Drawing.Point(17, 125);
+            this.KitapSil_dgv.Margin = new System.Windows.Forms.Padding(2);
+            this.KitapSil_dgv.Name = "KitapSil_dgv";
+            this.KitapSil_dgv.RowHeadersWidth = 51;
+            this.KitapSil_dgv.RowTemplate.Height = 24;
+            this.KitapSil_dgv.Size = new System.Drawing.Size(706, 364);
+            this.KitapSil_dgv.TabIndex = 1;
             // 
             // kitapsil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(733, 499);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.KitapSilBtn);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Controls.Add(this.KitapSil_dgv);
+            this.Controls.Add(this.KitapSil_btn);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "kitapsil";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "kitapsil";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.KitapSil_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.KitapSil_dgv)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button KitapSilBtn;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button KitapSil_btn;
+        private System.Windows.Forms.DataGridView KitapSil_dgv;
     }
 }

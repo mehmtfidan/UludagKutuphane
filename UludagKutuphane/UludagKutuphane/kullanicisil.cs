@@ -38,8 +38,8 @@ namespace UludagKutuphane
             int SecilenId = Convert.ToInt32(KullaniciSil_dgv.CurrentRow.Cells[0].Value);
 
             con.Open();
-            MySqlCommand Komut = new MySqlCommand("DELETE FROM Uye WHERE Id = '"+ SecilenId +"'", con);
-            Komut.ExecuteNonQuery();
+            cmd = new MySqlCommand("DELETE FROM Uye WHERE Id = '"+ SecilenId +"'", con);
+            cmd.ExecuteNonQuery();
 
             string Komut1 = "Select Uye.Id, Uye.Adi as Adı, Uye.Soyadi as Soyadı, Uye.Uye_Numarasi as Üye_Numarası, Uye.Telefon_No as Telefon_Numarası, Uye.E_Posta, Uye.Ceza, Bolum.Adi As Bölüm_Adı From Bolum Inner Join Uye On Uye.Bolum_Id = Bolum.Id";
             MySqlDataAdapter adp = new MySqlDataAdapter(Komut1, con);

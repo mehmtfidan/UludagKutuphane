@@ -14,6 +14,10 @@ namespace UludagKutuphane
     {
         MySqlConnection con;
         MySqlCommand cmd;
+        MySqlCommand cmd1;
+        int YazarId;
+        int YayineviId;
+        int CevirmenId;
 
         public kitapekle()
         {
@@ -32,12 +36,11 @@ namespace UludagKutuphane
             con.Close();
         }
 
-        public int VarMi(string aranan)
+        public int VarMi(string sorgu)
         {
             int sonuc;
-            string sorgu = "Select COUNT(tc) from ogrenci WHERE tc='" + aranan + "'";
-            cmd = new MySqlCommand(sorgu, con);
             con.Open();
+            cmd = new MySqlCommand(sorgu, con);           
             sonuc = Convert.ToInt32(cmd.ExecuteScalar());
             con.Close();
             return sonuc;
@@ -66,40 +69,78 @@ namespace UludagKutuphane
                 MessageBox.Show("Kitap bilgilerini eksiksiz giriniz!!");
             }
             
-            if (VarMi(Cevirmen_Adi) == 0 && VarMi(Cevirmen_Soyadi) == 0)
+            if (VarMi("SELECT COUNT('') From Cevirmen WHERE C_Adi='" + Cevirmen_Adi + "'") == 0 && VarMi("Select COUNT('') from Cevirmen WHERE C_Soyadi='" + Cevirmen_Soyadi + "'") == 0)
             {
                 con.Open();
                 cmd = new MySqlCommand("INSERT INTO Cevirmen (C_Adi, C_Soyadi) VALUES ('" + Cevirmen_Adi + "', '" + Cevirmen_Soyadi + "')", con);
                 cmd.ExecuteNonQuery();
+                cmd1 = new MySqlCommand("Select LAST_INSERT_ID()");
+                CevirmenId = Convert.ToInt32(cmd1.ExecuteScalar());
                 con.Close();
-                MessageBox.Show("Uye başarıyla kayıt edildi.");
+            }
+            else if (VarMi("Select COUNT('') from Cevirmen WHERE C_Adi='" + Cevirmen_Adi + "'") != 0 && VarMi("Select COUNT('') from Cevirmen WHERE C_Soyadi='" + Cevirmen_Soyadi + "'") != 0)
+            {
+                con.Open();
+                cmd = new MySqlCommand("Select Id from Cevirmen where C_Adi like '%"+ Cevirmen_Adi +"%' AND C_Soyadi like '%"+ Cevirmen_Soyadi +"%'", con);
+                CevirmenId = Convert.ToInt32(cmd.ExecuteScalar());
+                con.Close();
             }
             
-            if (VarMi(Yayinevi) == 0)
+            
+            
+            if (VarMi("Select COUNT('') from Yayinevi WHERE Yayin_Adi='" + Yayinevi + "'") == 0)
             {
                 con.Open();
                 cmd = new MySqlCommand("INSERT INTO Yayinevi (Yayin_Adi) VALUES ('" + Yayinevi + "')", con);
                 cmd.ExecuteNonQuery();
+                cmd1 = new MySqlCommand("Select LAST_INSERT_ID()");
+                YayineviId = Convert.ToInt32(cmd1.ExecuteScalar());
                 con.Close();
             }
+            else if (VarMi("Select COUNT('') from Yayinevi WHERE Yayin_Adi='" + Yayinevi + "'") != 0)
+            {
+                con.Open();
+                cmd = new MySqlCommand("Select Id from Yayinevi WHERE Yayin_Adi like '%" + Yayinevi + "%'", con);
+                YayineviId = Convert.ToInt32(cmd.ExecuteScalar());
+                con.Close();
+            }
+           
 
-            if (VarMi(YazarAdi) == 0 && VarMi(YazarSoyadi) == 0)
+           
+
+            if (VarMi("Select COUNT('') Yazar WHERE Y_Adi='" + YazarAdi + "'") == 0 && VarMi("Select COUNT('') Yazar WHERE Y_Soyadi='" + YazarSoyadi + "'") == 0)
             {
                 con.Open();
                 cmd = new MySqlCommand("INSERT INTO Yazar (Y_Adi, Y_Soyadi) VALUES ('" + YazarAdi + "', '"+ YazarSoyadi +"')", con);
                 cmd.ExecuteNonQuery();
+                cmd1 = new MySqlCommand("Select LAST_INSERT_ID()");
+                YazarId = Convert.ToInt32(cmd1.ExecuteScalar());
                 con.Close();
             }
+            else if (VarMi("Select COUNT('') Yazar WHERE Y_Adi='" + YazarAdi + "'") != 0 && VarMi("Select COUNT('') Yazar WHERE Y_Soyadi='" + YazarSoyadi + "'") != 0)
+            {
+                con.Open();
+                cmd = new MySqlCommand("Select Id from Cevirmen where Y_Adi like '%" + YazarAdi + "%' AND Y_Soyadi like '%" + YazarSoyadi + "%'", con);
+                YazarId = Convert.ToInt32(cmd.ExecuteScalar());
+                con.Close();
+            }
+            
 
+            con.Open();
+            cmd = new MySqlCommand("INSERT INTO Baski (Baski_Sayisi, Yayinevi_Id, Cevirmen_Id) VALUES ('"+ Baski +"', '"+ YayineviId +"', '"+ CevirmenId +"')");
+            cmd.ExecuteNonQuery();
+            cmd1 = new MySqlCommand("SELECT LAST_INSERT_ID()");
+            int BaskiId = Convert.ToInt32(cmd1.ExecuteScalar());
 
-
-            string Komut = "Select Kitap.Ki_Adi AS Kitap_Adi, Kitap.Demirbas_No, Yazar.Y_Adi AS Yazar_Adi, Yazar.Y_Soyadi AS Yazar_Soyadi, Baski.Baski_Sayisi, Yayinevi.Yayin_Adi AS Yayinevi, Cevirmen.C_Adi AS Cevirmen_Adi, Cevirmen.C_Soyadi AS Cevirmen_Soyadi, Kitap.ISBN, Kitap.Yayim_Yili, Durum.D_Adi AS Durumu, Kategori.K_Adi AS kategori_Adi, Kitap.Kitaplik_No, Kitap.Raf_No, Kitap.Kayit_Tarihi From Kitap Inner Join Baski On Kitap.Baski_Id = Baski.Id Inner Join Cevirmen On Baski.Cevirmen_Id = Cevirmen.Id Inner Join Yayinevi On Baski.Yayinevi_Id = Yayinevi.Id Inner Join Yazar On Kitap.Yazar_Id = Yazar.Id Inner Join Kategori On Kitap.Kategori_Id = Kategori.Id Inner Join Durum On Kitap.Durum_Id = Durum.Id";
-            MySqlDataAdapter adp = new MySqlDataAdapter(Komut, con);
+            MySqlCommand Komut = new MySqlCommand("INSERT INTO Kitap (Ki_Adi, Demirbas_No, Yazar_Id, Baski_Id, ISBN, Yayim_Yili, Kategori_Id, Durum_Id, Kitaplik_No, Raf_No, Kayit_Tarihi) VALUES ('"+ KitapAdi +"', '"+ Demirbas +"', '"+ YazarId +"', '"+ BaskiId +"', '"+ ISBN +"', '"+ YayimYili +"', '"+ Kategori +"', '"+ Durum +"', '"+ Kitaplik +"', '"+ Raf +"', '"+ Kayit_Tarihi +"')");
+            Komut.ExecuteNonQuery();
+ 
+            string Komut1 = "Select Kitap.Ki_Adi AS Kitap_Adi, Kitap.Demirbas_No, Yazar.Y_Adi AS Yazar_Adi, Yazar.Y_Soyadi AS Yazar_Soyadi, Baski.Baski_Sayisi, Yayinevi.Yayin_Adi AS Yayinevi, Cevirmen.C_Adi AS Cevirmen_Adi, Cevirmen.C_Soyadi AS Cevirmen_Soyadi, Kitap.ISBN, Kitap.Yayim_Yili, Durum.D_Adi AS Durumu, Kategori.K_Adi AS kategori_Adi, Kitap.Kitaplik_No, Kitap.Raf_No, Kitap.Kayit_Tarihi From Kitap Inner Join Baski On Kitap.Baski_Id = Baski.Id Inner Join Cevirmen On Baski.Cevirmen_Id = Cevirmen.Id Inner Join Yayinevi On Baski.Yayinevi_Id = Yayinevi.Id Inner Join Yazar On Kitap.Yazar_Id = Yazar.Id Inner Join Kategori On Kitap.Kategori_Id = Kategori.Id Inner Join Durum On Kitap.Durum_Id = Durum.Id";
+            MySqlDataAdapter adp = new MySqlDataAdapter(Komut1, con);
             DataTable dt = new DataTable();
             adp.Fill(dt);
             KitapEkle_dgv.DataSource = dt;
             con.Close();
         }
-
     }
 }
