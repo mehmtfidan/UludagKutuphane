@@ -6,8 +6,10 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+
 
 namespace UludagKutuphane
 {
@@ -38,15 +40,19 @@ namespace UludagKutuphane
 
             if (KullaniciAdi_txt.Text == "" || KullaniciSoyadi_txt.Text == "" || KullaniciUyeNumara_txt.Text == "" || KullaniciTelNo_txt.Text == "" || KullaniciMail_txt.Text == "" || KullaniciMail_txt.Text == "" || Bolum_cmb.SelectedIndex == 0)
             {
-                MessageBox.Show("Bilgileri eksiksiz giriniz!!");
+                System.Windows.Forms.MessageBox.Show("Bilgileri eksiksiz giriniz!!");
             }
             else
             {
-                con.Open();
-                string guncelleme = "UPDATE Uye SET Adi = '" + KullaniciAdi_txt.Text + "', Soyadi = '" + KullaniciSoyadi_txt.Text + "', Uye_Numarasi = '" + KullaniciUyeNumara_txt.Text + "', Telefon_No = '" + KullaniciTelNo_txt.Text + "', E_Posta = '" + KullaniciMail_txt.Text + "', BoluM_Id = '" + Bolum_cmb.SelectedIndex + "' WHERE Id = '" + SecilenId + "'";
-                MySqlCommand Komut = new MySqlCommand(guncelleme, con);
-                Komut.ExecuteNonQuery();
-                MessageBox.Show("Kullanıcı bilgileri başarıyla güncellendi.");
+                DialogResult dr = System.Windows.Forms.MessageBox.Show("Silmek istediğinize emin misiniz?", "Confirmation", (MessageBoxButtons)MessageBoxButton.YesNo, MessageBoxIcon.Warning);
+                if (dr == DialogResult.Yes)
+                {
+                    con.Open();
+                    string guncelleme = "UPDATE Uye SET Adi = '" + KullaniciAdi_txt.Text + "', Soyadi = '" + KullaniciSoyadi_txt.Text + "', Uye_Numarasi = '" + KullaniciUyeNumara_txt.Text + "', Telefon_No = '" + KullaniciTelNo_txt.Text + "', E_Posta = '" + KullaniciMail_txt.Text + "', BoluM_Id = '" + Bolum_cmb.SelectedIndex + "' WHERE Id = '" + SecilenId + "'";
+                    MySqlCommand Komut = new MySqlCommand(guncelleme, con);
+                    Komut.ExecuteNonQuery();
+                    System.Windows.Forms.MessageBox.Show("Kullanıcı bilgileri başarıyla güncellendi.");
+                }                
             }
             string Komut1 = "Select Uye.Id, Uye.Adi, Uye.Soyadi, Uye.Uye_Numarasi, Uye.Telefon_No, Uye.E_Posta, Uye.Ceza, Bolum.Adi As Adi1 From Bolum Inner Join Uye On Uye.Bolum_Id = Bolum.Id";
             MySqlDataAdapter adp = new MySqlDataAdapter(Komut1, con);

@@ -29,19 +29,19 @@ namespace UludagKutuphane
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.KitapListesi_dgv = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.KitapListesi_dgv)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // KitapListesi_dgv
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(1, 51);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(969, 498);
-            this.dataGridView1.TabIndex = 0;
+            this.KitapListesi_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.KitapListesi_dgv.Location = new System.Drawing.Point(1, 51);
+            this.KitapListesi_dgv.Name = "KitapListesi_dgv";
+            this.KitapListesi_dgv.RowHeadersWidth = 51;
+            this.KitapListesi_dgv.RowTemplate.Height = 24;
+            this.KitapListesi_dgv.Size = new System.Drawing.Size(969, 498);
+            this.KitapListesi_dgv.TabIndex = 0;
             // 
             // kitaplistesi
             // 
@@ -49,18 +49,19 @@ namespace UludagKutuphane
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(969, 547);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.KitapListesi_dgv);
             this.Name = "kitaplistesi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "kitaplistesi";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.kitaplistesi_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.KitapListesi_dgv)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView KitapListesi_dgv;
     }
 }

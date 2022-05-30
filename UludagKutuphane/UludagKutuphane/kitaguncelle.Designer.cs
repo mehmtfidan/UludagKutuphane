@@ -29,20 +29,23 @@ namespace UludagKutuphane
         /// </summary>
         private void InitializeComponent()
         {
-            this.DurumuCmb = new System.Windows.Forms.ComboBox();
-            this.KategoriCmb = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.Kayittarihitxt = new System.Windows.Forms.DateTimePicker();
-            this.KitapGuncelleBtn = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.DemirbasNotxt = new System.Windows.Forms.TextBox();
-            this.Yayinevitxt = new System.Windows.Forms.TextBox();
-            this.BaskiNotxt = new System.Windows.Forms.TextBox();
-            this.Isbntxt = new System.Windows.Forms.TextBox();
-            this.Cevirmentxt = new System.Windows.Forms.TextBox();
-            this.kitapYazaritxt = new System.Windows.Forms.TextBox();
-            this.kitapAditxt = new System.Windows.Forms.TextBox();
+            this.CevirmenSoyadi_txt = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.YazarSoyadi_txt = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.YayimYili_txt = new System.Windows.Forms.TextBox();
+            this.Durum_cmb = new System.Windows.Forms.ComboBox();
+            this.Kategori_cmb = new System.Windows.Forms.ComboBox();
+            this.Raf_cmb = new System.Windows.Forms.ComboBox();
+            this.Kitaaplik_cmb = new System.Windows.Forms.ComboBox();
+            this.KitapGüncelle_Btn = new System.Windows.Forms.Button();
+            this.DemirbasNo_txt = new System.Windows.Forms.TextBox();
+            this.Yayinevi_txt = new System.Windows.Forms.TextBox();
+            this.BaskiNo_txt = new System.Windows.Forms.TextBox();
+            this.ISBN_txt = new System.Windows.Forms.TextBox();
+            this.CevirmenAdi_txt = new System.Windows.Forms.TextBox();
+            this.YazarAdi_txt = new System.Windows.Forms.TextBox();
+            this.KitapAdi_txt = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -55,28 +58,71 @@ namespace UludagKutuphane
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.KitapGuncelle_dgv = new System.Windows.Forms.DataGridView();
+            this.Kayit_Trihi_txt = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.KitapGuncelle_dgv)).BeginInit();
             this.SuspendLayout();
             // 
-            // DurumuCmb
+            // CevirmenSoyadi_txt
             // 
-            this.DurumuCmb.FormattingEnabled = true;
-            this.DurumuCmb.Items.AddRange(new object[] {
+            this.CevirmenSoyadi_txt.Location = new System.Drawing.Point(142, 272);
+            this.CevirmenSoyadi_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CevirmenSoyadi_txt.Name = "CevirmenSoyadi_txt";
+            this.CevirmenSoyadi_txt.Size = new System.Drawing.Size(161, 22);
+            this.CevirmenSoyadi_txt.TabIndex = 85;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(5, 275);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(122, 17);
+            this.label14.TabIndex = 84;
+            this.label14.Text = "Çevirmen Soyadı :";
+            // 
+            // YazarSoyadi_txt
+            // 
+            this.YazarSoyadi_txt.Location = new System.Drawing.Point(142, 171);
+            this.YazarSoyadi_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.YazarSoyadi_txt.Name = "YazarSoyadi_txt";
+            this.YazarSoyadi_txt.Size = new System.Drawing.Size(161, 22);
+            this.YazarSoyadi_txt.TabIndex = 83;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(23, 174);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(104, 17);
+            this.label12.TabIndex = 82;
+            this.label12.Text = "Yazar  Soyadı :";
+            // 
+            // YayimYili_txt
+            // 
+            this.YayimYili_txt.Location = new System.Drawing.Point(478, 326);
+            this.YayimYili_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.YayimYili_txt.Name = "YayimYili_txt";
+            this.YayimYili_txt.Size = new System.Drawing.Size(161, 22);
+            this.YayimYili_txt.TabIndex = 81;
+            // 
+            // Durum_cmb
+            // 
+            this.Durum_cmb.FormattingEnabled = true;
+            this.Durum_cmb.Items.AddRange(new object[] {
             "Seçiniz",
             "Rafta",
             "Emanette",
             "Kayıp"});
-            this.DurumuCmb.Location = new System.Drawing.Point(70, 275);
-            this.DurumuCmb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.DurumuCmb.Name = "DurumuCmb";
-            this.DurumuCmb.Size = new System.Drawing.Size(122, 21);
-            this.DurumuCmb.TabIndex = 62;
+            this.Durum_cmb.Location = new System.Drawing.Point(142, 382);
+            this.Durum_cmb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Durum_cmb.Name = "Durum_cmb";
+            this.Durum_cmb.Size = new System.Drawing.Size(161, 24);
+            this.Durum_cmb.TabIndex = 80;
             // 
-            // KategoriCmb
+            // Kategori_cmb
             // 
-            this.KategoriCmb.FormattingEnabled = true;
-            this.KategoriCmb.Items.AddRange(new object[] {
+            this.Kategori_cmb.FormattingEnabled = true;
+            this.Kategori_cmb.Items.AddRange(new object[] {
             "Seçiniz",
             "Bilgisayar",
             "Çocuk Gelişim",
@@ -97,35 +143,38 @@ namespace UludagKutuphane
             "Süreli Yayın",
             "Tarih",
             "Tekstil",
-            "Yabancı Dil"});
-            this.KategoriCmb.Location = new System.Drawing.Point(70, 217);
-            this.KategoriCmb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.KategoriCmb.Name = "KategoriCmb";
-            this.KategoriCmb.Size = new System.Drawing.Size(122, 21);
-            this.KategoriCmb.TabIndex = 61;
+            "Yabancı Dil",
+            "YOK"});
+            this.Kategori_cmb.Location = new System.Drawing.Point(142, 330);
+            this.Kategori_cmb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Kategori_cmb.Name = "Kategori_cmb";
+            this.Kategori_cmb.Size = new System.Drawing.Size(161, 24);
+            this.Kategori_cmb.TabIndex = 79;
             // 
-            // comboBox2
+            // Raf_cmb
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.Raf_cmb.FormattingEnabled = true;
+            this.Raf_cmb.Items.AddRange(new object[] {
             "Seçiniz",
             "1",
             "2",
             "3",
             "4",
             "5",
-            "6"});
-            this.comboBox2.Location = new System.Drawing.Point(254, 360);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(92, 21);
-            this.comboBox2.TabIndex = 60;
+            "6",
+            "YOK"});
+            this.Raf_cmb.Location = new System.Drawing.Point(318, 434);
+            this.Raf_cmb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Raf_cmb.Name = "Raf_cmb";
+            this.Raf_cmb.Size = new System.Drawing.Size(121, 24);
+            this.Raf_cmb.TabIndex = 78;
             // 
-            // comboBox1
+            // Kitaaplik_cmb
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.Kitaaplik_cmb.FormattingEnabled = true;
+            this.Kitaaplik_cmb.Items.AddRange(new object[] {
             "Seçiniz",
+            "YOK",
             "A",
             "B",
             "C",
@@ -150,245 +199,230 @@ namespace UludagKutuphane
             "S3-Ö",
             "S4-A",
             "S4-Ö"});
-            this.comboBox1.Location = new System.Drawing.Point(138, 360);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(92, 21);
-            this.comboBox1.TabIndex = 59;
+            this.Kitaaplik_cmb.Location = new System.Drawing.Point(163, 434);
+            this.Kitaaplik_cmb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Kitaaplik_cmb.Name = "Kitaaplik_cmb";
+            this.Kitaaplik_cmb.Size = new System.Drawing.Size(121, 24);
+            this.Kitaaplik_cmb.TabIndex = 77;
             // 
-            // Kayittarihitxt
+            // KitapGüncelle_Btn
             // 
-            this.Kayittarihitxt.Location = new System.Drawing.Point(313, 323);
-            this.Kayittarihitxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Kayittarihitxt.Name = "Kayittarihitxt";
-            this.Kayittarihitxt.Size = new System.Drawing.Size(122, 20);
-            this.Kayittarihitxt.TabIndex = 58;
+            this.KitapGüncelle_Btn.Location = new System.Drawing.Point(214, 494);
+            this.KitapGüncelle_Btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.KitapGüncelle_Btn.Name = "KitapGüncelle_Btn";
+            this.KitapGüncelle_Btn.Size = new System.Drawing.Size(163, 70);
+            this.KitapGüncelle_Btn.TabIndex = 75;
+            this.KitapGüncelle_Btn.Text = "GÜNCELLE";
+            this.KitapGüncelle_Btn.UseVisualStyleBackColor = true;
+            this.KitapGüncelle_Btn.Click += new System.EventHandler(this.KitapGüncelle_Btn_Click);
             // 
-            // KitapGuncelleBtn
+            // DemirbasNo_txt
             // 
-            this.KitapGuncelleBtn.Location = new System.Drawing.Point(176, 410);
-            this.KitapGuncelleBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.KitapGuncelleBtn.Name = "KitapGuncelleBtn";
-            this.KitapGuncelleBtn.Size = new System.Drawing.Size(122, 57);
-            this.KitapGuncelleBtn.TabIndex = 56;
-            this.KitapGuncelleBtn.Text = "GÜNCELLE";
-            this.KitapGuncelleBtn.UseVisualStyleBackColor = true;
+            this.DemirbasNo_txt.Location = new System.Drawing.Point(482, 196);
+            this.DemirbasNo_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DemirbasNo_txt.Name = "DemirbasNo_txt";
+            this.DemirbasNo_txt.Size = new System.Drawing.Size(161, 22);
+            this.DemirbasNo_txt.TabIndex = 74;
             // 
-            // dataGridView1
+            // Yayinevi_txt
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(452, 50);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(592, 566);
-            this.dataGridView1.TabIndex = 55;
+            this.Yayinevi_txt.Location = new System.Drawing.Point(482, 119);
+            this.Yayinevi_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Yayinevi_txt.Name = "Yayinevi_txt";
+            this.Yayinevi_txt.Size = new System.Drawing.Size(161, 22);
+            this.Yayinevi_txt.TabIndex = 73;
             // 
-            // DemirbasNotxt
+            // BaskiNo_txt
             // 
-            this.DemirbasNotxt.Location = new System.Drawing.Point(316, 166);
-            this.DemirbasNotxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.DemirbasNotxt.Name = "DemirbasNotxt";
-            this.DemirbasNotxt.Size = new System.Drawing.Size(122, 20);
-            this.DemirbasNotxt.TabIndex = 54;
+            this.BaskiNo_txt.Location = new System.Drawing.Point(482, 58);
+            this.BaskiNo_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BaskiNo_txt.Name = "BaskiNo_txt";
+            this.BaskiNo_txt.Size = new System.Drawing.Size(161, 22);
+            this.BaskiNo_txt.TabIndex = 72;
             // 
-            // Yayinevitxt
+            // ISBN_txt
             // 
-            this.Yayinevitxt.Location = new System.Drawing.Point(316, 103);
-            this.Yayinevitxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Yayinevitxt.Name = "Yayinevitxt";
-            this.Yayinevitxt.Size = new System.Drawing.Size(122, 20);
-            this.Yayinevitxt.TabIndex = 53;
+            this.ISBN_txt.Location = new System.Drawing.Point(482, 260);
+            this.ISBN_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ISBN_txt.Name = "ISBN_txt";
+            this.ISBN_txt.Size = new System.Drawing.Size(161, 22);
+            this.ISBN_txt.TabIndex = 71;
             // 
-            // BaskiNotxt
+            // CevirmenAdi_txt
             // 
-            this.BaskiNotxt.Location = new System.Drawing.Point(316, 54);
-            this.BaskiNotxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.BaskiNotxt.Name = "BaskiNotxt";
-            this.BaskiNotxt.Size = new System.Drawing.Size(122, 20);
-            this.BaskiNotxt.TabIndex = 52;
+            this.CevirmenAdi_txt.Location = new System.Drawing.Point(142, 217);
+            this.CevirmenAdi_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CevirmenAdi_txt.Name = "CevirmenAdi_txt";
+            this.CevirmenAdi_txt.Size = new System.Drawing.Size(161, 22);
+            this.CevirmenAdi_txt.TabIndex = 70;
             // 
-            // Isbntxt
+            // YazarAdi_txt
             // 
-            this.Isbntxt.Location = new System.Drawing.Point(316, 217);
-            this.Isbntxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Isbntxt.Name = "Isbntxt";
-            this.Isbntxt.Size = new System.Drawing.Size(122, 20);
-            this.Isbntxt.TabIndex = 51;
+            this.YazarAdi_txt.Location = new System.Drawing.Point(139, 118);
+            this.YazarAdi_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.YazarAdi_txt.Name = "YazarAdi_txt";
+            this.YazarAdi_txt.Size = new System.Drawing.Size(161, 22);
+            this.YazarAdi_txt.TabIndex = 69;
             // 
-            // Cevirmentxt
+            // KitapAdi_txt
             // 
-            this.Cevirmentxt.Location = new System.Drawing.Point(70, 165);
-            this.Cevirmentxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Cevirmentxt.Name = "Cevirmentxt";
-            this.Cevirmentxt.Size = new System.Drawing.Size(122, 20);
-            this.Cevirmentxt.TabIndex = 50;
-            // 
-            // kitapYazaritxt
-            // 
-            this.kitapYazaritxt.Location = new System.Drawing.Point(70, 106);
-            this.kitapYazaritxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.kitapYazaritxt.Name = "kitapYazaritxt";
-            this.kitapYazaritxt.Size = new System.Drawing.Size(122, 20);
-            this.kitapYazaritxt.TabIndex = 49;
-            // 
-            // kitapAditxt
-            // 
-            this.kitapAditxt.Location = new System.Drawing.Point(70, 55);
-            this.kitapAditxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.kitapAditxt.Name = "kitapAditxt";
-            this.kitapAditxt.Size = new System.Drawing.Size(122, 20);
-            this.kitapAditxt.TabIndex = 48;
+            this.KitapAdi_txt.Location = new System.Drawing.Point(139, 61);
+            this.KitapAdi_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.KitapAdi_txt.Name = "KitapAdi_txt";
+            this.KitapAdi_txt.Size = new System.Drawing.Size(161, 22);
+            this.KitapAdi_txt.TabIndex = 68;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(16, 220);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Location = new System.Drawing.Point(58, 333);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(52, 13);
-            this.label13.TabIndex = 47;
+            this.label13.Size = new System.Drawing.Size(69, 17);
+            this.label13.TabIndex = 67;
             this.label13.Text = "Kategori :";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(77, 362);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Location = new System.Drawing.Point(82, 436);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(52, 13);
-            this.label11.TabIndex = 46;
+            this.label11.Size = new System.Drawing.Size(68, 17);
+            this.label11.TabIndex = 66;
             this.label11.Text = "Konumu :";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(243, 323);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Location = new System.Drawing.Point(385, 389);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(65, 13);
-            this.label10.TabIndex = 45;
+            this.label10.Size = new System.Drawing.Size(87, 17);
+            this.label10.TabIndex = 65;
             this.label10.Text = "Kayıt Tarihi :";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(12, 164);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(28, 220);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(57, 13);
-            this.label9.TabIndex = 44;
-            this.label9.Text = "Çevirmen :";
+            this.label9.Size = new System.Drawing.Size(99, 17);
+            this.label9.TabIndex = 64;
+            this.label9.Text = "Çevirmen Adı :";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(206, 167);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(332, 198);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(104, 13);
-            this.label8.TabIndex = 43;
+            this.label8.Size = new System.Drawing.Size(140, 17);
+            this.label8.TabIndex = 63;
             this.label8.Text = "Demirbaş Numarası :";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(260, 106);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(403, 122);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(53, 13);
-            this.label7.TabIndex = 42;
+            this.label7.Size = new System.Drawing.Size(69, 17);
+            this.label7.TabIndex = 62;
             this.label7.Text = "Yayınevi :";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(254, 277);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(396, 333);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(57, 13);
-            this.label6.TabIndex = 41;
+            this.label6.Size = new System.Drawing.Size(76, 17);
+            this.label6.TabIndex = 61;
             this.label6.Text = "Yayım Yılı :";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(28, 105);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(50, 124);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 13);
-            this.label5.TabIndex = 40;
-            this.label5.Text = "Yazar :";
+            this.label5.Size = new System.Drawing.Size(77, 17);
+            this.label5.TabIndex = 60;
+            this.label5.Text = "Yazar Adı :";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(19, 275);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(61, 385);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 13);
-            this.label4.TabIndex = 39;
+            this.label4.Size = new System.Drawing.Size(66, 17);
+            this.label4.TabIndex = 59;
             this.label4.Text = "Durumu :";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(226, 56);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(381, 61);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 13);
-            this.label3.TabIndex = 38;
-            this.label3.Text = "Baskı Numarası :";
+            this.label3.Size = new System.Drawing.Size(91, 17);
+            this.label3.TabIndex = 58;
+            this.label3.Text = "Baskı Sayısı :";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(276, 219);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(425, 262);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
-            this.label2.TabIndex = 37;
+            this.label2.Size = new System.Drawing.Size(47, 17);
+            this.label2.TabIndex = 57;
             this.label2.Text = "ISBN :";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(41, 58);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(91, 64);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(28, 13);
-            this.label1.TabIndex = 36;
+            this.label1.Size = new System.Drawing.Size(36, 17);
+            this.label1.TabIndex = 56;
             this.label1.Text = "Adı :";
             // 
-            // textBox1
+            // KitapGuncelle_dgv
             // 
-            this.textBox1.Location = new System.Drawing.Point(316, 274);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(122, 20);
-            this.textBox1.TabIndex = 63;
+            this.KitapGuncelle_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.KitapGuncelle_dgv.Location = new System.Drawing.Point(679, 58);
+            this.KitapGuncelle_dgv.Name = "KitapGuncelle_dgv";
+            this.KitapGuncelle_dgv.RowHeadersWidth = 51;
+            this.KitapGuncelle_dgv.RowTemplate.Height = 24;
+            this.KitapGuncelle_dgv.Size = new System.Drawing.Size(713, 649);
+            this.KitapGuncelle_dgv.TabIndex = 86;
+            this.KitapGuncelle_dgv.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.KitapGuncelle_CellCenter);
+            // 
+            // Kayit_Trihi_txt
+            // 
+            this.Kayit_Trihi_txt.Location = new System.Drawing.Point(478, 384);
+            this.Kayit_Trihi_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Kayit_Trihi_txt.Name = "Kayit_Trihi_txt";
+            this.Kayit_Trihi_txt.Size = new System.Drawing.Size(161, 22);
+            this.Kayit_Trihi_txt.TabIndex = 87;
             // 
             // kitaguncelle
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1053, 638);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.DurumuCmb);
-            this.Controls.Add(this.KategoriCmb);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.Kayittarihitxt);
-            this.Controls.Add(this.KitapGuncelleBtn);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.DemirbasNotxt);
-            this.Controls.Add(this.Yayinevitxt);
-            this.Controls.Add(this.BaskiNotxt);
-            this.Controls.Add(this.Isbntxt);
-            this.Controls.Add(this.Cevirmentxt);
-            this.Controls.Add(this.kitapYazaritxt);
-            this.Controls.Add(this.kitapAditxt);
+            this.ClientSize = new System.Drawing.Size(1404, 785);
+            this.Controls.Add(this.Kayit_Trihi_txt);
+            this.Controls.Add(this.KitapGuncelle_dgv);
+            this.Controls.Add(this.CevirmenSoyadi_txt);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.YazarSoyadi_txt);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.YayimYili_txt);
+            this.Controls.Add(this.Durum_cmb);
+            this.Controls.Add(this.Kategori_cmb);
+            this.Controls.Add(this.Raf_cmb);
+            this.Controls.Add(this.Kitaaplik_cmb);
+            this.Controls.Add(this.KitapGüncelle_Btn);
+            this.Controls.Add(this.DemirbasNo_txt);
+            this.Controls.Add(this.Yayinevi_txt);
+            this.Controls.Add(this.BaskiNo_txt);
+            this.Controls.Add(this.ISBN_txt);
+            this.Controls.Add(this.CevirmenAdi_txt);
+            this.Controls.Add(this.YazarAdi_txt);
+            this.Controls.Add(this.KitapAdi_txt);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
@@ -401,33 +435,36 @@ namespace UludagKutuphane
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "kitaguncelle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "kitapguncelle";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.KitapGuncelle_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.KitapGuncelle_dgv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox DurumuCmb;
-        private System.Windows.Forms.ComboBox KategoriCmb;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DateTimePicker Kayittarihitxt;
-        private System.Windows.Forms.Button KitapGuncelleBtn;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox DemirbasNotxt;
-        private System.Windows.Forms.TextBox Yayinevitxt;
-        private System.Windows.Forms.TextBox BaskiNotxt;
-        private System.Windows.Forms.TextBox Isbntxt;
-        private System.Windows.Forms.TextBox Cevirmentxt;
-        private System.Windows.Forms.TextBox kitapYazaritxt;
-        private System.Windows.Forms.TextBox kitapAditxt;
+        private System.Windows.Forms.TextBox CevirmenSoyadi_txt;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox YazarSoyadi_txt;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox YayimYili_txt;
+        private System.Windows.Forms.ComboBox Durum_cmb;
+        private System.Windows.Forms.ComboBox Kategori_cmb;
+        private System.Windows.Forms.ComboBox Raf_cmb;
+        private System.Windows.Forms.ComboBox Kitaaplik_cmb;
+        private System.Windows.Forms.Button KitapGüncelle_Btn;
+        private System.Windows.Forms.TextBox DemirbasNo_txt;
+        private System.Windows.Forms.TextBox Yayinevi_txt;
+        private System.Windows.Forms.TextBox BaskiNo_txt;
+        private System.Windows.Forms.TextBox ISBN_txt;
+        private System.Windows.Forms.TextBox CevirmenAdi_txt;
+        private System.Windows.Forms.TextBox YazarAdi_txt;
+        private System.Windows.Forms.TextBox KitapAdi_txt;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
@@ -440,6 +477,7 @@ namespace UludagKutuphane
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridView KitapGuncelle_dgv;
+        private System.Windows.Forms.TextBox Kayit_Trihi_txt;
     }
 }
