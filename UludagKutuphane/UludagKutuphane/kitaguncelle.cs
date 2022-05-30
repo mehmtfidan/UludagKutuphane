@@ -154,5 +154,47 @@ namespace UludagKutuphane
             Komut1.ExecuteNonQuery();
             MessageBox.Show("Kullanıcı bilgileri başarıyla güncellendi.");
         }
+
+        private void KitapGFiltre_txt_TextChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedIndex== 1)
+            {
+                con.Open();
+                DataTable tbl = new DataTable();
+
+                MySqlDataAdapter ara = new MySqlDataAdapter("select * from Kitap where Ki_Adi like '%" + KitapGFiltre_txt.Text + "%' ", con);
+                ara.Fill(tbl);
+                con.Close();
+                KitapGuncelle_dgv.DataSource = tbl;           
+            
+            }
+            else if (comboBox1.SelectedIndex == 2)
+            {
+                con.Open();
+                DataTable tbl = new DataTable();
+
+                MySqlDataAdapter ara = new MySqlDataAdapter("select * from Kitap where Y_Adi like '%" + KitapGFiltre_txt.Text + "%' ", con);
+                ara.Fill(tbl);
+                con.Close();
+                KitapGuncelle_dgv.DataSource = tbl;
+
+            }
+            else if (comboBox1.SelectedIndex == 3)
+            {
+                con.Open();
+                DataTable tbl = new DataTable();
+
+                MySqlDataAdapter ara = new MySqlDataAdapter("select * from Kitap where Demirbas_No like '%" + KitapGFiltre_txt.Text + "%' ", con);
+                ara.Fill(tbl);
+                con.Close();
+                KitapGuncelle_dgv.DataSource = tbl;
+            }
+
+        }
+
+        private void KitapGFiltreBtn_Click(object sender, EventArgs e)
+        {
+            KitapGFiltre_txt.Text = "";
+        }
     }
 }

@@ -31,7 +31,7 @@ namespace UludagKutuphane
             DataTable dt = new DataTable();
             adp.Fill(dt);
             KitapSil_dgv.DataSource = dt;
-            con.Close();    
+            con.Close();
         }
 
         private void KitapSil_btn_Click(object sender, EventArgs e)
@@ -54,5 +54,47 @@ namespace UludagKutuphane
             con.Close();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedIndex == 1)
+            {
+                con.Open();
+                DataTable tbl = new DataTable();
+
+                MySqlDataAdapter ara = new MySqlDataAdapter("select * from Kitap where Ki_Adi like '%" + textBox1.Text + "%' ", con);
+                ara.Fill(tbl);
+                con.Close();
+                KitapSil_dgv.DataSource = tbl;
+
+            }
+            else if (comboBox1.SelectedIndex == 2)
+            {
+                con.Open();
+                DataTable tbl = new DataTable();
+
+                MySqlDataAdapter ara = new MySqlDataAdapter("select * from Kitap where Y_Adi like '%" + textBox1.Text + "%' ", con);
+                ara.Fill(tbl);
+                con.Close();
+                KitapSil_dgv.DataSource = tbl;
+
+            }
+            else if (comboBox1.SelectedIndex == 3)
+            {
+                con.Open();
+                DataTable tbl = new DataTable();
+
+                MySqlDataAdapter ara = new MySqlDataAdapter("select * from Kitap where Demirbas_No like '%" + textBox1.Text + "%' ", con);
+                ara.Fill(tbl);
+                con.Close();
+                KitapSil_dgv.DataSource = tbl;
+            }
+
+        }
     }
 }
+

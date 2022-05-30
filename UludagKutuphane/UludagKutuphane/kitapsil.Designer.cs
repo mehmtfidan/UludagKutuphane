@@ -39,10 +39,10 @@ namespace UludagKutuphane
             // 
             // KitapSil_btn
             // 
-            this.KitapSil_btn.Location = new System.Drawing.Point(59, 46);
-            this.KitapSil_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.KitapSil_btn.Location = new System.Drawing.Point(44, 37);
+            this.KitapSil_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.KitapSil_btn.Name = "KitapSil_btn";
-            this.KitapSil_btn.Size = new System.Drawing.Size(140, 63);
+            this.KitapSil_btn.Size = new System.Drawing.Size(105, 51);
             this.KitapSil_btn.TabIndex = 0;
             this.KitapSil_btn.Text = "SİL";
             this.KitapSil_btn.UseVisualStyleBackColor = true;
@@ -51,49 +51,54 @@ namespace UludagKutuphane
             // KitapSil_dgv
             // 
             this.KitapSil_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.KitapSil_dgv.Location = new System.Drawing.Point(23, 154);
-            this.KitapSil_dgv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.KitapSil_dgv.Location = new System.Drawing.Point(17, 125);
+            this.KitapSil_dgv.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.KitapSil_dgv.Name = "KitapSil_dgv";
             this.KitapSil_dgv.RowHeadersWidth = 51;
             this.KitapSil_dgv.RowTemplate.Height = 24;
-            this.KitapSil_dgv.Size = new System.Drawing.Size(941, 448);
+            this.KitapSil_dgv.Size = new System.Drawing.Size(706, 364);
             this.KitapSil_dgv.TabIndex = 1;
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(296, 66);
+            this.comboBox1.Location = new System.Drawing.Point(222, 54);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.Size = new System.Drawing.Size(92, 21);
             this.comboBox1.TabIndex = 2;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(444, 66);
+            this.textBox1.Location = new System.Drawing.Point(333, 54);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(149, 22);
+            this.textBox1.Size = new System.Drawing.Size(113, 20);
             this.textBox1.TabIndex = 3;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(622, 66);
+            this.button1.Location = new System.Drawing.Point(466, 54);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 24);
+            this.button1.Size = new System.Drawing.Size(72, 20);
             this.button1.TabIndex = 4;
             this.button1.Text = "Temizle";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // kitapsil
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(977, 614);
+            this.ClientSize = new System.Drawing.Size(733, 499);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.KitapSil_dgv);
             this.Controls.Add(this.KitapSil_btn);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "kitapsil";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "kitapsil";

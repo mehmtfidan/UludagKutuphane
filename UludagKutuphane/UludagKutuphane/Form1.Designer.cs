@@ -40,28 +40,25 @@ namespace UludagKutuphane
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(115, 70);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(86, 57);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 17);
+            this.label1.Size = new System.Drawing.Size(64, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Kullanıcı Adı";
             // 
             // KullaniciAdi_txt
             // 
-            this.KullaniciAdi_txt.Location = new System.Drawing.Point(216, 70);
-            this.KullaniciAdi_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.KullaniciAdi_txt.Location = new System.Drawing.Point(162, 57);
             this.KullaniciAdi_txt.Multiline = true;
             this.KullaniciAdi_txt.Name = "KullaniciAdi_txt";
-            this.KullaniciAdi_txt.Size = new System.Drawing.Size(304, 40);
+            this.KullaniciAdi_txt.Size = new System.Drawing.Size(229, 33);
             this.KullaniciAdi_txt.TabIndex = 1;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(216, 228);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(162, 185);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(305, 53);
+            this.button1.Size = new System.Drawing.Size(229, 43);
             this.button1.TabIndex = 2;
             this.button1.Text = "Giriş Yap";
             this.button1.UseVisualStyleBackColor = true;
@@ -69,30 +66,27 @@ namespace UludagKutuphane
             // 
             // KullaniciSifre_txt
             // 
-            this.KullaniciSifre_txt.Location = new System.Drawing.Point(216, 151);
-            this.KullaniciSifre_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.KullaniciSifre_txt.Location = new System.Drawing.Point(162, 123);
             this.KullaniciSifre_txt.Multiline = true;
             this.KullaniciSifre_txt.Name = "KullaniciSifre_txt";
-            this.KullaniciSifre_txt.Size = new System.Drawing.Size(304, 40);
+            this.KullaniciSifre_txt.Size = new System.Drawing.Size(229, 33);
             this.KullaniciSifre_txt.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(115, 151);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(86, 123);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 17);
+            this.label2.Size = new System.Drawing.Size(70, 13);
             this.label2.TabIndex = 4;
             this.label2.Text = "Kullanıcı Şifre";
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(333, 322);
-            this.linkLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.linkLabel1.Location = new System.Drawing.Point(250, 262);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(51, 17);
+            this.linkLabel1.Size = new System.Drawing.Size(39, 13);
             this.linkLabel1.TabIndex = 5;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Kaydol";
@@ -100,17 +94,17 @@ namespace UludagKutuphane
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(705, 394);
+            this.ClientSize = new System.Drawing.Size(529, 320);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.KullaniciSifre_txt);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.KullaniciAdi_txt);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();

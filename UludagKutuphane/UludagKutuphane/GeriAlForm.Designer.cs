@@ -31,6 +31,9 @@ namespace UludagKutuphane
         {
             this.GeriAl_dgv = new System.Windows.Forms.DataGridView();
             this.GeriAlBtn = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.GeriAlFiltre_txt = new System.Windows.Forms.TextBox();
+            this.GeriAlFiltreBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.GeriAl_dgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,11 +54,45 @@ namespace UludagKutuphane
             this.GeriAlBtn.Text = "Geri Al";
             this.GeriAlBtn.UseVisualStyleBackColor = true;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Seçiniz..",
+            "Adı",
+            "Yazar Adı",
+            "Demirbaş Numarası",
+            "Çevirmen"});
+            this.comboBox1.Location = new System.Drawing.Point(355, 25);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 2;
+            // 
+            // GeriAlFiltre_txt
+            // 
+            this.GeriAlFiltre_txt.Location = new System.Drawing.Point(516, 26);
+            this.GeriAlFiltre_txt.Name = "GeriAlFiltre_txt";
+            this.GeriAlFiltre_txt.Size = new System.Drawing.Size(100, 20);
+            this.GeriAlFiltre_txt.TabIndex = 3;
+            this.GeriAlFiltre_txt.TextChanged += new System.EventHandler(this.GeriAlFiltre_txt_TextChanged);
+            // 
+            // GeriAlFiltreBtn
+            // 
+            this.GeriAlFiltreBtn.Location = new System.Drawing.Point(650, 23);
+            this.GeriAlFiltreBtn.Name = "GeriAlFiltreBtn";
+            this.GeriAlFiltreBtn.Size = new System.Drawing.Size(75, 23);
+            this.GeriAlFiltreBtn.TabIndex = 4;
+            this.GeriAlFiltreBtn.Text = "Temizle";
+            this.GeriAlFiltreBtn.UseVisualStyleBackColor = true;
+            // 
             // GeriAlForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(880, 484);
+            this.Controls.Add(this.GeriAlFiltreBtn);
+            this.Controls.Add(this.GeriAlFiltre_txt);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.GeriAlBtn);
             this.Controls.Add(this.GeriAl_dgv);
             this.Name = "GeriAlForm";
@@ -64,6 +101,7 @@ namespace UludagKutuphane
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.GeriAl_dgv)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -71,5 +109,8 @@ namespace UludagKutuphane
 
         private System.Windows.Forms.DataGridView GeriAl_dgv;
         private System.Windows.Forms.Button GeriAlBtn;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox GeriAlFiltre_txt;
+        private System.Windows.Forms.Button GeriAlFiltreBtn;
     }
 }
