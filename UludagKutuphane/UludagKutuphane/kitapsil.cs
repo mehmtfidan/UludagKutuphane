@@ -53,5 +53,6 @@ namespace UludagKutuphane
             KitapSil_dgv.DataSource = dt;
             con.Close();
         }
+
     }
 }
