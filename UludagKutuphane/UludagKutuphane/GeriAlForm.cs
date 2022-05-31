@@ -54,5 +54,15 @@ namespace UludagKutuphane
 
             con.Close();
         }
+
+        private void GeriAlFiltre_txt_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void GeriAlFiltreBtn_Click(object sender, EventArgs e)
+        {
+           GeriAl_Btn.Text = "";
+        }
     }
 }
