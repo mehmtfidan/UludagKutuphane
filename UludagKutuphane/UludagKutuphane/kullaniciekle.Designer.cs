@@ -35,13 +35,11 @@ namespace UludagKutuphane
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.KullaniciAdi_txt = new System.Windows.Forms.TextBox();
             this.KullaniciSoyadi_txt = new System.Windows.Forms.TextBox();
             this.UyeNumara_txt = new System.Windows.Forms.TextBox();
             this.TelNo_txt = new System.Windows.Forms.TextBox();
             this.EPosta_txt = new System.Windows.Forms.TextBox();
-            this.ceza_txt = new System.Windows.Forms.TextBox();
             this.UyeEkle = new System.Windows.Forms.Button();
             this.KullaniciEkle_dgv = new System.Windows.Forms.DataGridView();
             this.Bolum_cmb = new System.Windows.Forms.ComboBox();
@@ -102,15 +100,6 @@ namespace UludagKutuphane
             this.label6.TabIndex = 5;
             this.label6.Text = "Bölüm :";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(112, 302);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(48, 17);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Ceza :";
-            // 
             // KullaniciAdi_txt
             // 
             this.KullaniciAdi_txt.Location = new System.Drawing.Point(182, 63);
@@ -153,15 +142,6 @@ namespace UludagKutuphane
             this.EPosta_txt.Size = new System.Drawing.Size(174, 22);
             this.EPosta_txt.TabIndex = 11;
             // 
-            // ceza_txt
-            // 
-            this.ceza_txt.Location = new System.Drawing.Point(182, 299);
-            this.ceza_txt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ceza_txt.Multiline = true;
-            this.ceza_txt.Name = "ceza_txt";
-            this.ceza_txt.Size = new System.Drawing.Size(174, 22);
-            this.ceza_txt.TabIndex = 13;
-            // 
             // UyeEkle
             // 
             this.UyeEkle.Location = new System.Drawing.Point(182, 346);
@@ -192,7 +172,7 @@ namespace UludagKutuphane
             "Yönetim Bilişim Sistemleri",
             "İşletme"});
             this.Bolum_cmb.Location = new System.Drawing.Point(182, 260);
-            this.Bolum_cmb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Bolum_cmb.Margin = new System.Windows.Forms.Padding(4);
             this.Bolum_cmb.Name = "Bolum_cmb";
             this.Bolum_cmb.Size = new System.Drawing.Size(171, 24);
             this.Bolum_cmb.TabIndex = 16;
@@ -205,13 +185,11 @@ namespace UludagKutuphane
             this.Controls.Add(this.Bolum_cmb);
             this.Controls.Add(this.KullaniciEkle_dgv);
             this.Controls.Add(this.UyeEkle);
-            this.Controls.Add(this.ceza_txt);
             this.Controls.Add(this.EPosta_txt);
             this.Controls.Add(this.TelNo_txt);
             this.Controls.Add(this.UyeNumara_txt);
             this.Controls.Add(this.KullaniciSoyadi_txt);
             this.Controls.Add(this.KullaniciAdi_txt);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -240,13 +218,11 @@ namespace UludagKutuphane
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox KullaniciAdi_txt;
         private System.Windows.Forms.TextBox KullaniciSoyadi_txt;
         private System.Windows.Forms.TextBox UyeNumara_txt;
         private System.Windows.Forms.TextBox TelNo_txt;
         private System.Windows.Forms.TextBox EPosta_txt;
-        private System.Windows.Forms.TextBox ceza_txt;
         private System.Windows.Forms.Button UyeEkle;
         private System.Windows.Forms.DataGridView KullaniciEkle_dgv;
         private System.Windows.Forms.ComboBox Bolum_cmb;

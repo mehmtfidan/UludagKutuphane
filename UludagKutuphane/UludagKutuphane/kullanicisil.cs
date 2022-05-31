@@ -25,7 +25,7 @@ namespace UludagKutuphane
         private void KullaniciSil_Load(object sender, EventArgs e)
         {
             con.Open();
-            string Komut = "Select Uye.Id, Uye.Adi as Adı, Uye.Soyadi as Soyadı, Uye.Uye_Numarasi as Üye_Numarası, Uye.Telefon_No as Telefon_Numarası, Uye.E_Posta, Uye.Ceza, Bolum.Adi As Bölüm_Adı From Bolum Inner Join Uye On Uye.Bolum_Id = Bolum.Id";
+            string Komut = "Select Uye.Id, Uye.Adi as Adı, Uye.Soyadi as Soyadı, Uye.Uye_Numarasi as Üye_Numarası, Uye.Telefon_No as Telefon_Numarası, Uye.E_Posta, Bolum.Adi As Bölüm_Adı From Bolum Inner Join Uye On Uye.Bolum_Id = Bolum.Id";
             MySqlDataAdapter adp = new MySqlDataAdapter(Komut, con);
             DataTable dt = new DataTable();
             adp.Fill(dt);
@@ -41,7 +41,7 @@ namespace UludagKutuphane
             cmd = new MySqlCommand("DELETE FROM Uye WHERE Id = '"+ SecilenId +"'", con);
             cmd.ExecuteNonQuery();
 
-            string Komut1 = "Select Uye.Id, Uye.Adi as Adı, Uye.Soyadi as Soyadı, Uye.Uye_Numarasi as Üye_Numarası, Uye.Telefon_No as Telefon_Numarası, Uye.E_Posta, Uye.Ceza, Bolum.Adi As Bölüm_Adı From Bolum Inner Join Uye On Uye.Bolum_Id = Bolum.Id";
+            string Komut1 = "Select Uye.Id, Uye.Adi as Adı, Uye.Soyadi as Soyadı, Uye.Uye_Numarasi as Üye_Numarası, Uye.Telefon_No as Telefon_Numarası, Uye.E_Posta, Bolum.Adi As Bölüm_Adı From Bolum Inner Join Uye On Uye.Bolum_Id = Bolum.Id";
             MySqlDataAdapter adp = new MySqlDataAdapter(Komut1, con);
             DataTable dt = new DataTable();
             adp.Fill(dt);

@@ -78,7 +78,7 @@ namespace UludagKutuphane
             int SecilenId = Convert.ToInt32(Filtrele_dgv.CurrentRow.Cells[0].Value);
 
             con.Open();
-            MySqlCommand query = new MySqlCommand("SSELECT Durum_Id FROM Kitap WHERE Id = '"+ SecilenId +"'", con);
+            MySqlCommand query = new MySqlCommand("SELECT Durum_Id FROM Kitap WHERE Id = '"+ SecilenId +"'", con);
             int Durum = Convert.ToInt32(query.ExecuteScalar());
             con.Close();
 

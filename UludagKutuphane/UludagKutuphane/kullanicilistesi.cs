@@ -24,7 +24,7 @@ namespace UludagKutuphane
         private void KullaniciListele_load(object sender, EventArgs e)
         {
             con.Open();
-            string Komut = "Select Uye.Id, Uye.Adi, Uye.Soyadi, Uye.Uye_Numarasi, Uye.Telefon_No, Uye.E_Posta, Uye.Ceza, Bolum.Adi As Adi1 From Bolum Inner Join Uye On Uye.Bolum_Id = Bolum.Id";
+            string Komut = "Select Uye.Id, Uye.Adi, Uye.Soyadi, Uye.Uye_Numarasi, Uye.Telefon_No, Uye.E_Posta, Bolum.Adi As Adi1 From Bolum Inner Join Uye On Uye.Bolum_Id = Bolum.Id";
             MySqlDataAdapter adp = new MySqlDataAdapter(Komut, con);
             DataTable dt = new DataTable();
             adp.Fill(dt);

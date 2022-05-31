@@ -35,7 +35,7 @@ namespace UludagKutuphane
         private void KullaniciEkle_Load(object sender, EventArgs e)
         {
             con.Open();
-            string Komut = "Select Uye.Id, Uye.Adi, Uye.Soyadi, Uye.Uye_Numarasi, Uye.Telefon_No, Uye.E_Posta, Uye.Ceza, Bolum.Adi As Adi1 From Bolum Inner Join Uye On Uye.Bolum_Id = Bolum.Id";
+            string Komut = "Select Uye.Id, Uye.Adi, Uye.Soyadi, Uye.Uye_Numarasi, Uye.Telefon_No, Uye.E_Posta, Bolum.Adi As Bolum From Bolum Inner Join Uye On Uye.Bolum_Id = Bolum.Id";
             MySqlDataAdapter adp = new MySqlDataAdapter(Komut, con);
             DataTable dt = new DataTable();
             adp.Fill(dt);
@@ -50,10 +50,10 @@ namespace UludagKutuphane
             string kullaniciMail = EPosta_txt.Text;
             string KullaniciTelNo = TelNo_txt.Text;
             string kullaniciUyeNumara = UyeNumara_txt.Text;
-            float Ceza = float.Parse(ceza_txt.Text);
+            
             int Bolum = Bolum_cmb.SelectedIndex;
 
-            if (KullaniciAdi_txt.Text == "" && KullaniciSoyadi_txt.Text == "" && EPosta_txt.Text == "" && UyeNumara_txt.Text == "" && float.Parse(ceza_txt.Text) == 0 && Bolum_cmb.SelectedIndex == 0)
+            if (KullaniciAdi_txt.Text == "" && KullaniciSoyadi_txt.Text == "" && EPosta_txt.Text == "" && UyeNumara_txt.Text == "" && Bolum_cmb.SelectedIndex == 0)
             {
                 MessageBox.Show("Uye bilgileri eksiksiz giriniz!!");
             }
@@ -62,7 +62,7 @@ namespace UludagKutuphane
                 if (VarMi("SELECT COUNT(*) From Uye WHERE Uye_Numarasi = '" + UyeNumara_txt.Text + "'") == 0)
                 {
                     con.Open();
-                    cmd = new MySqlCommand("INSERT INTO Uye (Adi, Soyadi, Uye_Numarasi, Telefon_No, E_Posta, Ceza, Bolum_Id) VALUES ('" + kullaniciAdi + "', '" + kullaniciSoyadi + "', '" + kullaniciUyeNumara + "', '" + KullaniciTelNo + "', '" + kullaniciMail + "', '" + Ceza + "', '" + Bolum + "')", con);
+                    cmd = new MySqlCommand("INSERT INTO Uye (Adi, Soyadi, Uye_Numarasi, Telefon_No, E_Posta, Bolum_Id) VALUES ('" + kullaniciAdi + "', '" + kullaniciSoyadi + "', '" + kullaniciUyeNumara + "', '" + KullaniciTelNo + "', '" + kullaniciMail + "', '" + Bolum + "')", con);
                     cmd.ExecuteNonQuery();
                     con.Close();
                     MessageBox.Show("Uye başarıyla kayıt edildi.");
@@ -73,7 +73,7 @@ namespace UludagKutuphane
                 }               
             }
 
-            string Komut = "Select Uye.Id, Uye.Adi, Uye.Soyadi, Uye.Uye_Numarasi, Uye.Telefon_No, Uye.E_Posta, Uye.Ceza, Bolum.Adi As Adi1 From Bolum Inner Join Uye On Uye.Bolum_Id = Bolum.Id";
+            string Komut = "Select Uye.Id, Uye.Adi, Uye.Soyadi, Uye.Uye_Numarasi, Uye.Telefon_No, Uye.E_Posta, Bolum.Adi As Adi1 From Bolum Inner Join Uye On Uye.Bolum_Id = Bolum.Id";
             MySqlDataAdapter adp = new MySqlDataAdapter(Komut, con);
             DataTable dt = new DataTable();
             adp.Fill(dt);

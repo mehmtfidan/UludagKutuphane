@@ -64,7 +64,8 @@ namespace UludagKutuphane
         public int VarMi(string sorgu)
         {
             int sonuc;
-            con.Open();
+            if(con.State != ConnectionState.Open)
+                con.Open();
             cmd = new MySqlCommand(sorgu, con);
             sonuc = Convert.ToInt32(cmd.ExecuteScalar());
             con.Close();
