@@ -22,6 +22,16 @@ namespace UludagKutuphane
             con = new MySqlConnection("server=172.21.54.3; user id=132030020; pwd=Ogrenci9512357.; database=132030020");
         }
 
+        public int VarMi(string sorgu)
+        {
+            int sonuc;
+            con.Open();
+            cmd = new MySqlCommand(sorgu, con);
+            sonuc = Convert.ToInt32(cmd.ExecuteScalar());
+            con.Close();
+            return sonuc;
+        }
+
         private void KullaniciEkle_Load(object sender, EventArgs e)
         {
             con.Open();
@@ -49,11 +59,18 @@ namespace UludagKutuphane
             }
             else
             {
-                con.Open();
-                cmd = new MySqlCommand("INSERT INTO Uye (Adi, Soyadi, Uye_Numarasi, Telefon_No, E_Posta, Ceza, Bolum_Id) VALUES ('"+ kullaniciAdi +"', '"+ kullaniciSoyadi +"', '"+ kullaniciUyeNumara +"', '"+ KullaniciTelNo +"', '"+ kullaniciMail +"', '"+ Ceza +"', '"+ Bolum +"')", con);
-                cmd.ExecuteNonQuery();
-                con.Close();
-                MessageBox.Show("Uye başarıyla kayıt edildi.");
+                if (VarMi("SELECT COUNT(*) From Uye WHERE Uye_Numarasi = '" + UyeNumara_txt.Text + "'") == 0)
+                {
+                    con.Open();
+                    cmd = new MySqlCommand("INSERT INTO Uye (Adi, Soyadi, Uye_Numarasi, Telefon_No, E_Posta, Ceza, Bolum_Id) VALUES ('" + kullaniciAdi + "', '" + kullaniciSoyadi + "', '" + kullaniciUyeNumara + "', '" + KullaniciTelNo + "', '" + kullaniciMail + "', '" + Ceza + "', '" + Bolum + "')", con);
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("Uye başarıyla kayıt edildi.");
+                }
+                else
+                {
+                    MessageBox.Show("Bu üye numarasıyla kayıt bulunmaktadır.");
+                }               
             }
 
             string Komut = "Select Uye.Id, Uye.Adi, Uye.Soyadi, Uye.Uye_Numarasi, Uye.Telefon_No, Uye.E_Posta, Uye.Ceza, Bolum.Adi As Adi1 From Bolum Inner Join Uye On Uye.Bolum_Id = Bolum.Id";

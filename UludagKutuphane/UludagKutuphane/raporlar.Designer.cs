@@ -147,6 +147,7 @@ namespace UludagKutuphane
             this.EnCokOkuyan_Lb.FormattingEnabled = true;
             this.EnCokOkuyan_Lb.ItemHeight = 16;
             this.EnCokOkuyan_Lb.Location = new System.Drawing.Point(448, 252);
+            this.EnCokOkuyan_Lb.MultiColumn = true;
             this.EnCokOkuyan_Lb.Name = "EnCokOkuyan_Lb";
             this.EnCokOkuyan_Lb.Size = new System.Drawing.Size(214, 244);
             this.EnCokOkuyan_Lb.TabIndex = 11;

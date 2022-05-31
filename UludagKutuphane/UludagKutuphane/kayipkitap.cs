@@ -24,7 +24,7 @@ namespace UludagKutuphane
         private void Kayip_Load(object sender, EventArgs e)
         {
             con.Open();
-            MySqlDataAdapter ShowinDgv = new MySqlDataAdapter("Select Kitap.Id, Kayip_Kitap.Id As Id1, Kayip_Kitap.Bildirildigi_Tarih, Kitap.Ki_Adi, Kitap.Demirbas_No, Memur.Adi, Memur.Soyadi From Kayip_Kitap Inner Join Kitap On Kayip_Kitap.Kitap_Id = Kitap.Id Inner Join Memur On Kayip_Kitap.Memur_Id = Memur.Id WHERE Kitap.Durum_Id = '"+ 3 +"'", con);
+            MySqlDataAdapter ShowinDgv = new MySqlDataAdapter("SELECT Kitap.Id, Kitap.Ki_Adi, Kitap.Demirbas_No, Yazar.Y_Adi, Yazar.Y_Soyadi, Durum.D_Adi FROM Kitap INNER JOIN Durum ON Kitap.Durum_Id = Durum.Id INNER JOIN Yazar ON Kitap.Yazar_Id = Yazar.Id WHERE Kitap.Durum_Id = '3'", con);
             DataTable dt = new DataTable();
             ShowinDgv.Fill(dt);
             Kayip_dgv.DataSource = dt;
@@ -34,18 +34,18 @@ namespace UludagKutuphane
         private void durumdegis_Btn_Click(object sender, EventArgs e)
         {
             int SecilenSatır = Convert.ToInt32(Kayip_dgv.CurrentRow.Cells[0].Value);
-            int SecilenKitap = Convert.ToInt32(Kayip_dgv.CurrentRow.Cells[1].Value);
+            //int SecilenKitap = Convert.ToInt32(Kayip_dgv.CurrentRow.Cells[1].Value);
 
             if (durumdegis_Cmb.SelectedIndex == 1)
             {
                 con.Open();
-                MySqlCommand update = new MySqlCommand("UPDATE Kitap SET Durum_Id = '"+ durumdegis_Cmb.SelectedIndex +"' WHERE Id = '"+ SecilenKitap +"'", con);
+                MySqlCommand update = new MySqlCommand("UPDATE Kitap SET Durum_Id = '"+ durumdegis_Cmb.SelectedIndex +"' WHERE Id = '"+ SecilenSatır +"'", con);
                 update.ExecuteNonQuery();
 
                 MySqlCommand delete = new MySqlCommand("DELETE FROM Kayip_Kitap WHERE Id = '"+ SecilenSatır +"'", con);
                 delete.ExecuteNonQuery();
 
-                MySqlDataAdapter ShowinDgv = new MySqlDataAdapter("Select Kitap.Id, Kayip_Kitap.Id As Id1, Kayip_Kitap.Bildirildigi_Tarih, Kitap.Ki_Adi, Kitap.Demirbas_No, Memur.Adi, Memur.Soyadi From Kayip_Kitap Inner Join Kitap On Kayip_Kitap.Kitap_Id = Kitap.Id Inner Join Memur On Kayip_Kitap.Memur_Id = Memur.Id WHERE Kitap.Durum_Id = '" + 3 + "'", con);
+                MySqlDataAdapter ShowinDgv = new MySqlDataAdapter("SELECT Kitap.Id, Kitap.Ki_Adi, Kitap.Demirbas_No, Yazar.Y_Adi, Yazar.Y_Soyadi, Durum.D_Adi FROM Kitap INNER JOIN Durum ON Kitap.Durum_Id = Durum.Id INNER JOIN Yazar ON Kitap.Yazar_Id = Yazar.Id WHERE Kitap.Durum_Id = '3'", con);
                 DataTable dt = new DataTable();
                 ShowinDgv.Fill(dt);
                 Kayip_dgv.DataSource = dt;
