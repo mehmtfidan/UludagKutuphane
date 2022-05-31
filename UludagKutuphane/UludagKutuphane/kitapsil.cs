@@ -54,8 +54,6 @@ namespace UludagKutuphane
             con.Close();
         }
 
-
-
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             if (comboBox1.SelectedIndex == 1)

@@ -30,7 +30,7 @@ namespace UludagKutuphane
         private void InitializeComponent()
         {
             this.GeriAl_dgv = new System.Windows.Forms.DataGridView();
-            this.GeriAlBtn = new System.Windows.Forms.Button();
+            this.GeriAl_Btn = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.GeriAlFiltre_txt = new System.Windows.Forms.TextBox();
             this.GeriAlFiltreBtn = new System.Windows.Forms.Button();
@@ -45,14 +45,15 @@ namespace UludagKutuphane
             this.GeriAl_dgv.Size = new System.Drawing.Size(856, 324);
             this.GeriAl_dgv.TabIndex = 0;
             // 
-            // GeriAlBtn
+            // GeriAl_Btn
             // 
-            this.GeriAlBtn.Location = new System.Drawing.Point(27, 25);
-            this.GeriAlBtn.Name = "GeriAlBtn";
-            this.GeriAlBtn.Size = new System.Drawing.Size(122, 69);
-            this.GeriAlBtn.TabIndex = 1;
-            this.GeriAlBtn.Text = "Geri Al";
-            this.GeriAlBtn.UseVisualStyleBackColor = true;
+            this.GeriAl_Btn.Location = new System.Drawing.Point(27, 25);
+            this.GeriAl_Btn.Name = "GeriAl_Btn";
+            this.GeriAl_Btn.Size = new System.Drawing.Size(122, 69);
+            this.GeriAl_Btn.TabIndex = 1;
+            this.GeriAl_Btn.Text = "Geri Al";
+            this.GeriAl_Btn.UseVisualStyleBackColor = true;
+            this.GeriAl_Btn.Click += new System.EventHandler(this.GeriAl_Btn_Click);
             // 
             // comboBox1
             // 
@@ -74,7 +75,6 @@ namespace UludagKutuphane
             this.GeriAlFiltre_txt.Name = "GeriAlFiltre_txt";
             this.GeriAlFiltre_txt.Size = new System.Drawing.Size(100, 20);
             this.GeriAlFiltre_txt.TabIndex = 3;
-            this.GeriAlFiltre_txt.TextChanged += new System.EventHandler(this.GeriAlFiltre_txt_TextChanged);
             // 
             // GeriAlFiltreBtn
             // 
@@ -93,12 +93,13 @@ namespace UludagKutuphane
             this.Controls.Add(this.GeriAlFiltreBtn);
             this.Controls.Add(this.GeriAlFiltre_txt);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.GeriAlBtn);
+            this.Controls.Add(this.GeriAl_Btn);
             this.Controls.Add(this.GeriAl_dgv);
             this.Name = "GeriAlForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GeriAlForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.GeriAlForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.GeriAl_dgv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -108,7 +109,7 @@ namespace UludagKutuphane
         #endregion
 
         private System.Windows.Forms.DataGridView GeriAl_dgv;
-        private System.Windows.Forms.Button GeriAlBtn;
+        private System.Windows.Forms.Button GeriAl_Btn;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox GeriAlFiltre_txt;
         private System.Windows.Forms.Button GeriAlFiltreBtn;

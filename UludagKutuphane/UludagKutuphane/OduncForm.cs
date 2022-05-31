@@ -12,8 +12,6 @@ namespace UludagKutuphane
         int KisiId;
         string alis;
 
-
-
         public OduncForm()
         {
             InitializeComponent();
@@ -29,8 +27,6 @@ namespace UludagKutuphane
             con.Close();
             return sonuc;
         }
-
-
 
         private void OduncForm_Load(object sender, EventArgs e)
         {
@@ -53,8 +49,6 @@ namespace UludagKutuphane
             con.Close();
             Filtrele_dgv.DataSource = tbl;
         }
-
-
 
         private void BulBtn_Click(object sender, EventArgs e)
         {
@@ -83,51 +77,67 @@ namespace UludagKutuphane
         {
             int SecilenId = Convert.ToInt32(Filtrele_dgv.CurrentRow.Cells[0].Value);
 
-
-            DateTime Alis = new DateTime();
-            Alis = DateTime.Today;
-            alis = Convert.ToString(Alis);
-            DateTime Teslim = new DateTime();
-            Teslim = Alis.AddDays(15);
-            if (Teslim.DayOfWeek == DayOfWeek.Saturday)
-            {
-                Teslim.AddDays(2);
-                String teslim = Convert.ToString(Teslim);
-                con.Open();
-                MySqlCommand Insert1 = new MySqlCommand("INSERT INTO Odunc (Uye_Id, Kitap_Id, Alis_Tarihi, Teslim_Tarihi) VALUES ('" + KisiId + "', '" + SecilenId + "', '" + alis + "', '" + teslim + "')", con);
-                Insert1.ExecuteNonQuery();
-                con.Close();
-                MessageBox.Show("Kitap emanet edildi.");
-            }
-            else if (Teslim.DayOfWeek == DayOfWeek.Sunday)
-            {
-                Teslim.AddDays(1);
-                String teslim = Convert.ToString(Teslim);
-                con.Open();
-                MySqlCommand Insert2 = new MySqlCommand("INSERT INTO Odunc (Uye_Id, Kitap_Id, Alis_Tarihi, Teslim_Tarihi) VALUES ('" + KisiId + "', '" + SecilenId + "', '" + alis + "', '" + teslim + "')", con);
-                Insert2.ExecuteNonQuery();
-                con.Close();
-                MessageBox.Show("Kitap emanet edildi.");
-            }
-            else
-            {
-                con.Open();
-                MySqlCommand Insert2 = new MySqlCommand("INSERT INTO Odunc (Uye_Id, Kitap_Id, Alis_Tarihi, Teslim_Tarihi) VALUES ('" + KisiId + "', '" + SecilenId + "', '" + alis + "', '" + Teslim + "')", con);
-                Insert2.ExecuteNonQuery();
-                con.Close();
-                MessageBox.Show("Kitap emanet edildi.");
-            }
-
             con.Open();
-
-            
-
-            MySqlDataAdapter ShowinDgv = new MySqlDataAdapter("Select Odunc.Alis_Tarihi, Odunc.Teslim_Tarihi, Kitap.Ki_Adi, Kitap.Demirbas_No, Uye.Adi, Uye.Soyadi, Uye.Uye_Numarasi, Uye.Telefon_No, Uye.E_Posta From Odunc Inner Join Kitap On Odunc.Kitap_Id = Kitap.Id Inner Join Uye On Odunc.Uye_Id = Uye.Id", con);
-            DataTable dt = new DataTable();
-            ShowinDgv.Fill(dt);
-            Odunc_dgv.DataSource = dt;
-
+            MySqlCommand query = new MySqlCommand("SSELECT Durum_Id FROM Kitap WHERE Id = '"+ SecilenId +"'", con);
+            int Durum = Convert.ToInt32(query.ExecuteScalar());
             con.Close();
+
+            if (Durum == 1)
+            {
+                DateTime Alis = new DateTime();
+                Alis = DateTime.Today;
+                alis = Convert.ToString(Alis);
+                DateTime Teslim = new DateTime();
+                Teslim = Alis.AddDays(15);
+                if (Teslim.DayOfWeek == DayOfWeek.Saturday)
+                {
+                    Teslim.AddDays(2);
+                    String teslim = Convert.ToString(Teslim);
+                    con.Open();
+                    MySqlCommand Insert1 = new MySqlCommand("INSERT INTO Odunc (Uye_Id, Kitap_Id, Alis_Tarihi, Teslim_Tarihi) VALUES ('" + KisiId + "', '" + SecilenId + "', '" + alis + "', '" + teslim + "')", con);
+                    Insert1.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("Kitap emanet edildi.");
+                }
+                else if (Teslim.DayOfWeek == DayOfWeek.Sunday)
+                {
+                    Teslim.AddDays(1);
+                    String teslim = Convert.ToString(Teslim);
+                    con.Open();
+                    MySqlCommand Insert2 = new MySqlCommand("INSERT INTO Odunc (Uye_Id, Kitap_Id, Alis_Tarihi, Teslim_Tarihi) VALUES ('" + KisiId + "', '" + SecilenId + "', '" + alis + "', '" + teslim + "')", con);
+                    Insert2.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("Kitap emanet edildi.");
+                }
+                else
+                {
+                    con.Open();
+                    MySqlCommand Insert3 = new MySqlCommand("INSERT INTO Odunc (Uye_Id, Kitap_Id, Alis_Tarihi, Teslim_Tarihi) VALUES ('" + KisiId + "', '" + SecilenId + "', '" + alis + "', '" + Teslim + "')", con);
+                    Insert3.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("Kitap emanet edildi.");
+                }
+
+                con.Open();
+
+                MySqlCommand update = new MySqlCommand("UPDATE Kitap SET Durum_Id = '" + 2 + "' WHERE Id = '" + SecilenId + "'", con);
+                update.ExecuteNonQuery();
+
+                MySqlDataAdapter ShowinDgv = new MySqlDataAdapter("Select Odunc.Alis_Tarihi, Odunc.Teslim_Tarihi, Kitap.Ki_Adi, Kitap.Demirbas_No, Uye.Adi, Uye.Soyadi, Uye.Uye_Numarasi, Uye.Telefon_No, Uye.E_Posta From Odunc Inner Join Kitap On Odunc.Kitap_Id = Kitap.Id Inner Join Uye On Odunc.Uye_Id = Uye.Id", con);
+                DataTable dt = new DataTable();
+                ShowinDgv.Fill(dt);
+                Odunc_dgv.DataSource = dt;
+
+                con.Close();
+            }
+            else if (Durum == 2)
+            {
+                MessageBox.Show("Kitap başka bir üyede emanette.");
+            }
+            else if (Durum == 3)
+            {
+                MessageBox.Show("Kitap kayıp olduğundan dolayı emanet edilemez!!");
+            }           
         }
     }
 }
