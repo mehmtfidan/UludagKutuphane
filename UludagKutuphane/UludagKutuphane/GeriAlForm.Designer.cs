@@ -31,6 +31,9 @@ namespace UludagKutuphane
         {
             this.GeriAl_dgv = new System.Windows.Forms.DataGridView();
             this.GeriAl_Btn = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.Name_Tb = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.GeriAl_dgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -38,7 +41,7 @@ namespace UludagKutuphane
             // 
             this.GeriAl_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GeriAl_dgv.Location = new System.Drawing.Point(16, 182);
-            this.GeriAl_dgv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GeriAl_dgv.Margin = new System.Windows.Forms.Padding(4);
             this.GeriAl_dgv.Name = "GeriAl_dgv";
             this.GeriAl_dgv.RowHeadersWidth = 51;
             this.GeriAl_dgv.Size = new System.Drawing.Size(1141, 399);
@@ -47,7 +50,7 @@ namespace UludagKutuphane
             // GeriAl_Btn
             // 
             this.GeriAl_Btn.Location = new System.Drawing.Point(36, 31);
-            this.GeriAl_Btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GeriAl_Btn.Margin = new System.Windows.Forms.Padding(4);
             this.GeriAl_Btn.Name = "GeriAl_Btn";
             this.GeriAl_Btn.Size = new System.Drawing.Size(163, 85);
             this.GeriAl_Btn.TabIndex = 1;
@@ -55,14 +58,50 @@ namespace UludagKutuphane
             this.GeriAl_Btn.UseVisualStyleBackColor = true;
             this.GeriAl_Btn.Click += new System.EventHandler(this.GeriAl_Btn_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Seçiniz..",
+            "Adı",
+            "Yazarı",
+            "Demirbaş Numarası",
+            "Çevirmeni",
+            "Yayınevi"});
+            this.comboBox1.Location = new System.Drawing.Point(323, 62);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(158, 24);
+            this.comboBox1.TabIndex = 2;
+            // 
+            // Name_Tb
+            // 
+            this.Name_Tb.Location = new System.Drawing.Point(524, 63);
+            this.Name_Tb.Name = "Name_Tb";
+            this.Name_Tb.Size = new System.Drawing.Size(142, 22);
+            this.Name_Tb.TabIndex = 3;
+            this.Name_Tb.TextChanged += new System.EventHandler(this.Name_Tb_TextChanged);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(705, 48);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(128, 53);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Temizle";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // GeriAlForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1173, 596);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Name_Tb);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.GeriAl_Btn);
             this.Controls.Add(this.GeriAl_dgv);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "GeriAlForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GeriAlForm";
@@ -70,6 +109,7 @@ namespace UludagKutuphane
             this.Load += new System.EventHandler(this.GeriAlForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.GeriAl_dgv)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -77,5 +117,8 @@ namespace UludagKutuphane
 
         private System.Windows.Forms.DataGridView GeriAl_dgv;
         private System.Windows.Forms.Button GeriAl_Btn;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox Name_Tb;
+        private System.Windows.Forms.Button button1;
     }
 }

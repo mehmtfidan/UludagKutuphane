@@ -40,9 +40,9 @@ namespace UludagKutuphane
             dr = cmd.ExecuteReader();
             if (dr.Read())
             {
-                MessageBox.Show("Giriş Başarılı.");
                 islempaneli islempaneliform = new islempaneli();
-                islempaneliform.Show();               
+                islempaneliform.Show();
+                this.Hide();
             }
             else
             {

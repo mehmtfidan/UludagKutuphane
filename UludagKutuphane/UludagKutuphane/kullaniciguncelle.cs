@@ -42,8 +42,7 @@ namespace UludagKutuphane
             KullaniciTelNo_txt.Text = KullaniciGuncelle_dgv.CurrentRow.Cells[4].Value.ToString();
             KullaniciMail_txt.Text = KullaniciGuncelle_dgv.CurrentRow.Cells[5].Value.ToString();
             Bolum_cmb.Text = KullaniciGuncelle_dgv.CurrentRow.Cells[6].Value.ToString();
-            int Bolum = Bolum_cmb.SelectedIndex;
-            
+            int Bolum = Bolum_cmb.SelectedIndex;            
         }
 
         private void Guncelle_txt_Click(object sender, EventArgs e)
@@ -73,9 +72,6 @@ namespace UludagKutuphane
             adp.Fill(dt);
             KullaniciGuncelle_dgv.DataSource = dt;
             con.Close();
-
-        }
-
-        
+        }       
     }
 }

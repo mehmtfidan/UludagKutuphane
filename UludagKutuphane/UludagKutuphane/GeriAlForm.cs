@@ -24,7 +24,7 @@ namespace UludagKutuphane
         private void GeriAlForm_Load(object sender, EventArgs e)
         {
             con.Open();
-            MySqlDataAdapter ShowinDgv = new MySqlDataAdapter("Select Odunc.Id, Odunc.Alis_Tarihi, Odunc.Teslim_Tarihi, Kitap.Ki_Adi, Kitap.Demirbas_No, Uye.Adi, Uye.Soyadi, Uye.Uye_Numarasi, Uye.Telefon_No, Uye.E_Posta From Odunc Inner Join Kitap On Odunc.Kitap_Id = Kitap.Id Inner Join Uye On Odunc.Uye_Id = Uye.Id", con);
+            MySqlDataAdapter ShowinDgv = new MySqlDataAdapter("Select Odunc.Id, Odunc.Alis_Tarihi, Son_Teslim_Tarihi, Odunc.Teslim_Ettigi_Tarih, Odunc.Uye_Id, Odunc.Kitap_Id, Kitap.Ki_Adi, Kitap.Demirbas_No, Kitap.Durum_Id, Durum.D_Adi, Uye.Adi, Uye.Soyadi, Uye.Uye_Numarasi, Uye.Telefon_No, Uye.E_Posta, Odunc.Teslim_Durumu From Odunc Inner Join Kitap On Odunc.Kitap_Id = Kitap.Id Inner Join Durum On Kitap.Durum_Id = Durum.Id Inner Join Uye On Odunc.Uye_Id = Uye.Id", con);
             DataTable dt = new DataTable();
             ShowinDgv.Fill(dt);
             GeriAl_dgv.DataSource = dt;
@@ -33,19 +33,37 @@ namespace UludagKutuphane
 
         private void GeriAl_Btn_Click(object sender, EventArgs e)
         {
-            int SecilenSatır = Convert.ToInt32(GeriAl_dgv.CurrentRow.Cells[0].Value);
+            int SecilenSatir = Convert.ToInt32(GeriAl_dgv.CurrentRow.Cells[5].Value);
 
+            int SeciliSatir1 = Convert.ToInt32(GeriAl_dgv.CurrentRow.Cells[0].Value);
+
+            DateTime dtn = new DateTime();
+            dtn = DateTime.Today;
+            
             con.Open();
 
-            MySqlCommand KitapId = new MySqlCommand("SELECT Kitap_Id FROM Odunc WHERE Id = '"+ SecilenSatır +"'", con);
-            int SecilenKitapId = Convert.ToInt32(KitapId.ExecuteScalar());
+            //MySqlCommand KitapId = new MySqlCommand("SELECT Kitap_Id FROM Odunc WHERE Id = '"+ SeciliSatir1 + "'", con);
+            //int SecilenKitapId = Convert.ToInt32(KitapId.ExecuteScalar());
 
-            MySqlCommand update = new MySqlCommand("UPDATE Kitap SET Durum_Id = '" + 1 + "' WHERE Id = '" + SecilenKitapId + "'");
 
-            MySqlCommand delete = new MySqlCommand("DELETE FROM Odunc WHERE Id = '"+ SecilenSatır +"'", con);
-            delete.ExecuteNonQuery();
+            
 
-            MySqlDataAdapter ShowinDgv = new MySqlDataAdapter("Select Odunc.Id, Odunc.Alis_Tarihi, Odunc.Teslim_Tarihi, Kitap.Ki_Adi, Kitap.Demirbas_No, Uye.Adi, Uye.Soyadi, Uye.Uye_Numarasi, Uye.Telefon_No, Uye.E_Posta From Odunc Inner Join Kitap On Odunc.Kitap_Id = Kitap.Id Inner Join Uye On Odunc.Uye_Id = Uye.Id", con);
+            //MySqlCommand update3 = new MySqlCommand("UPDATE Odunc SET Durum_Id = '" + 1 + "' WHERE Id = '" + SecilenKitapId + "'", con);
+            //update.ExecuteNonQuery();
+
+            MySqlCommand update1 = new MySqlCommand("UPDATE Odunc SET Teslim_Ettigi_Tarih = '"+ dtn +"' WHERE Id = '"+ SeciliSatir1 +"'", con);
+            update1.ExecuteNonQuery();
+
+            MySqlCommand update2 = new MySqlCommand("UPDATE Odunc SET Teslim_Durumu = '" + 0 + "' WHERE Id = '" + SeciliSatir1 + "'", con);
+            update2.ExecuteNonQuery();
+            
+
+            MySqlCommand update = new MySqlCommand("UPDATE Kitap SET Durum_Id = '" + 1 + "' WHERE Id = '" + SecilenSatir + "'", con);
+            update.ExecuteNonQuery();
+
+
+
+            MySqlDataAdapter ShowinDgv = new MySqlDataAdapter("Select Odunc.Id, Odunc.Alis_Tarihi, Odunc.Son_Teslim_Tarihi, Odunc.Teslim_Ettigi_Tarih, Odunc.Uye_Id, Odunc.Kitap_Id, Kitap.Ki_Adi, Kitap.Demirbas_No, Kitap.Durum_Id, Durum.D_Adi, Uye.Adi, Uye.Soyadi, Uye.Uye_Numarasi, Uye.Telefon_No, Uye.E_Posta, Odunc.Teslim_Durumu From Odunc Inner Join Kitap On Odunc.Kitap_Id = Kitap.Id Inner Join Durum On Kitap.Durum_Id = Durum.Id Inner Join Uye On Odunc.Uye_Id = Uye.Id", con);
             DataTable dt = new DataTable();
             ShowinDgv.Fill(dt);
             GeriAl_dgv.DataSource = dt;
@@ -63,6 +81,17 @@ namespace UludagKutuphane
         private void GeriAlFiltreBtn_Click(object sender, EventArgs e)
         {
            GeriAl_Btn.Text = "";
+        }
+
+        private void Name_Tb_TextChanged(object sender, EventArgs e)
+        {
+            
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Name_Tb.Text = "";
         }
     }
 }

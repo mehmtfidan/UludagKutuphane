@@ -39,8 +39,10 @@ namespace UludagKutuphane
             this.ToplamUye_Lbl = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.EnCokOkunan_Lb = new System.Windows.Forms.ListBox();
-            this.EnCokOkuyan_Lb = new System.Windows.Forms.ListBox();
+            this.EnCokOkunan_dgv = new System.Windows.Forms.DataGridView();
+            this.encokokuyan_dgv = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.EnCokOkunan_dgv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.encokokuyan_dgv)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -82,7 +84,7 @@ namespace UludagKutuphane
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(346, 97);
+            this.label5.Location = new System.Drawing.Point(524, 97);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(240, 17);
             this.label5.TabIndex = 4;
@@ -91,7 +93,7 @@ namespace UludagKutuphane
             // EmanetKitap_Lbl
             // 
             this.EmanetKitap_Lbl.AutoSize = true;
-            this.EmanetKitap_Lbl.Location = new System.Drawing.Point(615, 97);
+            this.EmanetKitap_Lbl.Location = new System.Drawing.Point(793, 97);
             this.EmanetKitap_Lbl.Name = "EmanetKitap_Lbl";
             this.EmanetKitap_Lbl.Size = new System.Drawing.Size(16, 17);
             this.EmanetKitap_Lbl.TabIndex = 5;
@@ -100,7 +102,7 @@ namespace UludagKutuphane
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(453, 172);
+            this.label7.Location = new System.Drawing.Point(631, 172);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(133, 17);
             this.label7.TabIndex = 6;
@@ -109,7 +111,7 @@ namespace UludagKutuphane
             // ToplamUye_Lbl
             // 
             this.ToplamUye_Lbl.AutoSize = true;
-            this.ToplamUye_Lbl.Location = new System.Drawing.Point(615, 172);
+            this.ToplamUye_Lbl.Location = new System.Drawing.Point(793, 172);
             this.ToplamUye_Lbl.Name = "ToplamUye_Lbl";
             this.ToplamUye_Lbl.Size = new System.Drawing.Size(16, 17);
             this.ToplamUye_Lbl.TabIndex = 7;
@@ -127,38 +129,39 @@ namespace UludagKutuphane
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(445, 232);
+            this.label10.Location = new System.Drawing.Point(623, 232);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(220, 17);
             this.label10.TabIndex = 9;
             this.label10.Text = "En Çok Kitap Okuyan Öğrenciler :";
             // 
-            // EnCokOkunan_Lb
+            // EnCokOkunan_dgv
             // 
-            this.EnCokOkunan_Lb.FormattingEnabled = true;
-            this.EnCokOkunan_Lb.ItemHeight = 16;
-            this.EnCokOkunan_Lb.Location = new System.Drawing.Point(82, 252);
-            this.EnCokOkunan_Lb.Name = "EnCokOkunan_Lb";
-            this.EnCokOkunan_Lb.Size = new System.Drawing.Size(214, 244);
-            this.EnCokOkunan_Lb.TabIndex = 10;
+            this.EnCokOkunan_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.EnCokOkunan_dgv.Location = new System.Drawing.Point(12, 253);
+            this.EnCokOkunan_dgv.Name = "EnCokOkunan_dgv";
+            this.EnCokOkunan_dgv.RowHeadersWidth = 51;
+            this.EnCokOkunan_dgv.RowTemplate.Height = 24;
+            this.EnCokOkunan_dgv.Size = new System.Drawing.Size(536, 373);
+            this.EnCokOkunan_dgv.TabIndex = 12;
             // 
-            // EnCokOkuyan_Lb
+            // encokokuyan_dgv
             // 
-            this.EnCokOkuyan_Lb.FormattingEnabled = true;
-            this.EnCokOkuyan_Lb.ItemHeight = 16;
-            this.EnCokOkuyan_Lb.Location = new System.Drawing.Point(448, 252);
-            this.EnCokOkuyan_Lb.MultiColumn = true;
-            this.EnCokOkuyan_Lb.Name = "EnCokOkuyan_Lb";
-            this.EnCokOkuyan_Lb.Size = new System.Drawing.Size(214, 244);
-            this.EnCokOkuyan_Lb.TabIndex = 11;
+            this.encokokuyan_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.encokokuyan_dgv.Location = new System.Drawing.Point(566, 253);
+            this.encokokuyan_dgv.Name = "encokokuyan_dgv";
+            this.encokokuyan_dgv.RowHeadersWidth = 51;
+            this.encokokuyan_dgv.RowTemplate.Height = 24;
+            this.encokokuyan_dgv.Size = new System.Drawing.Size(586, 373);
+            this.encokokuyan_dgv.TabIndex = 13;
             // 
             // raporlar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(928, 577);
-            this.Controls.Add(this.EnCokOkuyan_Lb);
-            this.Controls.Add(this.EnCokOkunan_Lb);
+            this.ClientSize = new System.Drawing.Size(1205, 755);
+            this.Controls.Add(this.encokokuyan_dgv);
+            this.Controls.Add(this.EnCokOkunan_dgv);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.ToplamUye_Lbl);
@@ -174,6 +177,8 @@ namespace UludagKutuphane
             this.Text = "raporlar";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Raporlar_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.EnCokOkunan_dgv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.encokokuyan_dgv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,7 +196,7 @@ namespace UludagKutuphane
         private System.Windows.Forms.Label ToplamUye_Lbl;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ListBox EnCokOkunan_Lb;
-        private System.Windows.Forms.ListBox EnCokOkuyan_Lb;
+        private System.Windows.Forms.DataGridView EnCokOkunan_dgv;
+        private System.Windows.Forms.DataGridView encokokuyan_dgv;
     }
 }

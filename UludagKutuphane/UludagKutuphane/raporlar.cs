@@ -42,7 +42,7 @@ namespace UludagKutuphane
             con.Close();
 
             con.Open();
-            MySqlCommand komut3 = new MySqlCommand("Select Count(*) From Kayip_Kitap", con);
+            MySqlCommand komut3 = new MySqlCommand("Select Count(*) From Kitap WHERE Durum_Id = '3'", con);
             MySqlDataReader dr3 = komut3.ExecuteReader();
             while (dr3.Read())
             {
@@ -60,22 +60,19 @@ namespace UludagKutuphane
             con.Close();
 
             con.Open();
-            MySqlCommand komut5 = new MySqlCommand("SELECT COUNT(Kitap_Id), Odunc.Kitap_Id, Kitap.Ki_Adi FROM Odunc INNER JOIN Kitap ON Odunc.Kitap_Id = Kitap.Id GROUP BY Odunc.Kitap_Id ORDER BY COUNT(Kitap_Id) DESC", con);
-            MySqlDataReader dr5 = komut5.ExecuteReader();
-            while (dr5.Read())
-            {
-                EnCokOkunan_Lb.Items.Add(dr5["Ki_Adi"]);
-            }
+            MySqlDataAdapter komut5 = new MySqlDataAdapter("SELECT Kitap.Ki_Adi FROM Odunc INNER JOIN Kitap ON Odunc.Kitap_Id = Kitap.Id GROUP BY Odunc.Kitap_Id ORDER BY COUNT(Kitap_Id) DESC LIMIT 5", con);
+            DataTable dt = new DataTable();               
+            komut5.Fill(dt);
+            EnCokOkunan_dgv.DataSource = dt;
+                
+            
             con.Close();
 
             con.Open();
-            MySqlCommand komut6 = new MySqlCommand("SELECT COUNT(Uye_Id), Odunc.Uye_Id, Uye.Uye_Numarasi FROM Odunc INNER JOIN Uye ON Odunc.Uye_Id = Uye.Id GROUP BY Odunc.Uye_Id ORDER BY COUNT(Uye_Id) DESC", con);
-            MySqlDataReader dr6 = komut6.ExecuteReader();
-            while (dr6.Read())
-            {
-                EnCokOkuyan_Lb.Items.Add(dr6["Uye_Numarasi"]);
-                
-            }
+            MySqlDataAdapter komut6 = new MySqlDataAdapter("SELECT Uye.Adi, Uye.Soyadi FROM Odunc INNER JOIN Uye ON Odunc.Uye_Id = Uye.Id GROUP BY Odunc.Uye_Id ORDER BY COUNT(Uye_Id) DESC LIMIT 5", con);
+            DataTable dt1 = new DataTable();
+            komut6.Fill(dt1);
+            encokokuyan_dgv.DataSource = dt1;
             con.Close();
         }
     }

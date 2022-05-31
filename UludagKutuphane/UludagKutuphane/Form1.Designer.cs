@@ -46,7 +46,7 @@ namespace UludagKutuphane
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(78, 78);
+            this.label1.Location = new System.Drawing.Point(95, 76);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(92, 17);
@@ -55,8 +55,8 @@ namespace UludagKutuphane
             // 
             // KullaniciAdi_txt
             // 
-            this.KullaniciAdi_txt.Location = new System.Drawing.Point(192, 75);
-            this.KullaniciAdi_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.KullaniciAdi_txt.Location = new System.Drawing.Point(209, 73);
+            this.KullaniciAdi_txt.Margin = new System.Windows.Forms.Padding(4);
             this.KullaniciAdi_txt.Multiline = true;
             this.KullaniciAdi_txt.Name = "KullaniciAdi_txt";
             this.KullaniciAdi_txt.Size = new System.Drawing.Size(304, 40);
@@ -65,8 +65,8 @@ namespace UludagKutuphane
             // button1
             // 
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(192, 233);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(209, 231);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(305, 53);
             this.button1.TabIndex = 2;
@@ -76,10 +76,11 @@ namespace UludagKutuphane
             // 
             // KullaniciSifre_txt
             // 
-            this.KullaniciSifre_txt.Location = new System.Drawing.Point(192, 156);
-            this.KullaniciSifre_txt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.KullaniciSifre_txt.Location = new System.Drawing.Point(209, 154);
+            this.KullaniciSifre_txt.Margin = new System.Windows.Forms.Padding(4);
             this.KullaniciSifre_txt.Multiline = true;
             this.KullaniciSifre_txt.Name = "KullaniciSifre_txt";
+            this.KullaniciSifre_txt.PasswordChar = '*';
             this.KullaniciSifre_txt.Size = new System.Drawing.Size(304, 40);
             this.KullaniciSifre_txt.TabIndex = 3;
             // 
@@ -87,7 +88,7 @@ namespace UludagKutuphane
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(125, 159);
+            this.label2.Location = new System.Drawing.Point(142, 157);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 17);
@@ -98,7 +99,7 @@ namespace UludagKutuphane
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.LinkColor = System.Drawing.Color.AliceBlue;
-            this.linkLabel1.Location = new System.Drawing.Point(313, 310);
+            this.linkLabel1.Location = new System.Drawing.Point(330, 308);
             this.linkLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(51, 17);
@@ -142,7 +143,7 @@ namespace UludagKutuphane
             this.ClientSize = new System.Drawing.Size(760, 677);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
