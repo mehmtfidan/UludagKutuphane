@@ -38,12 +38,13 @@ namespace UludagKutuphane
             // Kayip_dgv
             // 
             this.Kayip_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Kayip_dgv.Location = new System.Drawing.Point(12, 263);
-            this.Kayip_dgv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Kayip_dgv.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.Kayip_dgv.Location = new System.Drawing.Point(0, 151);
+            this.Kayip_dgv.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Kayip_dgv.Name = "Kayip_dgv";
             this.Kayip_dgv.RowHeadersWidth = 51;
             this.Kayip_dgv.RowTemplate.Height = 24;
-            this.Kayip_dgv.Size = new System.Drawing.Size(1203, 448);
+            this.Kayip_dgv.Size = new System.Drawing.Size(920, 436);
             this.Kayip_dgv.TabIndex = 0;
             // 
             // durumdegis_Cmb
@@ -52,18 +53,18 @@ namespace UludagKutuphane
             this.durumdegis_Cmb.Items.AddRange(new object[] {
             "Seçiniz..",
             "Rafta"});
-            this.durumdegis_Cmb.Location = new System.Drawing.Point(131, 107);
-            this.durumdegis_Cmb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.durumdegis_Cmb.Location = new System.Drawing.Point(98, 87);
+            this.durumdegis_Cmb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.durumdegis_Cmb.Name = "durumdegis_Cmb";
-            this.durumdegis_Cmb.Size = new System.Drawing.Size(159, 24);
+            this.durumdegis_Cmb.Size = new System.Drawing.Size(120, 21);
             this.durumdegis_Cmb.TabIndex = 9;
             // 
             // durumdegis_Btn
             // 
-            this.durumdegis_Btn.Location = new System.Drawing.Point(373, 95);
-            this.durumdegis_Btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.durumdegis_Btn.Location = new System.Drawing.Point(280, 77);
+            this.durumdegis_Btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.durumdegis_Btn.Name = "durumdegis_Btn";
-            this.durumdegis_Btn.Size = new System.Drawing.Size(159, 46);
+            this.durumdegis_Btn.Size = new System.Drawing.Size(119, 37);
             this.durumdegis_Btn.TabIndex = 10;
             this.durumdegis_Btn.Text = "Durum Değiştir";
             this.durumdegis_Btn.UseVisualStyleBackColor = true;
@@ -71,13 +72,13 @@ namespace UludagKutuphane
             // 
             // kayipkitap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1227, 722);
+            this.ClientSize = new System.Drawing.Size(920, 587);
             this.Controls.Add(this.durumdegis_Btn);
             this.Controls.Add(this.durumdegis_Cmb);
             this.Controls.Add(this.Kayip_dgv);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "kayipkitap";
             this.Text = "kayipkitap";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

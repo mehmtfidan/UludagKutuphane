@@ -34,6 +34,18 @@ namespace UludagKutuphane
             adp.Fill(dt);
             KitapEkle_dgv.DataSource = dt;
             con.Close();
+
+            con.Open();
+            MySqlCommand cmd1 = new MySqlCommand("SELECT * FROM Kategori", con);
+            MySqlDataReader dr;
+            dr = cmd1.ExecuteReader();
+            while (dr.Read())
+            {
+                Kategori_cmb.Items.Add(dr["K_Adi"]);
+            }
+            con.Close();
+
+
         }
 
         public int VarMi(string sorgu)
@@ -137,6 +149,18 @@ namespace UludagKutuphane
             adp.Fill(dt);
             KitapEkle_dgv.DataSource = dt;
             con.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            MySqlCommand insert = new MySqlCommand("INSERT INTO Kategori (K_Adi) VALUES ('" + textBox1.Text + "')", con);
+            insert.ExecuteNonQuery();
+            con.Close();
+
+            Kategori_cmb.Items.Add(textBox1.Text);
+            MessageBox.Show("Kategori Eklendi");
+            textBox1.Clear();
         }
     }
 }

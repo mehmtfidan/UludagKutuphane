@@ -30,7 +30,8 @@ namespace UludagKutuphane
             sonuc = Convert.ToInt32(cmd.ExecuteScalar());
             con.Close();
             return sonuc;
-        }
+        } 
+        
 
         private void KullaniciEkle_Load(object sender, EventArgs e)
         {
@@ -40,6 +41,17 @@ namespace UludagKutuphane
             DataTable dt = new DataTable();
             adp.Fill(dt);
             KullaniciEkle_dgv.DataSource = dt;
+            con.Close();
+
+
+            con.Open();
+            MySqlCommand cmd1 = new MySqlCommand("SELECT * FROM Bolum", con);           
+            MySqlDataReader dr;
+            dr = cmd1.ExecuteReader();
+            while (dr.Read())
+            {
+                Bolum_cmb.Items.Add(dr["Adi"]);
+            }
             con.Close();
         }
 
@@ -80,5 +92,19 @@ namespace UludagKutuphane
             KullaniciEkle_dgv.DataSource = dt;
             con.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            MySqlCommand insert = new MySqlCommand("INSERT INTO Bolum (Adi) VALUES ('"+ textBox1.Text +"')", con);
+            insert.ExecuteNonQuery();
+            con.Close();
+
+            Bolum_cmb.Items.Add(textBox1.Text);
+            MessageBox.Show("Bölüm Eklendi");
+            textBox1.Clear();
+
+        }
+
     }
 }

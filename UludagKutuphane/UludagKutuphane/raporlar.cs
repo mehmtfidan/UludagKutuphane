@@ -51,7 +51,7 @@ namespace UludagKutuphane
             con.Close();
 
             con.Open();
-            MySqlCommand komut4 = new MySqlCommand("Select Count(*) From Kitap", con);
+            MySqlCommand komut4 = new MySqlCommand("Select Count(*) From Uye", con);
             MySqlDataReader dr4 = komut4.ExecuteReader();
             while (dr4.Read())
             {
