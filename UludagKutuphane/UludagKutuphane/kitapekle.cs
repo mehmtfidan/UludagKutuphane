@@ -28,7 +28,7 @@ namespace UludagKutuphane
         private void KitapEkle_Load(object sender, EventArgs e)
         {
             con.Open();
-            string Komut = "Select Kitap.Ki_Adi AS Kitap_Adi, Kitap.Demirbas_No, Yazar.Y_Adi AS Yazar_Adi, Yazar.Y_Soyadi AS Yazar_Soyadi, Baski.Baski_Sayisi, Yayinevi.Yayin_Adi AS Yayinevi, Cevirmen.C_Adi AS Cevirmen_Adi, Cevirmen.C_Soyadi AS Cevirmen_Soyadi, Kitap.ISBN, Kitap.Yayim_Yili, Durum.D_Adi AS Durumu, Kategori.K_Adi AS kategori_Adi, Kitap.Kitaplik_No, Kitap.Raf_No, Kitap.Kayit_Tarihi From Kitap Inner Join Baski On Kitap.Baski_Id = Baski.Id Inner Join Cevirmen On Baski.Cevirmen_Id = Cevirmen.Id Inner Join Yayinevi On Baski.Yayinevi_Id = Yayinevi.Id Inner Join Yazar On Kitap.Yazar_Id = Yazar.Id Inner Join Kategori On Kitap.Kategori_Id = Kategori.Id Inner Join Durum On Kitap.Durum_Id = Durum.Id";
+            string Komut = "Select Kitap.Id, Kitap.Ki_Adi, Kitap.Demirbas_No, Yazar.Y_Adi, Yazar.Y_Soyadi, Baski.Baski_Sayisi, Yayinevi.Yayin_Adi, Cevirmen.C_Adi, Cevirmen.C_Soyadi, Kitap.ISBN, Kitap.Yayim_Yili, Durum.D_Adi, Kategori.K_Adi, Kitaplik.Kitaplik_Adi, Raf.Raf_No From Kitap Inner Join Durum On Kitap.Durum_Id = Durum.Id Inner Join Kategori On Kitap.Kategori_Id = Kategori.Id Inner Join Kitaplik On Kitap.Kitaplik_Id = Kitaplik.Id Inner Join Raf On Kitap.Raf_Id = Raf.Id Inner Join Yazar On Kitap.Yazar_Id = Yazar.Id Inner Join Baski On Kitap.Baski_Id = Baski.Id Inner Join Cevirmen On Baski.Cevirmen_Id = Cevirmen.Id Inner Join Yayinevi On Baski.Yayinevi_Id = Yayinevi.Id";
             MySqlDataAdapter adp = new MySqlDataAdapter(Komut, con);
             DataTable dt = new DataTable();
             adp.Fill(dt);
@@ -138,12 +138,12 @@ namespace UludagKutuphane
             cmd1 = new MySqlCommand("SELECT LAST_INSERT_ID()", con);
             int BaskiId = Convert.ToInt32(cmd1.ExecuteScalar());
 
-            MySqlCommand Komut = new MySqlCommand("INSERT INTO Kitap (Ki_Adi, Demirbas_No, Yazar_Id, Baski_Id, ISBN, Yayim_Yili, Kategori_Id, Durum_Id, Kitaplik_No, Raf_No, Kayit_Tarihi) VALUES ('" + KitapAdi + "', '" + Demirbas + "', '" + YazarId + "', '" + BaskiId + "', '" + ISBN + "', '" + YayimYili + "', '" + Kategori + "', '" + Durum + "', '" + Kitaplik + "', '" + Raf + "', '" + Kayit_Tarihi + "')", con);
+            MySqlCommand Komut = new MySqlCommand("INSERT INTO Kitap (Ki_Adi, Demirbas_No, Yazar_Id, Baski_Id, ISBN, Yayim_Yili, Kategori_Id, Durum_Id, Kitaplik_Id, Raf_Id, Kayit_Tarihi) VALUES ('" + KitapAdi + "', '" + Demirbas + "', '" + YazarId + "', '" + BaskiId + "', '" + ISBN + "', '" + YayimYili + "', '" + Kategori + "', '" + Durum + "', '" + Kitaplik + "', '" + Raf + "', '" + Kayit_Tarihi + "')", con);
             Komut.ExecuteNonQuery();
 
             MessageBox.Show("Kitap kayıt edildi.");
 
-            string Komut1 = "Select Kitap.Ki_Adi AS Kitap_Adi, Kitap.Demirbas_No, Yazar.Y_Adi AS Yazar_Adi, Yazar.Y_Soyadi AS Yazar_Soyadi, Baski.Baski_Sayisi, Yayinevi.Yayin_Adi AS Yayinevi, Cevirmen.C_Adi AS Cevirmen_Adi, Cevirmen.C_Soyadi AS Cevirmen_Soyadi, Kitap.ISBN, Kitap.Yayim_Yili, Durum.D_Adi AS Durumu, Kategori.K_Adi AS kategori_Adi, Kitap.Kitaplik_No, Kitap.Raf_No, Kitap.Kayit_Tarihi From Kitap Inner Join Baski On Kitap.Baski_Id = Baski.Id Inner Join Cevirmen On Baski.Cevirmen_Id = Cevirmen.Id Inner Join Yayinevi On Baski.Yayinevi_Id = Yayinevi.Id Inner Join Yazar On Kitap.Yazar_Id = Yazar.Id Inner Join Kategori On Kitap.Kategori_Id = Kategori.Id Inner Join Durum On Kitap.Durum_Id = Durum.Id";
+            string Komut1 = "Select Kitap.Id, Kitap.Ki_Adi, Kitap.Demirbas_No, Yazar.Y_Adi, Yazar.Y_Soyadi, Baski.Baski_Sayisi, Yayinevi.Yayin_Adi, Cevirmen.C_Adi, Cevirmen.C_Soyadi, Kitap.ISBN, Kitap.Yayim_Yili, Durum.D_Adi, Kategori.K_Adi, Kitaplik.Kitaplik_Adi, Raf.Raf_No From Kitap Inner Join Durum On Kitap.Durum_Id = Durum.Id Inner Join Kategori On Kitap.Kategori_Id = Kategori.Id Inner Join Kitaplik On Kitap.Kitaplik_Id = Kitaplik.Id Inner Join Raf On Kitap.Raf_Id = Raf.Id Inner Join Yazar On Kitap.Yazar_Id = Yazar.Id Inner Join Baski On Kitap.Baski_Id = Baski.Id Inner Join Cevirmen On Baski.Cevirmen_Id = Cevirmen.Id Inner Join Yayinevi On Baski.Yayinevi_Id = Yayinevi.Id";
             MySqlDataAdapter adp = new MySqlDataAdapter(Komut1, con);
             DataTable dt = new DataTable();
             adp.Fill(dt);

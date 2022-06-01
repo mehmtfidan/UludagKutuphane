@@ -30,7 +30,7 @@ namespace UludagKutuphane
         private void KitapGuncelle_Load(object sender, EventArgs e)
         {
             con.Open();
-            string Komut = "Select Kitap.Id, Kitap.Ki_Adi AS Kitap_Adi, Kitap.Demirbas_No, Yazar.Y_Adi AS Yazar_Adi, Yazar.Y_Soyadi AS Yazar_Soyadi, Baski.Baski_Sayisi, Yayinevi.Yayin_Adi AS Yayinevi, Cevirmen.C_Adi AS Cevirmen_Adi, Cevirmen.C_Soyadi AS Cevirmen_Soyadi, Kitap.ISBN, Kitap.Yayim_Yili, Durum.D_Adi AS Durumu, Kategori.K_Adi AS kategori_Adi, Kitap.Kitaplik_No, Kitap.Raf_No, Kitap.Kayit_Tarihi From Kitap Inner Join Baski On Kitap.Baski_Id = Baski.Id Inner Join Cevirmen On Baski.Cevirmen_Id = Cevirmen.Id Inner Join Yayinevi On Baski.Yayinevi_Id = Yayinevi.Id Inner Join Yazar On Kitap.Yazar_Id = Yazar.Id Inner Join Kategori On Kitap.Kategori_Id = Kategori.Id Inner Join Durum On Kitap.Durum_Id = Durum.Id";
+            string Komut = "Select Kitap.Id, Kitap.Ki_Adi, Kitap.Demirbas_No, Yazar.Y_Adi, Yazar.Y_Soyadi, Baski.Baski_Sayisi, Yayinevi.Yayin_Adi, Cevirmen.C_Adi, Cevirmen.C_Soyadi, Kitap.ISBN, Kitap.Yayim_Yili, Durum.D_Adi, Kategori.K_Adi, Kitaplik.Kitaplik_Adi, Raf.Raf_No From Kitap Inner Join Durum On Kitap.Durum_Id = Durum.Id Inner Join Kategori On Kitap.Kategori_Id = Kategori.Id Inner Join Kitaplik On Kitap.Kitaplik_Id = Kitaplik.Id Inner Join Raf On Kitap.Raf_Id = Raf.Id Inner Join Yazar On Kitap.Yazar_Id = Yazar.Id Inner Join Baski On Kitap.Baski_Id = Baski.Id Inner Join Cevirmen On Baski.Cevirmen_Id = Cevirmen.Id Inner Join Yayinevi On Baski.Yayinevi_Id = Yayinevi.Id";
             MySqlDataAdapter adp = new MySqlDataAdapter(Komut, con);
             DataTable dt = new DataTable();
             adp.Fill(dt);
@@ -58,7 +58,7 @@ namespace UludagKutuphane
             Kategori_cmb.Text = KitapGuncelle_dgv.CurrentRow.Cells[12].Value.ToString();
             Kitaaplik_cmb.Text = KitapGuncelle_dgv.CurrentRow.Cells[13].Value.ToString();
             Raf_cmb.Text = KitapGuncelle_dgv.CurrentRow.Cells[14].Value.ToString();
-            Kayit_Trihi_txt.Text = KitapGuncelle_dgv.CurrentRow.Cells[15].Value.ToString();
+ 
         }
 
         public int VarMi(string sorgu)
@@ -150,13 +150,13 @@ namespace UludagKutuphane
             cmd = new MySqlCommand("UPDATE Baski SET Baski_Sayisi = '" + Baski + "', Yayinevi_Id = '" + YayineviId + "', Cevirmen_Id = '" + CevirmenId + "' WHERE Id = '" + BaskiId +"'", con);
             cmd.ExecuteNonQuery();
 
-            string guncelleme = "UPDATE Kitap SET Ki_Adi = '" + KitapAdi + "', Demirbas_No = '" + Demirbas + "', Yazar_Id = '" + YazarId + "', Baski_Id = '" + BaskiId + "', ISBN = '" + ISBN + "', Yayim_Yili = '" + YayimYili + "', Kategori_Id = '"+ Kategori +"', Durum_Id = '"+ Durum +"', Kitaplik_No = '"+ Kitaplik +"', Raf_No = '"+ Raf +"', Kayit_Tarihi = '"+ Kayit_Tarihi +"' WHERE Id = '" + SecilenId + "'";
+            string guncelleme = "UPDATE Kitap SET Ki_Adi = '" + KitapAdi + "', Demirbas_No = '" + Demirbas + "', Yazar_Id = '" + YazarId + "', Baski_Id = '" + BaskiId + "', ISBN = '" + ISBN + "', Yayim_Yili = '" + YayimYili + "', Kategori_Id = '"+ Kategori +"', Durum_Id = '"+ Durum +"', Kitaplik_Id = '"+ Kitaplik +"', Raf_Id = '"+ Raf +"', Kayit_Tarihi = '"+ Kayit_Tarihi +"' WHERE Id = '" + SecilenId + "'";
             MySqlCommand Komut1 = new MySqlCommand(guncelleme, con);
             Komut1.ExecuteNonQuery();
             MessageBox.Show("Kullanıcı bilgileri başarıyla güncellendi.");
 
             
-            string Komut2 = "Select Kitap.Id, Kitap.Ki_Adi AS Kitap_Adi, Kitap.Demirbas_No, Yazar.Y_Adi AS Yazar_Adi, Yazar.Y_Soyadi AS Yazar_Soyadi, Baski.Baski_Sayisi, Yayinevi.Yayin_Adi AS Yayinevi, Cevirmen.C_Adi AS Cevirmen_Adi, Cevirmen.C_Soyadi AS Cevirmen_Soyadi, Kitap.ISBN, Kitap.Yayim_Yili, Durum.D_Adi AS Durumu, Kategori.K_Adi AS kategori_Adi, Kitap.Kitaplik_No, Kitap.Raf_No, Kitap.Kayit_Tarihi From Kitap Inner Join Baski On Kitap.Baski_Id = Baski.Id Inner Join Cevirmen On Baski.Cevirmen_Id = Cevirmen.Id Inner Join Yayinevi On Baski.Yayinevi_Id = Yayinevi.Id Inner Join Yazar On Kitap.Yazar_Id = Yazar.Id Inner Join Kategori On Kitap.Kategori_Id = Kategori.Id Inner Join Durum On Kitap.Durum_Id = Durum.Id";
+            string Komut2 = "Select Kitap.Id, Kitap.Ki_Adi, Kitap.Demirbas_No, Yazar.Y_Adi, Yazar.Y_Soyadi, Baski.Baski_Sayisi, Yayinevi.Yayin_Adi, Cevirmen.C_Adi, Cevirmen.C_Soyadi, Kitap.ISBN, Kitap.Yayim_Yili, Durum.D_Adi, Kategori.K_Adi, Kitaplik.Kitaplik_Adi, Raf.Raf_No From Kitap Inner Join Durum On Kitap.Durum_Id = Durum.Id Inner Join Kategori On Kitap.Kategori_Id = Kategori.Id Inner Join Kitaplik On Kitap.Kitaplik_Id = Kitaplik.Id Inner Join Raf On Kitap.Raf_Id = Raf.Id Inner Join Yazar On Kitap.Yazar_Id = Yazar.Id Inner Join Baski On Kitap.Baski_Id = Baski.Id Inner Join Cevirmen On Baski.Cevirmen_Id = Cevirmen.Id Inner Join Yayinevi On Baski.Yayinevi_Id = Yayinevi.Id";
             MySqlDataAdapter adp = new MySqlDataAdapter(Komut2, con);
             DataTable dt = new DataTable();
             adp.Fill(dt);
@@ -171,7 +171,7 @@ namespace UludagKutuphane
                 con.Open();
                 DataTable tbl = new DataTable();
 
-                MySqlDataAdapter ara = new MySqlDataAdapter("Select Kitap.Id, Kitap.Ki_Adi AS Kitap_Adi, Kitap.Demirbas_No, Yazar.Y_Adi AS Yazar_Adi, Yazar.Y_Soyadi AS Yazar_Soyadi, Baski.Baski_Sayisi, Yayinevi.Yayin_Adi AS Yayinevi, Cevirmen.C_Adi AS Cevirmen_Adi, Cevirmen.C_Soyadi AS Cevirmen_Soyadi, Kitap.ISBN, Kitap.Yayim_Yili, Durum.D_Adi AS Durumu, Kategori.K_Adi AS kategori_Adi, Kitap.Kitaplik_No, Kitap.Raf_No, Kitap.Kayit_Tarihi From Kitap Inner Join Baski On Kitap.Baski_Id = Baski.Id Inner Join Cevirmen On Baski.Cevirmen_Id = Cevirmen.Id Inner Join Yayinevi On Baski.Yayinevi_Id = Yayinevi.Id Inner Join Yazar On Kitap.Yazar_Id = Yazar.Id Inner Join Kategori On Kitap.Kategori_Id = Kategori.Id Inner Join Durum On Kitap.Durum_Id = Durum.Id where Ki_Adi like '%" + KitapGFiltre_txt.Text + "%' ", con);
+                MySqlDataAdapter ara = new MySqlDataAdapter("Select Kitap.Ki_Adi, Kitap.Demirbas_No, Kitap.ISBN, Kitap.Yayim_Yili, Kitap.Kayit_Tarihi, Cevirmen.C_Adi, Cevirmen.C_Soyadi, Yazar.Y_Adi, Yazar.Y_Soyadi, Durum.D_Adi, Kitaplik.Kitaplik_Adi, Kategori.K_Adi, Yayinevi.Yayin_Adi, Raf.Raf_No From Kitap Inner Join Baski On Kitap.Baski_Id = Baski.Id Inner Join Cevirmen On Baski.Cevirmen_Id = Cevirmen.Id Inner Join Durum On Kitap.Durum_Id = Durum.Id Inner Join Kategori On Kitap.Kategori_Id = `132030020`.Kategori.Id Inner Join Kitaplik On Kitap.Kitaplik_Id = Kitaplik.Id Inner Join Raf On Kitap.Raf_Id = Raf.Id Inner Join Yayinevi On Baski.Yayinevi_Id = Yayinevi.Id Inner Join Yazar On Kitap.Yazar_Id = Yazar.Id where Ki_Adi like '%" + KitapGFiltre_txt.Text + "%' ", con);
                 ara.Fill(tbl);
                 con.Close();
                 KitapGuncelle_dgv.DataSource = tbl;           
