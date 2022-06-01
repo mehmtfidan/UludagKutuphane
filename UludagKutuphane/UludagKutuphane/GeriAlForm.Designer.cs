@@ -39,14 +39,16 @@ namespace UludagKutuphane
             // 
             // GeriAl_dgv
             // 
+            this.GeriAl_dgv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.GeriAl_dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.GeriAl_dgv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.GeriAl_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GeriAl_dgv.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.GeriAl_dgv.Location = new System.Drawing.Point(0, 120);
+            this.GeriAl_dgv.Location = new System.Drawing.Point(12, 120);
             this.GeriAl_dgv.Name = "GeriAl_dgv";
             this.GeriAl_dgv.RowHeadersWidth = 51;
-            this.GeriAl_dgv.Size = new System.Drawing.Size(1235, 434);
+            this.GeriAl_dgv.Size = new System.Drawing.Size(1075, 515);
             this.GeriAl_dgv.TabIndex = 0;
             // 
             // GeriAl_Btn
@@ -69,25 +71,25 @@ namespace UludagKutuphane
             "Demirbaş Numarası",
             "Çevirmeni",
             "Yayınevi"});
-            this.comboBox1.Location = new System.Drawing.Point(242, 50);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1.Location = new System.Drawing.Point(371, 50);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(120, 21);
             this.comboBox1.TabIndex = 2;
             // 
             // Name_Tb
             // 
-            this.Name_Tb.Location = new System.Drawing.Point(393, 51);
-            this.Name_Tb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Name_Tb.Location = new System.Drawing.Point(518, 50);
+            this.Name_Tb.Margin = new System.Windows.Forms.Padding(2);
             this.Name_Tb.Name = "Name_Tb";
-            this.Name_Tb.Size = new System.Drawing.Size(108, 20);
+            this.Name_Tb.Size = new System.Drawing.Size(136, 20);
             this.Name_Tb.TabIndex = 3;
             this.Name_Tb.TextChanged += new System.EventHandler(this.Name_Tb_TextChanged);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(529, 39);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Location = new System.Drawing.Point(682, 38);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(96, 43);
             this.button1.TabIndex = 4;
@@ -99,14 +101,15 @@ namespace UludagKutuphane
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1235, 554);
+            this.ClientSize = new System.Drawing.Size(1099, 647);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Name_Tb);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.GeriAl_Btn);
             this.Controls.Add(this.GeriAl_dgv);
             this.Name = "GeriAlForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "GeriAlForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.GeriAlForm_Load);

@@ -38,15 +38,18 @@ namespace UludagKutuphane
             // 
             // KullaniciListesi_dgv
             // 
+            this.KullaniciListesi_dgv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.KullaniciListesi_dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.KullaniciListesi_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.KullaniciListesi_dgv.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.KullaniciListesi_dgv.Location = new System.Drawing.Point(0, 72);
-            this.KullaniciListesi_dgv.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.KullaniciListesi_dgv.Location = new System.Drawing.Point(30, 97);
+            this.KullaniciListesi_dgv.Margin = new System.Windows.Forms.Padding(2);
             this.KullaniciListesi_dgv.MultiSelect = false;
             this.KullaniciListesi_dgv.Name = "KullaniciListesi_dgv";
             this.KullaniciListesi_dgv.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.KullaniciListesi_dgv.RowTemplate.Height = 24;
-            this.KullaniciListesi_dgv.Size = new System.Drawing.Size(892, 479);
+            this.KullaniciListesi_dgv.Size = new System.Drawing.Size(941, 514);
             this.KullaniciListesi_dgv.TabIndex = 0;
             // 
             // comboBox1
@@ -57,14 +60,14 @@ namespace UludagKutuphane
             "Adı ",
             "Üye Numarası",
             "Bölümü"});
-            this.comboBox1.Location = new System.Drawing.Point(194, 40);
+            this.comboBox1.Location = new System.Drawing.Point(260, 44);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 1;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(355, 39);
+            this.textBox1.Location = new System.Drawing.Point(421, 43);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(125, 20);
             this.textBox1.TabIndex = 2;
@@ -72,7 +75,7 @@ namespace UludagKutuphane
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(515, 39);
+            this.button1.Location = new System.Drawing.Point(581, 43);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(93, 20);
             this.button1.TabIndex = 3;
@@ -85,13 +88,13 @@ namespace UludagKutuphane
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(892, 551);
+            this.ClientSize = new System.Drawing.Size(1015, 664);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.KullaniciListesi_dgv);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "kullanicilistesi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "kullanicilistesi";

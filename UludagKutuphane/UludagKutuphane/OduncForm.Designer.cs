@@ -44,18 +44,21 @@ namespace UludagKutuphane
             // 
             // Odunc_dgv
             // 
+            this.Odunc_dgv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Odunc_dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Odunc_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Odunc_dgv.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.Odunc_dgv.Location = new System.Drawing.Point(0, 260);
+            this.Odunc_dgv.Location = new System.Drawing.Point(12, 401);
             this.Odunc_dgv.Name = "Odunc_dgv";
             this.Odunc_dgv.RowHeadersWidth = 51;
-            this.Odunc_dgv.Size = new System.Drawing.Size(943, 197);
+            this.Odunc_dgv.Size = new System.Drawing.Size(1078, 205);
             this.Odunc_dgv.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 78);
+            this.label1.Location = new System.Drawing.Point(95, 209);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 13);
             this.label1.TabIndex = 1;
@@ -63,7 +66,7 @@ namespace UludagKutuphane
             // 
             // UyeNo_txt
             // 
-            this.UyeNo_txt.Location = new System.Drawing.Point(64, 75);
+            this.UyeNo_txt.Location = new System.Drawing.Point(147, 206);
             this.UyeNo_txt.Name = "UyeNo_txt";
             this.UyeNo_txt.Size = new System.Drawing.Size(147, 20);
             this.UyeNo_txt.TabIndex = 2;
@@ -72,24 +75,25 @@ namespace UludagKutuphane
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(87, 90);
+            this.label2.Location = new System.Drawing.Point(170, 221);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 13);
             this.label2.TabIndex = 4;
             // 
             // Filtrele_dgv
             // 
+            this.Filtrele_dgv.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Filtrele_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Filtrele_dgv.Dock = System.Windows.Forms.DockStyle.Right;
-            this.Filtrele_dgv.Location = new System.Drawing.Point(432, 0);
+            this.Filtrele_dgv.Location = new System.Drawing.Point(430, 12);
             this.Filtrele_dgv.Name = "Filtrele_dgv";
             this.Filtrele_dgv.RowHeadersWidth = 51;
-            this.Filtrele_dgv.Size = new System.Drawing.Size(511, 260);
+            this.Filtrele_dgv.Size = new System.Drawing.Size(660, 383);
             this.Filtrele_dgv.TabIndex = 5;
             // 
             // Ara_txt
             // 
-            this.Ara_txt.Location = new System.Drawing.Point(275, 75);
+            this.Ara_txt.Location = new System.Drawing.Point(147, 129);
             this.Ara_txt.Name = "Ara_txt";
             this.Ara_txt.Size = new System.Drawing.Size(149, 20);
             this.Ara_txt.TabIndex = 6;
@@ -97,7 +101,7 @@ namespace UludagKutuphane
             // 
             // OduncVerBtn
             // 
-            this.OduncVerBtn.Location = new System.Drawing.Point(153, 174);
+            this.OduncVerBtn.Location = new System.Drawing.Point(147, 301);
             this.OduncVerBtn.Name = "OduncVerBtn";
             this.OduncVerBtn.Size = new System.Drawing.Size(122, 59);
             this.OduncVerBtn.TabIndex = 7;
@@ -108,7 +112,7 @@ namespace UludagKutuphane
             // UyeAdi_lbl
             // 
             this.UyeAdi_lbl.AutoSize = true;
-            this.UyeAdi_lbl.Location = new System.Drawing.Point(130, 112);
+            this.UyeAdi_lbl.Location = new System.Drawing.Point(198, 250);
             this.UyeAdi_lbl.Name = "UyeAdi_lbl";
             this.UyeAdi_lbl.Size = new System.Drawing.Size(35, 13);
             this.UyeAdi_lbl.TabIndex = 8;
@@ -117,7 +121,7 @@ namespace UludagKutuphane
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(217, 79);
+            this.label3.Location = new System.Drawing.Point(89, 129);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 13);
             this.label3.TabIndex = 9;
@@ -127,7 +131,7 @@ namespace UludagKutuphane
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(943, 457);
+            this.ClientSize = new System.Drawing.Size(1102, 618);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.UyeAdi_lbl);
             this.Controls.Add(this.OduncVerBtn);
@@ -138,7 +142,8 @@ namespace UludagKutuphane
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Odunc_dgv);
             this.Name = "OduncForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "OduncForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.OduncForm_Load);

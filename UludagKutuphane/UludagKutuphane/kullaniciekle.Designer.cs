@@ -159,17 +159,21 @@ namespace UludagKutuphane
             this.UyeEkle.TabIndex = 14;
             this.UyeEkle.Text = "EKLE";
             this.UyeEkle.UseVisualStyleBackColor = true;
+            this.UyeEkle.Click += new System.EventHandler(this.UyeEkle_Click_1);
             // 
             // KullaniciEkle_dgv
             // 
+            this.KullaniciEkle_dgv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.KullaniciEkle_dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.KullaniciEkle_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.KullaniciEkle_dgv.Dock = System.Windows.Forms.DockStyle.Right;
-            this.KullaniciEkle_dgv.Location = new System.Drawing.Point(310, 0);
+            this.KullaniciEkle_dgv.Location = new System.Drawing.Point(289, 40);
             this.KullaniciEkle_dgv.Margin = new System.Windows.Forms.Padding(2);
             this.KullaniciEkle_dgv.Name = "KullaniciEkle_dgv";
             this.KullaniciEkle_dgv.RowHeadersWidth = 51;
             this.KullaniciEkle_dgv.RowTemplate.Height = 24;
-            this.KullaniciEkle_dgv.Size = new System.Drawing.Size(585, 483);
+            this.KullaniciEkle_dgv.Size = new System.Drawing.Size(561, 448);
             this.KullaniciEkle_dgv.TabIndex = 15;
             // 
             // Bolum_cmb
@@ -197,12 +201,13 @@ namespace UludagKutuphane
             this.button1.TabIndex = 18;
             this.button1.Text = "Bölüm Ekle";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // kullaniciekle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(895, 483);
+            this.ClientSize = new System.Drawing.Size(880, 499);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.Bolum_cmb);
@@ -222,10 +227,10 @@ namespace UludagKutuphane
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "kullaniciekle";
-            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "kullaniciekle";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.KullaniciEkle_Load);
             ((System.ComponentModel.ISupportInitialize)(this.KullaniciEkle_dgv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

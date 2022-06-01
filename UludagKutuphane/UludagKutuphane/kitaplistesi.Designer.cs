@@ -38,13 +38,17 @@ namespace UludagKutuphane
             // 
             // KitapListesi_dgv
             // 
+            this.KitapListesi_dgv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.KitapListesi_dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.KitapListesi_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.KitapListesi_dgv.Location = new System.Drawing.Point(3, 121);
-            this.KitapListesi_dgv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.KitapListesi_dgv.Location = new System.Drawing.Point(11, 96);
+            this.KitapListesi_dgv.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.KitapListesi_dgv.Name = "KitapListesi_dgv";
             this.KitapListesi_dgv.RowHeadersWidth = 51;
             this.KitapListesi_dgv.RowTemplate.Height = 24;
-            this.KitapListesi_dgv.Size = new System.Drawing.Size(1315, 645);
+            this.KitapListesi_dgv.Size = new System.Drawing.Size(1005, 554);
             this.KitapListesi_dgv.TabIndex = 0;
             // 
             // comboBox1
@@ -57,27 +61,27 @@ namespace UludagKutuphane
             "Demirbaş Numarası",
             "Çevirmen Adı",
             "Yayınevi"});
-            this.comboBox1.Location = new System.Drawing.Point(187, 64);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox1.Location = new System.Drawing.Point(239, 39);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(177, 24);
+            this.comboBox1.Size = new System.Drawing.Size(134, 21);
             this.comboBox1.TabIndex = 1;
             // 
             // NameTb
             // 
-            this.NameTb.Location = new System.Drawing.Point(405, 65);
-            this.NameTb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.NameTb.Location = new System.Drawing.Point(403, 40);
+            this.NameTb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.NameTb.Name = "NameTb";
-            this.NameTb.Size = new System.Drawing.Size(163, 22);
+            this.NameTb.Size = new System.Drawing.Size(123, 20);
             this.NameTb.TabIndex = 2;
             this.NameTb.TextChanged += new System.EventHandler(this.NameTb_TextChanged);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(608, 64);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Location = new System.Drawing.Point(555, 39);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 25);
+            this.button1.Size = new System.Drawing.Size(75, 20);
             this.button1.TabIndex = 3;
             this.button1.Text = "Temizle";
             this.button1.UseVisualStyleBackColor = true;
@@ -85,17 +89,18 @@ namespace UludagKutuphane
             // 
             // kitaplistesi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1317, 763);
+            this.ClientSize = new System.Drawing.Size(1027, 661);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.NameTb);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.KitapListesi_dgv);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "kitaplistesi";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "kitaplistesi";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.kitaplistesi_Load);

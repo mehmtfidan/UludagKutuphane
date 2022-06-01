@@ -30,6 +30,8 @@ namespace UludagKutuphane
             adp.Fill(dt);
             KullaniciListesi_dgv.DataSource = dt;
             con.Close();
+
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

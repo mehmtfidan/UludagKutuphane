@@ -36,14 +36,17 @@ namespace UludagKutuphane
             // 
             // KullaniciSil_dgv
             // 
+            this.KullaniciSil_dgv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.KullaniciSil_dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.KullaniciSil_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.KullaniciSil_dgv.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.KullaniciSil_dgv.Location = new System.Drawing.Point(0, 110);
+            this.KullaniciSil_dgv.Location = new System.Drawing.Point(16, 109);
             this.KullaniciSil_dgv.Margin = new System.Windows.Forms.Padding(2);
             this.KullaniciSil_dgv.Name = "KullaniciSil_dgv";
             this.KullaniciSil_dgv.RowHeadersWidth = 51;
             this.KullaniciSil_dgv.RowTemplate.Height = 24;
-            this.KullaniciSil_dgv.Size = new System.Drawing.Size(818, 425);
+            this.KullaniciSil_dgv.Size = new System.Drawing.Size(961, 473);
             this.KullaniciSil_dgv.TabIndex = 0;
             // 
             // Sil_btn
@@ -61,11 +64,13 @@ namespace UludagKutuphane
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(818, 535);
+            this.ClientSize = new System.Drawing.Size(988, 604);
             this.Controls.Add(this.Sil_btn);
             this.Controls.Add(this.KullaniciSil_dgv);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "kullanicisil";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "kullanicisil";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.KullaniciSil_Load);

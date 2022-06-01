@@ -48,7 +48,7 @@ namespace UludagKutuphane
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(92, 79);
+            this.label1.Location = new System.Drawing.Point(110, 68);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(105, 13);
@@ -58,7 +58,7 @@ namespace UludagKutuphane
             // Toplam_Kitap_lbl
             // 
             this.Toplam_Kitap_lbl.AutoSize = true;
-            this.Toplam_Kitap_lbl.Location = new System.Drawing.Point(210, 79);
+            this.Toplam_Kitap_lbl.Location = new System.Drawing.Point(219, 68);
             this.Toplam_Kitap_lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Toplam_Kitap_lbl.Name = "Toplam_Kitap_lbl";
             this.Toplam_Kitap_lbl.Size = new System.Drawing.Size(13, 13);
@@ -68,7 +68,7 @@ namespace UludagKutuphane
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(75, 140);
+            this.label3.Location = new System.Drawing.Point(94, 129);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(121, 13);
@@ -78,7 +78,7 @@ namespace UludagKutuphane
             // KayipKitap_Lbl
             // 
             this.KayipKitap_Lbl.AutoSize = true;
-            this.KayipKitap_Lbl.Location = new System.Drawing.Point(210, 140);
+            this.KayipKitap_Lbl.Location = new System.Drawing.Point(219, 129);
             this.KayipKitap_Lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.KayipKitap_Lbl.Name = "KayipKitap_Lbl";
             this.KayipKitap_Lbl.Size = new System.Drawing.Size(13, 13);
@@ -88,7 +88,7 @@ namespace UludagKutuphane
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(393, 79);
+            this.label5.Location = new System.Drawing.Point(636, 68);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(179, 13);
@@ -98,7 +98,7 @@ namespace UludagKutuphane
             // EmanetKitap_Lbl
             // 
             this.EmanetKitap_Lbl.AutoSize = true;
-            this.EmanetKitap_Lbl.Location = new System.Drawing.Point(595, 79);
+            this.EmanetKitap_Lbl.Location = new System.Drawing.Point(819, 68);
             this.EmanetKitap_Lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.EmanetKitap_Lbl.Name = "EmanetKitap_Lbl";
             this.EmanetKitap_Lbl.Size = new System.Drawing.Size(13, 13);
@@ -108,7 +108,7 @@ namespace UludagKutuphane
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(473, 140);
+            this.label7.Location = new System.Drawing.Point(715, 129);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(100, 13);
@@ -118,7 +118,7 @@ namespace UludagKutuphane
             // ToplamUye_Lbl
             // 
             this.ToplamUye_Lbl.AutoSize = true;
-            this.ToplamUye_Lbl.Location = new System.Drawing.Point(595, 140);
+            this.ToplamUye_Lbl.Location = new System.Drawing.Point(819, 129);
             this.ToplamUye_Lbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ToplamUye_Lbl.Name = "ToplamUye_Lbl";
             this.ToplamUye_Lbl.Size = new System.Drawing.Size(13, 13);
@@ -128,7 +128,7 @@ namespace UludagKutuphane
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(71, 188);
+            this.label9.Location = new System.Drawing.Point(88, 177);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(127, 13);
@@ -138,7 +138,7 @@ namespace UludagKutuphane
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(467, 188);
+            this.label10.Location = new System.Drawing.Point(649, 177);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(166, 13);
@@ -147,31 +147,37 @@ namespace UludagKutuphane
             // 
             // EnCokOkunan_dgv
             // 
+            this.EnCokOkunan_dgv.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.EnCokOkunan_dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.EnCokOkunan_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.EnCokOkunan_dgv.Location = new System.Drawing.Point(9, 206);
-            this.EnCokOkunan_dgv.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EnCokOkunan_dgv.Location = new System.Drawing.Point(11, 206);
+            this.EnCokOkunan_dgv.Margin = new System.Windows.Forms.Padding(2);
             this.EnCokOkunan_dgv.Name = "EnCokOkunan_dgv";
             this.EnCokOkunan_dgv.RowHeadersWidth = 51;
             this.EnCokOkunan_dgv.RowTemplate.Height = 24;
-            this.EnCokOkunan_dgv.Size = new System.Drawing.Size(402, 303);
+            this.EnCokOkunan_dgv.Size = new System.Drawing.Size(500, 366);
             this.EnCokOkunan_dgv.TabIndex = 12;
             // 
             // encokokuyan_dgv
             // 
+            this.encokokuyan_dgv.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.encokokuyan_dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.encokokuyan_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.encokokuyan_dgv.Location = new System.Drawing.Point(424, 206);
-            this.encokokuyan_dgv.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.encokokuyan_dgv.Location = new System.Drawing.Point(567, 206);
+            this.encokokuyan_dgv.Margin = new System.Windows.Forms.Padding(2);
             this.encokokuyan_dgv.Name = "encokokuyan_dgv";
             this.encokokuyan_dgv.RowHeadersWidth = 51;
             this.encokokuyan_dgv.RowTemplate.Height = 24;
-            this.encokokuyan_dgv.Size = new System.Drawing.Size(440, 303);
+            this.encokokuyan_dgv.Size = new System.Drawing.Size(500, 366);
             this.encokokuyan_dgv.TabIndex = 13;
             // 
             // raporlar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(904, 609);
+            this.ClientSize = new System.Drawing.Size(1078, 583);
             this.Controls.Add(this.encokokuyan_dgv);
             this.Controls.Add(this.EnCokOkunan_dgv);
             this.Controls.Add(this.label10);
@@ -184,9 +190,10 @@ namespace UludagKutuphane
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Toplam_Kitap_lbl);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "raporlar";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "raporlar";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Raporlar_Load);

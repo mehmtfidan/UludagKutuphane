@@ -55,14 +55,14 @@ namespace UludagKutuphane
             con.Close();
         }
 
-        private void UyeEkle_Click(object sender, EventArgs e)
+        private void UyeEkle_Click_1(object sender, EventArgs e)
         {
             string kullaniciAdi = KullaniciAdi_txt.Text;
             string kullaniciSoyadi = KullaniciSoyadi_txt.Text;
             string kullaniciMail = EPosta_txt.Text;
             string KullaniciTelNo = TelNo_txt.Text;
             string kullaniciUyeNumara = UyeNumara_txt.Text;
-            
+
             int Bolum = Bolum_cmb.SelectedIndex;
 
             if (KullaniciAdi_txt.Text == "" && KullaniciSoyadi_txt.Text == "" && EPosta_txt.Text == "" && UyeNumara_txt.Text == "" && Bolum_cmb.SelectedIndex == 0)
@@ -82,7 +82,7 @@ namespace UludagKutuphane
                 else
                 {
                     MessageBox.Show("Bu üye numarasıyla kayıt bulunmaktadır.");
-                }               
+                }
             }
 
             string Komut = "Select Uye.Id, Uye.Adi, Uye.Soyadi, Uye.Uye_Numarasi, Uye.Telefon_No, Uye.E_Posta, Bolum.Adi As Adi1 From Bolum Inner Join Uye On Uye.Bolum_Id = Bolum.Id";
@@ -93,18 +93,16 @@ namespace UludagKutuphane
             con.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
             con.Open();
-            MySqlCommand insert = new MySqlCommand("INSERT INTO Bolum (Adi) VALUES ('"+ textBox1.Text +"')", con);
+            MySqlCommand insert = new MySqlCommand("INSERT INTO Bolum (Adi) VALUES ('" + textBox1.Text + "')", con);
             insert.ExecuteNonQuery();
             con.Close();
 
             Bolum_cmb.Items.Add(textBox1.Text);
             MessageBox.Show("Bölüm Eklendi");
             textBox1.Clear();
-
         }
-
     }
 }

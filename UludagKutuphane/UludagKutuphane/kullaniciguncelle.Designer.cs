@@ -48,8 +48,8 @@ namespace UludagKutuphane
             // 
             // Guncelle_txt
             // 
-            this.Guncelle_txt.Location = new System.Drawing.Point(136, 273);
-            this.Guncelle_txt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Guncelle_txt.Location = new System.Drawing.Point(119, 269);
+            this.Guncelle_txt.Margin = new System.Windows.Forms.Padding(2);
             this.Guncelle_txt.Name = "Guncelle_txt";
             this.Guncelle_txt.Size = new System.Drawing.Size(122, 42);
             this.Guncelle_txt.TabIndex = 29;
@@ -59,8 +59,8 @@ namespace UludagKutuphane
             // 
             // KullaniciMail_txt
             // 
-            this.KullaniciMail_txt.Location = new System.Drawing.Point(136, 173);
-            this.KullaniciMail_txt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.KullaniciMail_txt.Location = new System.Drawing.Point(119, 169);
+            this.KullaniciMail_txt.Margin = new System.Windows.Forms.Padding(2);
             this.KullaniciMail_txt.Multiline = true;
             this.KullaniciMail_txt.Name = "KullaniciMail_txt";
             this.KullaniciMail_txt.Size = new System.Drawing.Size(123, 19);
@@ -68,32 +68,32 @@ namespace UludagKutuphane
             // 
             // KullaniciTelNo_txt
             // 
-            this.KullaniciTelNo_txt.Location = new System.Drawing.Point(136, 141);
-            this.KullaniciTelNo_txt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.KullaniciTelNo_txt.Location = new System.Drawing.Point(119, 137);
+            this.KullaniciTelNo_txt.Margin = new System.Windows.Forms.Padding(2);
             this.KullaniciTelNo_txt.Name = "KullaniciTelNo_txt";
             this.KullaniciTelNo_txt.Size = new System.Drawing.Size(123, 20);
             this.KullaniciTelNo_txt.TabIndex = 25;
             // 
             // KullaniciUyeNumara_txt
             // 
-            this.KullaniciUyeNumara_txt.Location = new System.Drawing.Point(136, 106);
-            this.KullaniciUyeNumara_txt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.KullaniciUyeNumara_txt.Location = new System.Drawing.Point(119, 102);
+            this.KullaniciUyeNumara_txt.Margin = new System.Windows.Forms.Padding(2);
             this.KullaniciUyeNumara_txt.Name = "KullaniciUyeNumara_txt";
             this.KullaniciUyeNumara_txt.Size = new System.Drawing.Size(123, 20);
             this.KullaniciUyeNumara_txt.TabIndex = 24;
             // 
             // KullaniciSoyadi_txt
             // 
-            this.KullaniciSoyadi_txt.Location = new System.Drawing.Point(136, 75);
-            this.KullaniciSoyadi_txt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.KullaniciSoyadi_txt.Location = new System.Drawing.Point(119, 71);
+            this.KullaniciSoyadi_txt.Margin = new System.Windows.Forms.Padding(2);
             this.KullaniciSoyadi_txt.Name = "KullaniciSoyadi_txt";
             this.KullaniciSoyadi_txt.Size = new System.Drawing.Size(123, 20);
             this.KullaniciSoyadi_txt.TabIndex = 23;
             // 
             // KullaniciAdi_txt
             // 
-            this.KullaniciAdi_txt.Location = new System.Drawing.Point(136, 43);
-            this.KullaniciAdi_txt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.KullaniciAdi_txt.Location = new System.Drawing.Point(119, 39);
+            this.KullaniciAdi_txt.Margin = new System.Windows.Forms.Padding(2);
             this.KullaniciAdi_txt.Multiline = true;
             this.KullaniciAdi_txt.Name = "KullaniciAdi_txt";
             this.KullaniciAdi_txt.Size = new System.Drawing.Size(123, 19);
@@ -102,7 +102,7 @@ namespace UludagKutuphane
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(78, 206);
+            this.label6.Location = new System.Drawing.Point(61, 202);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(42, 13);
@@ -112,7 +112,7 @@ namespace UludagKutuphane
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(74, 176);
+            this.label5.Location = new System.Drawing.Point(57, 172);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(46, 13);
@@ -122,7 +122,7 @@ namespace UludagKutuphane
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(23, 143);
+            this.label4.Location = new System.Drawing.Point(6, 139);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(96, 13);
@@ -132,7 +132,7 @@ namespace UludagKutuphane
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(40, 109);
+            this.label3.Location = new System.Drawing.Point(23, 105);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 13);
@@ -142,7 +142,7 @@ namespace UludagKutuphane
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(75, 77);
+            this.label2.Location = new System.Drawing.Point(58, 73);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 13);
@@ -152,7 +152,7 @@ namespace UludagKutuphane
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(92, 46);
+            this.label1.Location = new System.Drawing.Point(75, 42);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(28, 13);
@@ -161,14 +161,17 @@ namespace UludagKutuphane
             // 
             // KullaniciGuncelle_dgv
             // 
+            this.KullaniciGuncelle_dgv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.KullaniciGuncelle_dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.KullaniciGuncelle_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.KullaniciGuncelle_dgv.Dock = System.Windows.Forms.DockStyle.Right;
-            this.KullaniciGuncelle_dgv.Location = new System.Drawing.Point(288, 0);
-            this.KullaniciGuncelle_dgv.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.KullaniciGuncelle_dgv.Location = new System.Drawing.Point(263, 11);
+            this.KullaniciGuncelle_dgv.Margin = new System.Windows.Forms.Padding(2);
             this.KullaniciGuncelle_dgv.Name = "KullaniciGuncelle_dgv";
             this.KullaniciGuncelle_dgv.RowHeadersWidth = 51;
             this.KullaniciGuncelle_dgv.RowTemplate.Height = 24;
-            this.KullaniciGuncelle_dgv.Size = new System.Drawing.Size(593, 472);
+            this.KullaniciGuncelle_dgv.Size = new System.Drawing.Size(709, 616);
             this.KullaniciGuncelle_dgv.TabIndex = 30;
             this.KullaniciGuncelle_dgv.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.KullaniciGuncelle_CellEnter);
             // 
@@ -179,7 +182,7 @@ namespace UludagKutuphane
             "Seçiniz",
             "Yönetim Bilişim Sistemleri",
             "İşletme"});
-            this.Bolum_cmb.Location = new System.Drawing.Point(136, 203);
+            this.Bolum_cmb.Location = new System.Drawing.Point(119, 199);
             this.Bolum_cmb.Name = "Bolum_cmb";
             this.Bolum_cmb.Size = new System.Drawing.Size(121, 21);
             this.Bolum_cmb.TabIndex = 31;
@@ -188,7 +191,7 @@ namespace UludagKutuphane
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(881, 472);
+            this.ClientSize = new System.Drawing.Size(1002, 638);
             this.Controls.Add(this.Bolum_cmb);
             this.Controls.Add(this.KullaniciGuncelle_dgv);
             this.Controls.Add(this.Guncelle_txt);
@@ -203,8 +206,9 @@ namespace UludagKutuphane
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "kullaniciguncelle";
+            this.ShowInTaskbar = false;
             this.Text = "kullaniciguncelle";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.KullaniciGuncelle_Load);
