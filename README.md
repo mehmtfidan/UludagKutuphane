@@ -13,9 +13,11 @@ e)**C#** kullanarak back end kodlarımızı oluşturduk ve projemizi tamamladık
 </br>
 # Otomasyonun Kullanım Şekli ve Prensipleri:
 1)Kullanıcı girişi için exe dosyasını açıyoruz ve bizi kullanıcı giriş ekranı karşılıyor.Kayıtlı bir kullanıcıysak bilgileri doldurup giriş yap tuşuna basıyoruz ve anasayfaya yönlendiriliyoruz.
+</br>
 ![girispaneli](https://user-images.githubusercontent.com/100084384/171525572-acf2ad2c-5546-4d50-a9f3-3f5ed01e4bd4.JPG)
 </br>
 2)Otomasyona kayıtlı değilsek kullanıcı giriş ekranından kayıt ol tuşuna basıyoruz ve kaydolma ekranını açıyoruz ve bilgileri doldurarak kaydol tuşuna basıyoruz ve kaydoluyoruz.
+</br>
 ![kaydolekrani](https://user-images.githubusercontent.com/100084384/171525738-34238d9a-abef-4481-8449-20d3d53cdd21.JPG)
 </br>
 3)Kullanıcı bilgilerini doğru girip **Giriş Yap** butonuna bastıktan sonra bizi anasayfa karşılıyor ve soldaki menüden otomasyonun bütün fonksiyonlarına erişebiliyoruz.
