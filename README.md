@@ -6,9 +6,13 @@ Bu amaç doğrultusunda kütüphanede bulunan kitapların takibi, emanet , öğr
 </br>
 # Proje Süreci ve İlerleyişi: 
 a)İlk olarak kütüphane memurları ile görüşüp eksiklikleri ve hataları belirledik.
+</br>
 b)Memurların ihtiyaç ve isteklerine göre ilerleyiş sürecimizi taslağa dökebilmek için gereksinim analizi ve E&R diyagramı oluşturduk. 
+</br>
 c)Oluşturduğumuz taslaklara göre kullanım pratikliği ve değişkenlerin elverişliliği sağlayan **MySql** veritabanını kullanarak tablolarımızı oluşturduk.
+</br>
 d)Sade ve kolay kullanım sağlayan bir tasarım modeli oluşturduk.
+</br>
 e)**C#** kullanarak back end kodlarımızı oluşturduk ve projemizi tamamladık.
 </br>
 # Otomasyonun Kullanım Şekli ve Prensipleri:
@@ -29,7 +33,7 @@ e)**C#** kullanarak back end kodlarımızı oluşturduk ve projemizi tamamladık
 5)Kullanıcı ekle sayfasından üyeleri görüntüleyebiliyor aynı zamanda bölüm ve üye ekleyebiliyoruz.
 ![kullaniciekle](https://user-images.githubusercontent.com/100084384/171525956-09285988-3858-4bb6-940c-0f82a996a649.JPG)
 </br>
-6)Kullanıcı güncelle sayfasından üyeleri görüntüleyebilir ve güncelleyebiliriz.
+6)Kullanıcı güncelle sayfasından üyeleri görüntüleyebiliyoruz ve güncelleyebiliyoruz.
 </br>
 ![kullaniciguncelle](https://user-images.githubusercontent.com/100084384/171526020-ed747d44-8438-48c6-979b-737b64d337f6.JPG)
 7)Kullanıcı sil bölümünden üyeleri görrüntüleyip silmek istediğimiz üyeyi seçiyoruz ve siliyoruz.
@@ -38,7 +42,7 @@ e)**C#** kullanarak back end kodlarımızı oluşturduk ve projemizi tamamladık
 8)Anasayfadan kitap listesi butonuna basınca kitap listesi açılıyor ve buradan kitapları görüntüleyebiliyoruz.Adına , yazarına , demirbaş numarasına , çevirmenine ve yayınevine göre arama yapabiliyoruz.
 ![kitaplistesi](https://user-images.githubusercontent.com/100084384/171526147-cedfdf29-e832-4919-b69a-4daf4344617c.JPG)
 </br>
-9)Kitap ekle sayfasından kitapları görüntüleyebiliyor aynı zamanda kategori ve  kitap ekleyebiliyoruz.
+9)Kitap ekle sayfasından kitapları görüntüleyebiliyor aynı zamanda kategori ve kitap ekleyebiliyoruz.
 ![kitapekle](https://user-images.githubusercontent.com/100084384/171526188-54845faa-3b57-43f4-b9c4-72edb097f04d.JPG)
 </br>
 10)Kitap güncelle sayfasından kitapları görüntüleyebilir adına , yazarına , demirbaş numarasına , çevirmenine ve yayınevine göre arama yaptıktan sonra güncelleyebiliriz.
