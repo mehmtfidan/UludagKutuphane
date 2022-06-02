@@ -57,10 +57,10 @@ namespace UludagKutuphane
             this.button2.ForeColor = System.Drawing.SystemColors.Control;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 772);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Location = new System.Drawing.Point(0, 627);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(257, 63);
+            this.button2.Size = new System.Drawing.Size(193, 51);
             this.button2.TabIndex = 13;
             this.button2.Text = "      KAYIP KİTAP";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -77,10 +77,10 @@ namespace UludagKutuphane
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(3, 710);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Location = new System.Drawing.Point(2, 577);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(249, 58);
+            this.button1.Size = new System.Drawing.Size(187, 47);
             this.button1.TabIndex = 12;
             this.button1.Text = "     RAPORLAR";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -97,12 +97,12 @@ namespace UludagKutuphane
             this.GeriAl_btn.ForeColor = System.Drawing.SystemColors.Control;
             this.GeriAl_btn.Image = ((System.Drawing.Image)(resources.GetObject("GeriAl_btn.Image")));
             this.GeriAl_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.GeriAl_btn.Location = new System.Drawing.Point(-3, 646);
-            this.GeriAl_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.GeriAl_btn.Location = new System.Drawing.Point(-2, 525);
+            this.GeriAl_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.GeriAl_btn.Name = "GeriAl_btn";
-            this.GeriAl_btn.Size = new System.Drawing.Size(257, 59);
+            this.GeriAl_btn.Size = new System.Drawing.Size(193, 48);
             this.GeriAl_btn.TabIndex = 11;
-            this.GeriAl_btn.Text = "      GERİ AL";
+            this.GeriAl_btn.Text = "      EMANET AL";
             this.GeriAl_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.GeriAl_btn.UseMnemonic = false;
             this.GeriAl_btn.UseVisualStyleBackColor = false;
@@ -117,12 +117,12 @@ namespace UludagKutuphane
             this.OduncVer_btn.ForeColor = System.Drawing.SystemColors.Control;
             this.OduncVer_btn.Image = ((System.Drawing.Image)(resources.GetObject("OduncVer_btn.Image")));
             this.OduncVer_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.OduncVer_btn.Location = new System.Drawing.Point(0, 580);
-            this.OduncVer_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.OduncVer_btn.Location = new System.Drawing.Point(0, 471);
+            this.OduncVer_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.OduncVer_btn.Name = "OduncVer_btn";
-            this.OduncVer_btn.Size = new System.Drawing.Size(257, 62);
+            this.OduncVer_btn.Size = new System.Drawing.Size(193, 50);
             this.OduncVer_btn.TabIndex = 10;
-            this.OduncVer_btn.Text = "      ÖDÜNÇ VER";
+            this.OduncVer_btn.Text = "      EMANET  VER";
             this.OduncVer_btn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.OduncVer_btn.UseMnemonic = false;
             this.OduncVer_btn.UseVisualStyleBackColor = false;
@@ -137,10 +137,10 @@ namespace UludagKutuphane
             this.kitapsilbtn.ForeColor = System.Drawing.SystemColors.Control;
             this.kitapsilbtn.Image = ((System.Drawing.Image)(resources.GetObject("kitapsilbtn.Image")));
             this.kitapsilbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.kitapsilbtn.Location = new System.Drawing.Point(-3, 523);
-            this.kitapsilbtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kitapsilbtn.Location = new System.Drawing.Point(-2, 425);
+            this.kitapsilbtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.kitapsilbtn.Name = "kitapsilbtn";
-            this.kitapsilbtn.Size = new System.Drawing.Size(255, 52);
+            this.kitapsilbtn.Size = new System.Drawing.Size(191, 42);
             this.kitapsilbtn.TabIndex = 9;
             this.kitapsilbtn.Text = "      KİTAP SİL";
             this.kitapsilbtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -157,10 +157,10 @@ namespace UludagKutuphane
             this.kitapguncellebtn.ForeColor = System.Drawing.SystemColors.Control;
             this.kitapguncellebtn.Image = ((System.Drawing.Image)(resources.GetObject("kitapguncellebtn.Image")));
             this.kitapguncellebtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.kitapguncellebtn.Location = new System.Drawing.Point(3, 453);
-            this.kitapguncellebtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kitapguncellebtn.Location = new System.Drawing.Point(2, 368);
+            this.kitapguncellebtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.kitapguncellebtn.Name = "kitapguncellebtn";
-            this.kitapguncellebtn.Size = new System.Drawing.Size(252, 53);
+            this.kitapguncellebtn.Size = new System.Drawing.Size(189, 43);
             this.kitapguncellebtn.TabIndex = 8;
             this.kitapguncellebtn.Text = "     KİTAP GÜNCELLE";
             this.kitapguncellebtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -176,10 +176,10 @@ namespace UludagKutuphane
             this.kitapeklebtn.ForeColor = System.Drawing.SystemColors.Control;
             this.kitapeklebtn.Image = ((System.Drawing.Image)(resources.GetObject("kitapeklebtn.Image")));
             this.kitapeklebtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.kitapeklebtn.Location = new System.Drawing.Point(0, 379);
-            this.kitapeklebtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kitapeklebtn.Location = new System.Drawing.Point(0, 308);
+            this.kitapeklebtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.kitapeklebtn.Name = "kitapeklebtn";
-            this.kitapeklebtn.Size = new System.Drawing.Size(255, 52);
+            this.kitapeklebtn.Size = new System.Drawing.Size(191, 42);
             this.kitapeklebtn.TabIndex = 7;
             this.kitapeklebtn.Text = "      KİTAP EKLE";
             this.kitapeklebtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -195,10 +195,10 @@ namespace UludagKutuphane
             this.kitaplistesibtn.ForeColor = System.Drawing.SystemColors.Control;
             this.kitaplistesibtn.Image = ((System.Drawing.Image)(resources.GetObject("kitaplistesibtn.Image")));
             this.kitaplistesibtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.kitaplistesibtn.Location = new System.Drawing.Point(0, 311);
-            this.kitaplistesibtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kitaplistesibtn.Location = new System.Drawing.Point(0, 253);
+            this.kitaplistesibtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.kitaplistesibtn.Name = "kitaplistesibtn";
-            this.kitaplistesibtn.Size = new System.Drawing.Size(257, 63);
+            this.kitaplistesibtn.Size = new System.Drawing.Size(193, 51);
             this.kitaplistesibtn.TabIndex = 6;
             this.kitaplistesibtn.Text = "     KİTAP LİSTESİ";
             this.kitaplistesibtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -214,10 +214,10 @@ namespace UludagKutuphane
             this.kullanicisilbtn.ForeColor = System.Drawing.SystemColors.Control;
             this.kullanicisilbtn.Image = ((System.Drawing.Image)(resources.GetObject("kullanicisilbtn.Image")));
             this.kullanicisilbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.kullanicisilbtn.Location = new System.Drawing.Point(0, 244);
-            this.kullanicisilbtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kullanicisilbtn.Location = new System.Drawing.Point(0, 198);
+            this.kullanicisilbtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.kullanicisilbtn.Name = "kullanicisilbtn";
-            this.kullanicisilbtn.Size = new System.Drawing.Size(255, 63);
+            this.kullanicisilbtn.Size = new System.Drawing.Size(191, 51);
             this.kullanicisilbtn.TabIndex = 5;
             this.kullanicisilbtn.Text = "      KULLANICI SİL";
             this.kullanicisilbtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -234,10 +234,10 @@ namespace UludagKutuphane
             this.kullaniciguncellebtn.ForeColor = System.Drawing.SystemColors.Control;
             this.kullaniciguncellebtn.Image = ((System.Drawing.Image)(resources.GetObject("kullaniciguncellebtn.Image")));
             this.kullaniciguncellebtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.kullaniciguncellebtn.Location = new System.Drawing.Point(0, 183);
-            this.kullaniciguncellebtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kullaniciguncellebtn.Location = new System.Drawing.Point(0, 149);
+            this.kullaniciguncellebtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.kullaniciguncellebtn.Name = "kullaniciguncellebtn";
-            this.kullaniciguncellebtn.Size = new System.Drawing.Size(255, 55);
+            this.kullaniciguncellebtn.Size = new System.Drawing.Size(191, 45);
             this.kullaniciguncellebtn.TabIndex = 3;
             this.kullaniciguncellebtn.Text = "   KULLANICI GÜNCELLE";
             this.kullaniciguncellebtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -253,10 +253,10 @@ namespace UludagKutuphane
             this.kullanicieklebtn.ForeColor = System.Drawing.SystemColors.Control;
             this.kullanicieklebtn.Image = ((System.Drawing.Image)(resources.GetObject("kullanicieklebtn.Image")));
             this.kullanicieklebtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.kullanicieklebtn.Location = new System.Drawing.Point(0, 113);
-            this.kullanicieklebtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kullanicieklebtn.Location = new System.Drawing.Point(0, 92);
+            this.kullanicieklebtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.kullanicieklebtn.Name = "kullanicieklebtn";
-            this.kullanicieklebtn.Size = new System.Drawing.Size(252, 65);
+            this.kullanicieklebtn.Size = new System.Drawing.Size(189, 53);
             this.kullanicieklebtn.TabIndex = 3;
             this.kullanicieklebtn.Text = "       KULLANICI EKLE";
             this.kullanicieklebtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -273,10 +273,10 @@ namespace UludagKutuphane
             this.kullanicilistesibtn.ForeColor = System.Drawing.SystemColors.Control;
             this.kullanicilistesibtn.Image = ((System.Drawing.Image)(resources.GetObject("kullanicilistesibtn.Image")));
             this.kullanicilistesibtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.kullanicilistesibtn.Location = new System.Drawing.Point(0, 52);
-            this.kullanicilistesibtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kullanicilistesibtn.Location = new System.Drawing.Point(0, 42);
+            this.kullanicilistesibtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.kullanicilistesibtn.Name = "kullanicilistesibtn";
-            this.kullanicilistesibtn.Size = new System.Drawing.Size(257, 57);
+            this.kullanicilistesibtn.Size = new System.Drawing.Size(193, 46);
             this.kullanicilistesibtn.TabIndex = 2;
             this.kullanicilistesibtn.Text = "      KULLANICI LİSTESİ";
             this.kullanicilistesibtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -303,9 +303,8 @@ namespace UludagKutuphane
             this.panel1.Controls.Add(this.kitapeklebtn);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(257, 922);
+            this.panel1.Size = new System.Drawing.Size(193, 609);
             this.panel1.TabIndex = 14;
             // 
             // panel2
@@ -313,31 +312,29 @@ namespace UludagKutuphane
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(257, 52);
+            this.panel2.Size = new System.Drawing.Size(193, 42);
             this.panel2.TabIndex = 1;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(257, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Location = new System.Drawing.Point(193, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1110, 52);
+            this.panel3.Size = new System.Drawing.Size(832, 42);
             this.panel3.TabIndex = 15;
             // 
             // islempaneli
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1367, 922);
+            this.ClientSize = new System.Drawing.Size(1025, 609);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "islempaneli";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "islempaneli";
