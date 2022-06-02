@@ -85,8 +85,37 @@ namespace UludagKutuphane
 
         private void Name_Tb_TextChanged(object sender, EventArgs e)
         {
-            
-            
+            if (comboBox1.SelectedIndex == 1)
+            {
+                con.Open();
+                DataTable tbl = new DataTable();
+
+                MySqlDataAdapter ara = new MySqlDataAdapter("Select Odunc.Id, Odunc.Alis_Tarihi, Odunc.Son_Teslim_Tarihi, Odunc.Teslim_Ettigi_Tarih, Odunc.Uye_Id, Odunc.Kitap_Id, Kitap.Ki_Adi, Kitap.Demirbas_No, Kitap.Durum_Id, Durum.D_Adi, Uye.Adi, Uye.Soyadi, Uye.Uye_Numarasi, Uye.Telefon_No, Uye.E_Posta, Odunc.Teslim_Durumu From Odunc Inner Join Kitap On Odunc.Kitap_Id = Kitap.Id Inner Join Durum On Kitap.Durum_Id = Durum.Id Inner Join Uye On Odunc.Uye_Id = Uye.Id WHERE Adi like '%" + Name_Tb.Text + "%'  ", con);
+                ara.Fill(tbl);
+                con.Close();
+                GeriAl_dgv.DataSource = tbl;
+            }
+            else if (comboBox1.SelectedIndex == 2)
+            {
+                con.Open();
+                DataTable tbl = new DataTable();
+
+                MySqlDataAdapter ara = new MySqlDataAdapter("Select Odunc.Id, Odunc.Alis_Tarihi, Odunc.Son_Teslim_Tarihi, Odunc.Teslim_Ettigi_Tarih, Odunc.Uye_Id, Odunc.Kitap_Id, Kitap.Ki_Adi, Kitap.Demirbas_No, Kitap.Durum_Id, Durum.D_Adi, Uye.Adi, Uye.Soyadi, Uye.Uye_Numarasi, Uye.Telefon_No, Uye.E_Posta, Odunc.Teslim_Durumu From Odunc Inner Join Kitap On Odunc.Kitap_Id = Kitap.Id Inner Join Durum On Kitap.Durum_Id = Durum.Id Inner Join Uye On Odunc.Uye_Id = Uye.Id WHERE Ki_Adi like '%" + Name_Tb.Text + "%'  ", con);
+                ara.Fill(tbl);
+                con.Close();
+                GeriAl_dgv.DataSource = tbl;
+            }
+            else if (comboBox1.SelectedIndex == 3)
+            {
+                con.Open();
+                DataTable tbl = new DataTable();
+
+                MySqlDataAdapter ara = new MySqlDataAdapter("Select Odunc.Id, Odunc.Alis_Tarihi, Odunc.Son_Teslim_Tarihi, Odunc.Teslim_Ettigi_Tarih, Odunc.Uye_Id, Odunc.Kitap_Id, Kitap.Ki_Adi, Kitap.Demirbas_No, Kitap.Durum_Id, Durum.D_Adi, Uye.Adi, Uye.Soyadi, Uye.Uye_Numarasi, Uye.Telefon_No, Uye.E_Posta, Odunc.Teslim_Durumu From Odunc Inner Join Kitap On Odunc.Kitap_Id = Kitap.Id Inner Join Durum On Kitap.Durum_Id = Durum.Id Inner Join Uye On Odunc.Uye_Id = Uye.Id WHERE Demirbas_No like '%" + Name_Tb.Text + "%'  ", con);
+                ara.Fill(tbl);
+                con.Close();
+                GeriAl_dgv.DataSource = tbl;
+            }
+
         }
 
         private void button1_Click(object sender, EventArgs e)

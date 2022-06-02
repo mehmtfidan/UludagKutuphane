@@ -32,6 +32,17 @@ namespace UludagKutuphane
             adp.Fill(dt);
             KullaniciGuncelle_dgv.DataSource = dt;
             con.Close();
+
+
+            con.Open();
+            MySqlCommand cmd1 = new MySqlCommand("SELECT * FROM Bolum", con);
+            MySqlDataReader dr;
+            dr = cmd1.ExecuteReader();
+            while (dr.Read())
+            {
+                Bolum_cmb.Items.Add(dr["Adi"]);
+            }
+            con.Close();
         }
 
         public void KullaniciGuncelle_CellEnter(object sender, DataGridViewCellEventArgs e)
