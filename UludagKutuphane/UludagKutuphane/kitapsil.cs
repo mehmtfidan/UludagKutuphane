@@ -49,7 +49,7 @@ namespace UludagKutuphane
         {
             int SecilenId = Convert.ToInt32(KitapSil_dgv.CurrentRow.Cells[0].Value);
 
-            if (VarMi("Select COUNT('') from Odunc WHERE Kitap_Id = '" + SecilenId + "'") == 0)
+            if (VarMi("Select COUNT('') from Kitap WHERE Id = '" + SecilenId + "'") == 0)
             {
                 DialogResult dr = System.Windows.Forms.MessageBox.Show("Silmek istediğinize emin misiniz?", "Confirmation", (MessageBoxButtons)MessageBoxButton.YesNo, MessageBoxIcon.Warning);
                 if (dr == DialogResult.Yes)
