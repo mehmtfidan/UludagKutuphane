@@ -76,7 +76,7 @@ e)**C#** kullanarak back end kodlarımızı oluşturduk ve projemizi tamamladık
 ![oduncver](https://user-images.githubusercontent.com/100084384/171526421-93112464-6276-4df8-943a-7092f423cd38.JPG)
 </br>
 </br>
-13)Geri al sayfasından emanetin teslim durumu kontrol edebilir alış tarihine , son teslim tarihine ve teslim edildiği tarihe erişebilir kitabın teslim edilmemişse emanete tıklatıp **Geri Al** butonuna basarsak kitap emanet verilmiş ve kitap listesinde rafta olarak gözükecektir.Emanet durumu ise teslim alınmış olarak aynı tabloda görünmektedir.
+13)Geri al sayfasından emanetin teslim durumu kontrol edebilir alış tarihine , son teslim tarihine ve teslim edildiği tarihe erişebilir kitabın teslim edilmemişse emanete tıklatıp **Geri Al** butonuna basarsak kitap emanet verilmiş ve kitap listesinde rafta olarak gözükecektir.
 </br>
 ![gerial](https://user-images.githubusercontent.com/100084384/171526469-811b0358-3eac-4fd5-bab4-820f99efb7c5.JPG)
 </br>
